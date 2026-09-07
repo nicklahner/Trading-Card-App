@@ -141,6 +141,8 @@ export default async function ReviewQueuePage() {
   }
 
   // Build enriched list with identification data
+  type MatchSource = 'cardsight' | 'catalog_search' | 'unmatched';
+
   type EnrichedItem = (typeof items)[number] & {
     ident: (typeof items)[number]['identifications'][number] | null;
     topCandidate: StoredCandidate | null;
@@ -149,6 +151,8 @@ export default async function ReviewQueuePage() {
     wasReady: boolean;
     hasAlwaysFlag: boolean;
     hasBlockingFlag: boolean;
+    matchSource: MatchSource;
+    displayFlags: string[];
   };
 
   const enriched: EnrichedItem[] = items.map((item) => {
@@ -156,10 +160,23 @@ export default async function ReviewQueuePage() {
     const candidates = (ident?.candidates ?? []) as unknown as StoredCandidate[];
     const topCandidate = candidates[0] ?? null;
 
-    // Check flags
+    // Determine match source
     const flags = ident?.flags ?? [];
+    let matchSource: MatchSource = 'catalog_search';
+    if (flags.includes('no_catalog_match')) {
+      matchSource = 'unmatched';
+    } else if (topCandidate?.provider === 'cardsight') {
+      matchSource = 'cardsight';
+    }
+
+    // Flags to display on the row (skip internal-only flags)
+    const displayFlags = flags.filter((f: string) =>
+      ['parallel_uncertain', 'variation_possible', 'no_catalog_match',
+       'auto_uncertain', 'serial_mismatch', 'photo_quality'].includes(f),
+    );
+
     const hasAlwaysFlag = flags.some((f: string) =>
-      ['numbered_serial', 'auto_detected', 'memorabilia_detected'].includes(f),
+      ['no_catalog_match', 'redemption'].includes(f),
     );
     const hasBlockingFlag = flags.length > 0;
 
@@ -172,6 +189,8 @@ export default async function ReviewQueuePage() {
       wasReady: ident?.wasReady ?? false,
       hasAlwaysFlag,
       hasBlockingFlag,
+      matchSource,
+      displayFlags,
     };
   });
 
@@ -246,10 +265,17 @@ export default async function ReviewQueuePage() {
           const candidateName = candidate
             ? `${candidate.playerName} - ${candidate.year} ${candidate.setName}`
             : 'No candidate';
-          const score =
-            item.ident?.overallConfidence != null
-              ? `${(Number(item.ident.overallConfidence) * 100).toFixed(0)}%`
-              : '?';
+
+          const sourceLabel: Record<MatchSource, string> = {
+            cardsight: 'CardSight',
+            catalog_search: 'Catalog',
+            unmatched: 'Unmatched',
+          };
+          const sourceColor: Record<MatchSource, string> = {
+            cardsight: 'bg-blue-100 text-blue-700',
+            catalog_search: 'bg-purple-100 text-purple-700',
+            unmatched: 'bg-amber-100 text-amber-700',
+          };
 
           return (
             <li key={item.id}>
@@ -262,17 +288,10 @@ export default async function ReviewQueuePage() {
                   <p className="truncate text-sm font-medium">
                     {candidateName}
                   </p>
-                  <div className="mt-0.5 flex items-center gap-2">
-                    <span
-                      className={`rounded px-1.5 py-0.5 text-xs font-medium ${
-                        Number(item.ident?.overallConfidence ?? 0) >= 0.9
-                          ? 'bg-green-100 text-green-700'
-                          : Number(item.ident?.overallConfidence ?? 0) >= 0.7
-                            ? 'bg-yellow-100 text-yellow-700'
-                            : 'bg-red-100 text-red-700'
-                      }`}
-                    >
-                      {score}
+                  <div className="mt-0.5 flex flex-wrap items-center gap-1.5">
+                    {/* Match source badge */}
+                    <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${sourceColor[item.matchSource]}`}>
+                      {sourceLabel[item.matchSource]}
                     </span>
                     {item.estValueMaxCents != null && (
                       <span className="text-xs text-gray-500">
@@ -284,7 +303,13 @@ export default async function ReviewQueuePage() {
                         ready
                       </span>
                     )}
-                    {item.hasAlwaysFlag && (
+                    {/* Display flags */}
+                    {item.displayFlags.map((flag) => (
+                      <span key={flag} className="rounded bg-amber-50 px-1.5 py-0.5 text-xs text-amber-600">
+                        {flag.replace(/_/g, ' ')}
+                      </span>
+                    ))}
+                    {item.hasAlwaysFlag && item.displayFlags.length === 0 && (
                       <span className="rounded bg-amber-50 px-1.5 py-0.5 text-xs text-amber-600">
                         needs attention
                       </span>

@@ -21,10 +21,16 @@ const DATA_DIR = join(process.cwd(), 'data');
 // Helpers
 // ---------------------------------------------------------------------------
 
-function getProviderMode(): 'fake' | 'live' {
+function getProviderMode(opts?: { allowFake?: boolean }): 'fake' | 'live' {
   const mode = process.env.PROVIDERS_MODE ?? 'fake';
   if (mode !== 'fake' && mode !== 'live') {
     throw new Error(`Invalid PROVIDERS_MODE: ${mode}`);
+  }
+  if (mode === 'fake' && !opts?.allowFake && process.env.NODE_ENV !== 'test') {
+    throw new Error(
+      'Identify job refuses to run with fake providers (PROVIDERS_MODE=fake). ' +
+      'Set PROVIDERS_MODE=live in .env.local, or pass --fake to explicitly allow fakes.',
+    );
   }
   return mode;
 }
@@ -286,9 +292,12 @@ async function identifyItem(
 // ---------------------------------------------------------------------------
 
 export async function runIdentifyJob(
-  opts?: { itemIds?: string[] },
+  opts?: { itemIds?: string[]; allowFake?: boolean },
 ): Promise<{ processed: number; succeeded: number; failed: number }> {
-  const providers = createProviders(getProviderMode());
+  const allowFake = opts?.allowFake ?? process.argv.includes('--fake');
+  const mode = getProviderMode({ allowFake });
+  console.log(`[identify] Provider mode: ${mode}`);
+  const providers = createProviders(mode);
 
   // Find items to process
   let items: Array<{ id: string }>;

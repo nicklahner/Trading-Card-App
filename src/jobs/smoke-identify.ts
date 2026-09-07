@@ -166,7 +166,8 @@ async function main() {
     process.exit(1);
   }
 
-  console.log(`Running identification on ${availableCards.length} cards...\n`);
+  console.log(`Running identification on ${availableCards.length} cards...`);
+  console.log(`Provider mode: live (hardcoded)\n`);
 
   const providers = createProviders('live');
   const results: CardResult[] = [];

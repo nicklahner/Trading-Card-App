@@ -165,7 +165,9 @@ async function main() {
 
   // Optionally trigger identification
   if (doIdentify && itemIds.length > 0) {
-    console.log('\nTriggering identification...');
+    // Force live providers for identification — never silently use fakes
+    process.env.PROVIDERS_MODE = 'live';
+    console.log('\nTriggering identification (PROVIDERS_MODE=live)...');
 
     // Set items to 'identifying' status
     await prisma.item.updateMany({
