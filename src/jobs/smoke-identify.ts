@@ -23,7 +23,7 @@ config({ path: '.env.local', override: true });
 import { createProviders } from '@/providers';
 import type { ImageRef } from '@/providers';
 import { runIdentificationPipeline, type ScoredCandidate } from '@/domain/identification/pipeline';
-import { canonicalSetName, canonicalParallelName } from '@/domain/identity/aliases';
+import { canonicalSetName, canonicalParallelName, playerNamesMatch } from '@/domain/identity/aliases';
 
 // ---------------------------------------------------------------------------
 // Manifest types
@@ -64,6 +64,7 @@ interface Manifest {
 // ---------------------------------------------------------------------------
 
 type FieldResult = 'correct' | 'wrong' | 'excluded' | 'not_in_catalog';
+type StrictResult = 'strict_correct' | 'strict_wrong' | 'excluded';
 
 interface ExtractionSummary {
   player: string | null;
@@ -84,9 +85,17 @@ interface CardResult {
   cardId: string;
   storage: string;
   catalogMiss: boolean;
+  /** Candidate accuracy (normalized via aliases). */
   fields: Record<string, FieldResult>;
+  /** Candidate accuracy (strict string equality). */
+  strictFields: Record<string, StrictResult>;
+  /** Extraction accuracy (normalized). */
+  extractionFields: Record<string, FieldResult>;
+  /** Extraction accuracy (strict). */
+  extractionStrictFields: Record<string, StrictResult>;
   parallelFlags: string[];
   details: Record<string, { expected: unknown; got: unknown }>;
+  extractionDetails: Record<string, { expected: unknown; got: unknown }>;
   extractionSummary: ExtractionSummary | null;
   candidateCount: number;
   flags: string[];
@@ -97,6 +106,7 @@ interface CardResult {
 // Field comparison
 // ---------------------------------------------------------------------------
 
+/** Normalized comparison using the alias system. */
 function compareField(
   fieldName: string,
   expected: ExpectedField<unknown>,
@@ -104,13 +114,15 @@ function compareField(
 ): FieldResult {
   if (expected.status === 'unsure') return 'excluded';
 
-  // Normalize for comparison
   if (fieldName === 'set_name' && typeof expected.value === 'string' && typeof actual === 'string') {
     return canonicalSetName(expected.value) === canonicalSetName(actual) ? 'correct' : 'wrong';
   }
 
+  if (fieldName === 'player' && typeof expected.value === 'string' && typeof actual === 'string') {
+    return playerNamesMatch(expected.value, actual) ? 'correct' : 'wrong';
+  }
+
   if (fieldName === 'parallel') {
-    // Both null = correct
     if (expected.value == null && actual == null) return 'correct';
     if (expected.value == null || actual == null) return 'wrong';
     if (typeof expected.value === 'string' && typeof actual === 'string') {
@@ -127,10 +139,34 @@ function compareField(
     return a === b ? 'correct' : 'wrong';
   }
 
-  // Generic comparison
   if (expected.value === actual) return 'correct';
   if (expected.value == null && actual == null) return 'correct';
   return 'wrong';
+}
+
+/** Strict comparison — exact string match, no aliases. */
+function compareFieldStrict(
+  fieldName: string,
+  expected: ExpectedField<unknown>,
+  actual: unknown,
+): StrictResult {
+  if (expected.status === 'unsure') return 'excluded';
+
+  if (fieldName === 'card_number' && typeof expected.value === 'string' && typeof actual === 'string') {
+    const a = expected.value.replace(/^#/, '').trim().toLowerCase();
+    const b = actual.replace(/^#/, '').trim().toLowerCase();
+    return a === b ? 'strict_correct' : 'strict_wrong';
+  }
+
+  if (typeof expected.value === 'string' && typeof actual === 'string') {
+    return expected.value.toLowerCase().trim() === actual.toLowerCase().trim()
+      ? 'strict_correct'
+      : 'strict_wrong';
+  }
+
+  if (expected.value === actual) return 'strict_correct';
+  if (expected.value == null && actual == null) return 'strict_correct';
+  return 'strict_wrong';
 }
 
 // ---------------------------------------------------------------------------
@@ -205,67 +241,65 @@ async function main() {
       const providerFailed = result.flags.includes('cardsight_failed');
       const catalogMiss = !providerFailed && (top1 == null || result.unmatched);
       const expected = card.expected;
+
+      // --- Extraction values (always available) ---
+      const extVals: Record<string, unknown> = {
+        year: result.extraction.set_year.value ?? result.extraction.copyright_year.value,
+        set_name: result.extraction.set_name.value,
+        card_number: result.extraction.card_number.value,
+        player: result.extraction.players[0]?.name ?? null,
+        parallel: result.extraction.finish.parallel_name_printed,
+        print_run: result.extraction.serial.print_run,
+        auto: result.extraction.autograph.present ?? false,
+        memorabilia: result.extraction.memorabilia.value ?? false,
+        serial: result.extraction.serial.printed,
+      };
+
+      // --- Score extraction (all 15 cards) ---
+      const SCORE_FIELDS = ['year', 'set_name', 'card_number', 'player', 'parallel', 'print_run', 'auto', 'memorabilia', 'serial'] as const;
+      const extractionFields: Record<string, FieldResult> = {};
+      const extractionStrictFields: Record<string, StrictResult> = {};
+      const extractionDetails: Record<string, { expected: unknown; got: unknown }> = {};
+
+      for (const f of SCORE_FIELDS) {
+        const ef = expected[f];
+        extractionFields[f] = compareField(f, ef, extVals[f]);
+        extractionStrictFields[f] = compareFieldStrict(f, ef, extVals[f]);
+        if (extractionFields[f] === 'wrong') {
+          extractionDetails[f] = { expected: ef.value, got: extVals[f] };
+        }
+      }
+
+      // --- Score candidates (only matched cards) ---
       const fields: Record<string, FieldResult> = {};
+      const strictFields: Record<string, StrictResult> = {};
       const details: Record<string, { expected: unknown; got: unknown }> = {};
 
       if (catalogMiss) {
-        // All scorable fields become not_in_catalog
-        for (const f of ['year', 'set_name', 'card_number', 'player', 'parallel', 'print_run', 'auto', 'memorabilia', 'serial'] as const) {
+        for (const f of SCORE_FIELDS) {
           const ef = expected[f];
           fields[f] = ef.status === 'unsure' ? 'excluded' : 'not_in_catalog';
+          strictFields[f] = ef.status === 'unsure' ? 'excluded' : 'strict_wrong';
         }
       } else {
-        // Compare each field against top-1 candidate
-        fields.year = compareField('year', expected.year, top1!.year);
-        fields.set_name = compareField('set_name', expected.set_name, top1!.setName);
-        fields.card_number = compareField('card_number', expected.card_number, top1!.cardNumber);
-        fields.player = compareField('player', expected.player, top1!.playerName);
-        fields.parallel = compareField(
-          'parallel',
-          expected.parallel,
-          top1!.resolvedParallelName,
-        );
-        // print_run, auto, memorabilia, serial — not directly on ScoredCandidate,
-        // compare from extraction instead
-        fields.print_run = compareField(
-          'print_run',
-          expected.print_run,
-          result.extraction.serial.print_run,
-        );
-        fields.auto = compareField(
-          'auto',
-          expected.auto,
-          result.extraction.autograph.present ?? false,
-        );
-        fields.memorabilia = compareField(
-          'memorabilia',
-          expected.memorabilia,
-          result.extraction.memorabilia.value ?? false,
-        );
-        fields.serial = compareField(
-          'serial',
-          expected.serial,
-          result.extraction.serial.printed,
-        );
+        const candVals: Record<string, unknown> = {
+          year: top1!.year,
+          set_name: top1!.setName,
+          card_number: top1!.cardNumber,
+          player: top1!.playerName,
+          parallel: top1!.resolvedParallelName,
+          print_run: result.extraction.serial.print_run,
+          auto: result.extraction.autograph.present ?? false,
+          memorabilia: result.extraction.memorabilia.value ?? false,
+          serial: result.extraction.serial.printed,
+        };
 
-        // Track details for wrong fields
-        for (const [key, val] of Object.entries(fields)) {
-          if (val === 'wrong') {
-            const actualValues: Record<string, unknown> = {
-              year: top1!.year,
-              set_name: top1!.setName,
-              card_number: top1!.cardNumber,
-              player: top1!.playerName,
-              parallel: top1!.resolvedParallelName,
-              print_run: result.extraction.serial.print_run,
-              auto: result.extraction.autograph.present ?? false,
-              memorabilia: result.extraction.memorabilia.value ?? false,
-              serial: result.extraction.serial.printed,
-            };
-            details[key] = {
-              expected: (expected as unknown as Record<string, ExpectedField<unknown>>)[key]?.value,
-              got: actualValues[key],
-            };
+        for (const f of SCORE_FIELDS) {
+          const ef = expected[f];
+          fields[f] = compareField(f, ef, candVals[f]);
+          strictFields[f] = compareFieldStrict(f, ef, candVals[f]);
+          if (fields[f] === 'wrong') {
+            details[f] = { expected: ef.value, got: candVals[f] };
           }
         }
       }
@@ -290,8 +324,12 @@ async function main() {
         storage: expected.storage,
         catalogMiss,
         fields,
+        strictFields,
+        extractionFields,
+        extractionStrictFields,
         parallelFlags: result.flags.filter((f) => f.startsWith('parallel')),
         details,
+        extractionDetails,
         extractionSummary,
         candidateCount: result.candidates.length,
         flags: result.flags,
@@ -300,8 +338,12 @@ async function main() {
 
       const statusLabel = providerFailed ? 'PROVIDER FAILED' : catalogMiss ? 'CATALOG MISS' : 'OK';
       const wrongCount = Object.values(fields).filter((v) => v === 'wrong').length;
-      const suffix = wrongCount > 0 ? ` (${wrongCount} wrong)` : '';
-      console.log(`  Card ${card.id}: ${statusLabel}${suffix}`);
+      const extWrongCount = Object.values(extractionFields).filter((v) => v === 'wrong').length;
+      const suffix = [
+        wrongCount > 0 ? `${wrongCount} candidate wrong` : null,
+        extWrongCount > 0 ? `${extWrongCount} extraction wrong` : null,
+      ].filter(Boolean).join(', ');
+      console.log(`  Card ${card.id}: ${statusLabel}${suffix ? ` (${suffix})` : ''}`);
     } catch (err) {
       console.error(`  Card ${card.id}: ERROR — ${err instanceof Error ? err.message : String(err)}`);
       // Mark all fields as not_in_catalog on error
@@ -309,13 +351,21 @@ async function main() {
       for (const f of ['year', 'set_name', 'card_number', 'player', 'parallel', 'print_run', 'auto', 'memorabilia', 'serial'] as const) {
         fields[f] = 'not_in_catalog';
       }
+      const emptyStrict: Record<string, StrictResult> = {};
+      for (const f of ['year', 'set_name', 'card_number', 'player', 'parallel', 'print_run', 'auto', 'memorabilia', 'serial']) {
+        emptyStrict[f] = 'excluded';
+      }
       results.push({
         cardId: card.id,
         storage: card.expected.storage,
         catalogMiss: true,
         fields,
+        strictFields: emptyStrict,
+        extractionFields: { ...fields },
+        extractionStrictFields: emptyStrict,
         parallelFlags: [],
         details: {},
+        extractionDetails: {},
         extractionSummary: null,
         candidateCount: 0,
         flags: [],
@@ -332,56 +382,50 @@ async function main() {
   console.log('  SMOKE:IDENTIFY RESULTS');
   console.log('='.repeat(72) + '\n');
 
-  // --- Per-field accuracy ---
+  // --- Helper: build accuracy row with sample size ---
   const fieldNames = ['year', 'set_name', 'card_number', 'player', 'parallel', 'print_run', 'auto', 'memorabilia', 'serial'];
-  const fieldTable: Array<Record<string, string | number>> = [];
 
-  for (const field of fieldNames) {
-    const scorable = results.filter(
-      (r) => r.fields[field] === 'correct' || r.fields[field] === 'wrong',
-    );
-    const correct = scorable.filter((r) => r.fields[field] === 'correct').length;
-    const total = scorable.length;
-    const excluded = results.filter((r) => r.fields[field] === 'excluded').length;
-    const catalogMiss = results.filter((r) => r.fields[field] === 'not_in_catalog').length;
-    const accuracy = total > 0 ? `${((correct / total) * 100).toFixed(0)}%` : 'n/a';
-
-    fieldTable.push({
-      field,
-      correct,
-      wrong: total - correct,
-      excluded,
-      catalog_miss: catalogMiss,
-      accuracy,
+  function accuracyRow(
+    field: string,
+    resultsSet: CardResult[],
+    getResult: (r: CardResult) => FieldResult | StrictResult,
+    correctVal: string,
+    wrongVal: string,
+  ) {
+    const scorable = resultsSet.filter((r) => {
+      const v = getResult(r);
+      return v === correctVal || v === wrongVal;
     });
+    const correct = scorable.filter((r) => getResult(r) === correctVal).length;
+    const total = scorable.length;
+    return {
+      field,
+      result: total > 0 ? `${correct}/${total}` : '—',
+      excluded: resultsSet.filter((r) => getResult(r) === 'excluded').length,
+    };
   }
 
-  console.log('Pipeline accuracy (verified + best_guess fields only):');
-  console.table(fieldTable);
+  // --- Candidate accuracy (matched cards only) ---
+  console.log('CANDIDATE accuracy (normalized via aliases):');
+  console.table(fieldNames.map((f) =>
+    accuracyRow(f, results, (r) => r.fields[f], 'correct', 'wrong'),
+  ));
 
-  // --- Parallel accuracy by storage ---
-  const sleeved = results.filter(
-    (r) => !r.catalogMiss && r.storage !== 'none' && r.storage !== 'bare',
-  );
-  const bare = results.filter(
-    (r) => !r.catalogMiss && (r.storage === 'none' || r.storage === 'bare'),
-  );
+  console.log('\nCANDIDATE accuracy (strict string match):');
+  console.table(fieldNames.map((f) =>
+    accuracyRow(f, results, (r) => r.strictFields[f], 'strict_correct', 'strict_wrong'),
+  ));
 
-  const parallelAccuracy = (group: CardResult[], label: string) => {
-    const scorable = group.filter(
-      (r) => r.fields.parallel === 'correct' || r.fields.parallel === 'wrong',
-    );
-    const correct = scorable.filter((r) => r.fields.parallel === 'correct').length;
-    return {
-      group: label,
-      correct,
-      total: scorable.length,
-      accuracy: scorable.length > 0 ? `${((correct / scorable.length) * 100).toFixed(0)}%` : 'n/a',
-    };
-  };
+  // --- Extraction accuracy (all 15 cards) ---
+  console.log('\nEXTRACTION accuracy (normalized, all cards):');
+  console.table(fieldNames.map((f) =>
+    accuracyRow(f, results, (r) => r.extractionFields[f], 'correct', 'wrong'),
+  ));
 
-  console.log('\nParallel accuracy by storage:');
-  console.table([parallelAccuracy(sleeved, 'sleeved'), parallelAccuracy(bare, 'bare')]);
+  console.log('\nEXTRACTION accuracy (strict, all cards):');
+  console.table(fieldNames.map((f) =>
+    accuracyRow(f, results, (r) => r.extractionStrictFields[f], 'strict_correct', 'strict_wrong'),
+  ));
 
   // --- Wrong parallel without parallel_uncertain ---
   const wrongParallelNoFlag = results.filter(
@@ -450,49 +494,51 @@ async function main() {
 
   // --- Summary stats ---
   const pipelineCards = results.filter((r) => !r.catalogMiss);
-  const readyRate = pipelineCards.length > 0
-    ? pipelineCards.filter((r) => Object.values(r.fields).every((v) => v === 'correct' || v === 'excluded')).length / pipelineCards.length
-    : 0;
-
-  // Low-stakes: cards where all wrong fields are best_guess (not verified)
-  // For this we need the manifest data; approximate by checking if any verified field is wrong
-  const lowStakes = pipelineCards.filter((r) => {
-    const wrongFields = Object.entries(r.fields)
-      .filter(([, v]) => v === 'wrong')
-      .map(([k]) => k);
-    // A card is low-stakes if it has no wrong fields or all wrong fields would be best_guess
-    // We can't tell from results alone, but wrongFields.length === 0 means it's perfect
-    return wrongFields.length === 0;
-  });
-  const lowStakesShare = pipelineCards.length > 0 ? lowStakes.length / pipelineCards.length : 0;
+  const readyCount = pipelineCards.filter((r) => Object.values(r.fields).every((v) => v === 'correct' || v === 'excluded')).length;
+  const lowStakesCount = pipelineCards.filter((r) => {
+    return Object.values(r.fields).every((v) => v !== 'wrong');
+  }).length;
 
   console.log('\nSummary:');
   console.table([
     {
-      metric: 'Ready rate (all scored fields correct)',
-      value: `${(readyRate * 100).toFixed(0)}%`,
-      detail: `${Math.round(readyRate * pipelineCards.length)} / ${pipelineCards.length} cards`,
+      metric: 'Matched cards (candidate accuracy scored)',
+      value: `${pipelineCards.length}/${results.length}`,
     },
     {
-      metric: 'Low-stakes share (no wrong fields)',
-      value: `${(lowStakesShare * 100).toFixed(0)}%`,
-      detail: `${lowStakes.length} / ${pipelineCards.length} cards`,
+      metric: 'Catalog misses (extraction accuracy only)',
+      value: `${catalogMisses.length}/${results.length}`,
     },
     {
-      metric: 'Catalog misses',
-      value: catalogMisses.length,
-      detail: `${catalogMisses.length} / ${results.length} cards (not counted against pipeline)`,
+      metric: 'Ready rate (all candidate fields correct)',
+      value: `${readyCount}/${pipelineCards.length}`,
+    },
+    {
+      metric: 'Low-stakes (no wrong candidate fields)',
+      value: `${lowStakesCount}/${pipelineCards.length}`,
     },
   ]);
 
   // --- Detail on wrong fields ---
-  const wrongResults = results.filter(
+  const candWrong = results.filter(
     (r) => !r.catalogMiss && Object.values(r.fields).some((v) => v === 'wrong'),
   );
-  if (wrongResults.length > 0) {
-    console.log('\nDetailed wrong fields:');
-    for (const r of wrongResults) {
+  if (candWrong.length > 0) {
+    console.log('\nWrong candidate fields:');
+    for (const r of candWrong) {
       for (const [field, detail] of Object.entries(r.details)) {
+        console.log(`  Card ${r.cardId} / ${field}: expected=${JSON.stringify(detail.expected)} got=${JSON.stringify(detail.got)}`);
+      }
+    }
+  }
+
+  const extWrong = results.filter(
+    (r) => Object.values(r.extractionFields).some((v) => v === 'wrong'),
+  );
+  if (extWrong.length > 0) {
+    console.log('\nWrong extraction fields:');
+    for (const r of extWrong) {
+      for (const [field, detail] of Object.entries(r.extractionDetails)) {
         console.log(`  Card ${r.cardId} / ${field}: expected=${JSON.stringify(detail.expected)} got=${JSON.stringify(detail.got)}`);
       }
     }

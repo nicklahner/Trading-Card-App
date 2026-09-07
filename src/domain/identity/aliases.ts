@@ -64,10 +64,19 @@ const SET_ALIASES: Map<string, string> = new Map([
   // Topps Chrome
   ['topps chrome', 'topps-chrome'],
   ['chrome', 'topps-chrome'],
+  ['topps chrome football', 'topps-chrome'],
 
   // Bowman Chrome
   ['bowman chrome', 'bowman-chrome'],
   ['bowman chrome baseball', 'bowman-chrome'],
+
+  // Topps Flagship
+  ['topps flagship', 'topps-flagship'],
+  ['topps flagship football', 'topps-flagship'],
+  ['2026 topps flagship', 'topps-flagship'],
+  ['2026 topps flagship football', 'topps-flagship'],
+  ['2025 topps flagship', 'topps-flagship'],
+  ['2025 topps flagship football', 'topps-flagship'],
 ]);
 
 // --- Parallel aliases ---
@@ -149,4 +158,18 @@ export function canonicalSetName(name: string): string {
 export function canonicalParallelName(name: string): string {
   const norm = normalizeParallel(name);
   return PARALLEL_ALIASES.get(norm) ?? norm;
+}
+
+/**
+ * Check whether two player/card names match after normalization.
+ * Handles cases like "America's Duo" vs "America's Duo Combo Card"
+ * where one is a prefix of the other with trailing qualifiers.
+ */
+export function playerNamesMatch(a: string, b: string): boolean {
+  const na = normalize(a);
+  const nb = normalize(b);
+  if (na === nb) return true;
+  // Allow one to be a prefix of the other (for "Combo Card" suffixes etc.)
+  if (na.startsWith(nb) || nb.startsWith(na)) return true;
+  return false;
 }

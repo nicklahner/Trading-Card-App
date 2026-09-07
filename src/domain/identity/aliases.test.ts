@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { normalize, canonicalSetName, canonicalParallelName } from './aliases';
+import { normalize, canonicalSetName, canonicalParallelName, playerNamesMatch } from './aliases';
 
 describe('normalize', () => {
   it('lowercases and collapses whitespace', () => {
@@ -89,5 +89,35 @@ describe('canonicalParallelName', () => {
     expect(canonicalParallelName('Neon Green Pulsar')).toBe(
       'neon green pulsar',
     );
+  });
+});
+
+describe('canonicalSetName — Topps Flagship', () => {
+  it('maps Topps Flagship with and without Football suffix', () => {
+    expect(canonicalSetName('Topps Flagship')).toBe('topps-flagship');
+    expect(canonicalSetName('Topps Flagship Football')).toBe('topps-flagship');
+    expect(canonicalSetName('2026 Topps Flagship Football')).toBe('topps-flagship');
+  });
+});
+
+describe('playerNamesMatch', () => {
+  it('matches identical names', () => {
+    expect(playerNamesMatch('Eli Heidenreich', 'Eli Heidenreich')).toBe(true);
+  });
+
+  it('matches with trailing qualifier', () => {
+    expect(playerNamesMatch("America's Duo", "America's Duo Combo Card")).toBe(true);
+  });
+
+  it('case insensitive', () => {
+    expect(playerNamesMatch('MIKE EVANS', 'Mike Evans')).toBe(true);
+  });
+
+  it('rejects different names', () => {
+    expect(playerNamesMatch('Michael Irvin', 'CeeDee Lamb')).toBe(false);
+  });
+
+  it('rejects partial substring that is not a prefix', () => {
+    expect(playerNamesMatch('Evans', 'Mike Evans')).toBe(false);
   });
 });
