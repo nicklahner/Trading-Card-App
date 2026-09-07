@@ -1,6 +1,9 @@
 /**
  * Exhaustive copy maps for every domain enum.
  * When a value is added to the domain, this file must be updated or the build fails.
+ *
+ * Voice: "you", direct, no jargon, no exclamation marks.
+ * Never name a vendor in user-facing copy.
  */
 
 import type {
@@ -48,32 +51,70 @@ type SaleType =
   | 'best_offer_unknown_price'
   | 'unknown';
 
+type ValuationMethod =
+  | 'comps_strong'
+  | 'comps_only'
+  | 'blend'
+  | 'model_primary'
+  | 'model_only'
+  | 'grade_inferred'
+  | 'manual'
+  | 'unpriced';
+
+// ---------------------------------------------------------------------------
+// Flags that are system-internal and should not show per-card.
+// These are grouped into a single fallback message.
+// ---------------------------------------------------------------------------
+
+const SYSTEM_FAILURE_FLAGS = new Set([
+  'cardsight_failed',
+  'catalog_search_failed',
+  'parallel_fetch_failed',
+  'scp_linkage_failed',
+  'card_number_ocr_only',
+]);
+
+export const SYSTEM_FAILURE_MESSAGE =
+  "Couldn't check prices right now \u2014 your card is saved and we'll retry automatically.";
+
+/**
+ * Returns the user-facing copy for a flag, or the system failure
+ * fallback for internal flags that shouldn't surface per-card.
+ */
+export function flagCopy(flag: string): string {
+  if (SYSTEM_FAILURE_FLAGS.has(flag)) return SYSTEM_FAILURE_MESSAGE;
+  return identificationFlagCopy[flag as IdentificationFlag] ?? flag;
+}
+
 // ---------------------------------------------------------------------------
 // 1. Identification flags
 // ---------------------------------------------------------------------------
 
 export const identificationFlagCopy = {
   no_catalog_match: 'Not in the price catalogs yet',
-  redemption: 'This is a voucher you mail in \u2014 the actual card comes later',
+  redemption:
+    'This is a voucher you mail in \u2014 the actual card comes later, not in the pack',
   parallel_uncertain: 'Not sure which version this is',
   serial_unreadable: "Couldn't read the serial number",
   serial_mismatch: "Serial number doesn't match",
   providers_disagree: 'Two sources disagree \u2014 worth a look',
-  auto_uncertain: 'Not sure about the autograph',
+  auto_uncertain: 'Not sure if this is signed',
   photo_quality: 'Photo quality may affect results',
   no_back_photo: "No back photo \u2014 can't check everything",
   variation_possible: 'This card may have a variant',
   rookie_conflict: 'Rookie status differs from the catalog',
   no_scp_match: 'No price match found',
-  cardsight_failed: 'Card lookup service unavailable',
-  catalog_search_failed: 'Catalog search failed',
-  slab: 'Graded slab detected',
-  parallel_fetch_failed: "Couldn't load parallel options",
-  scp_linkage_failed: 'Price linkage failed',
-  card_number_mismatch: 'Card number needs verification',
-  card_number_unverified: 'Card number not confirmed',
-  card_number_ocr_only: 'Card number read by backup scanner only',
-  card_number_unreadable: "Couldn't read the card number",
+  slab: 'Graded card in a sealed case',
+  // System-internal flags — these use the grouped SYSTEM_FAILURE_MESSAGE
+  // via flagCopy(), but the Record must be exhaustive for type-safety.
+  cardsight_failed: SYSTEM_FAILURE_MESSAGE,
+  catalog_search_failed: SYSTEM_FAILURE_MESSAGE,
+  parallel_fetch_failed: SYSTEM_FAILURE_MESSAGE,
+  scp_linkage_failed: SYSTEM_FAILURE_MESSAGE,
+  card_number_ocr_only: SYSTEM_FAILURE_MESSAGE,
+  card_number_mismatch: 'Card number needs checking \u2014 look at the back of the card',
+  card_number_unverified: 'Card number not confirmed \u2014 check it matches the back',
+  card_number_unreadable: "Couldn't read the card number \u2014 enter it from the back of the card",
 } as const satisfies Record<IdentificationFlag, string>;
 
 // ---------------------------------------------------------------------------
@@ -82,7 +123,7 @@ export const identificationFlagCopy = {
 
 export const itemStatusCopy = {
   draft: 'Scanning',
-  identifying: 'Identifying...',
+  identifying: 'Identifying\u2026',
   needs_review: 'Needs review',
   owned: 'In collection',
   sold: 'Sold',
@@ -95,7 +136,7 @@ export const itemStatusCopy = {
 
 export const identificationStatusCopy = {
   queued: 'Waiting',
-  running: 'Identifying...',
+  running: 'Identifying\u2026',
   ready: 'Ready to add',
   needs_review: 'Needs review',
   confirmed: 'Confirmed',
@@ -108,12 +149,12 @@ export const identificationStatusCopy = {
 
 export const failureReasonCopy = {
   quota_exhausted:
-    "We've used this month's lookups. Try again next month or enter it yourself.",
+    "You've used this month's identification lookups. You can still add cards by entering the details yourself, or raise the limit in Settings.",
   provider_unavailable:
     'The identification service is temporarily unavailable. Try again in a few minutes.',
   image_unreadable:
-    "The photo wasn't clear enough to read. Try retaking it with better lighting.",
-  internal: 'Something went wrong on our end. Try again.',
+    "The photo wasn't clear enough to read. Try retaking it with better lighting and the full card in frame.",
+  internal: 'Something went wrong. Try again, or enter the card yourself.',
 } as const satisfies Record<IdentificationFailureReason, string>;
 
 // ---------------------------------------------------------------------------
@@ -144,15 +185,18 @@ export const acquiredViaCopy = {
 
 // ---------------------------------------------------------------------------
 // 7. Raw condition tier
+// Order: best to worst, matching DESIGN §7.6 multipliers.
+// nm_mt (1.00) > market (default, no adjustment) > ex_mt (0.60) >
+// ex (0.45) > vg (0.30) > poor (0.15)
 // ---------------------------------------------------------------------------
 
 export const rawConditionTierCopy = {
-  market: 'Typical raw card',
-  nm_mt: 'Light wear',
-  ex_mt: 'Clear wear',
-  ex: 'Worn',
-  vg: 'Heavy wear',
-  poor: 'Damaged',
+  nm_mt: 'Looks perfect \u2014 sharp corners, centered, no marks',
+  market: 'Typical \u2014 some handling, nothing obvious',
+  ex_mt: 'Light wear \u2014 a soft corner or small edge nick',
+  ex: 'Noticeable wear \u2014 rounded corners, surface marks',
+  vg: 'Heavy wear \u2014 creases, whitening, or staining',
+  poor: 'Damaged \u2014 major creases, tears, or writing',
 } as const satisfies Record<RawConditionTier, string>;
 
 // ---------------------------------------------------------------------------
@@ -167,18 +211,33 @@ export const autoTypeCopy = {
 } as const satisfies Record<AutoType, string>;
 
 // ---------------------------------------------------------------------------
-// 9. Confidence
+// 9. Confidence (how sure, not how the value was calculated)
 // ---------------------------------------------------------------------------
 
 export const confidenceCopy = {
-  high: 'Based on recent sales',
-  medium: 'Estimated with some uncertainty',
-  low: 'Rough estimate',
+  high: 'Solid',
+  medium: 'Fair',
+  low: 'Rough',
   none: 'No value yet',
 } as const satisfies Record<Confidence, string>;
 
 // ---------------------------------------------------------------------------
-// 10. Sale type
+// 10. Valuation method (how the value was calculated)
+// ---------------------------------------------------------------------------
+
+export const valuationMethodCopy = {
+  comps_strong: 'Based on recent sales',
+  comps_only: 'Based on sales, no model check',
+  blend: 'Sales and model blended',
+  model_primary: 'Estimated from price guides',
+  model_only: 'Estimated \u2014 no recent sales found',
+  grade_inferred: 'Grade estimated from similar cards',
+  manual: 'You set this value',
+  unpriced: 'No value yet',
+} as const satisfies Record<ValuationMethod, string>;
+
+// ---------------------------------------------------------------------------
+// 11. Sale type
 // ---------------------------------------------------------------------------
 
 export const saleTypeCopy = {
@@ -210,55 +269,70 @@ type HelpFlag =
   | 'provider_unavailable'
   | 'image_unreadable'
   | 'redemption'
-  | 'quota_exhausted';
+  | 'quota_exhausted'
+  | 'card_number_mismatch'
+  | 'card_number_unverified'
+  | 'card_number_unreadable';
 
 export const helpPanelContent = {
   parallel_uncertain: {
     title: 'Which version is this?',
-    body: "Your card may be a base, refractor, prizm, or other parallel. We couldn't tell from the photos. Pick the correct version so the value is accurate.",
+    body: 'A parallel is the same card printed in a different colour or finish \u2014 often rarer and more valuable than the plain version. Common examples: a coloured border instead of silver, a shiny or textured surface, or a numbered print run like /99. Look at the card\u2019s border colour, surface finish, and any number printed on it, then pick the version that matches.',
   },
   no_catalog_match: {
     title: 'Not in the catalogs',
-    body: "We searched our price sources but didn't find this card. It may be too new, too obscure, or from a set we don't cover yet. You can enter the details yourself.",
+    body: "Your card isn't in the price databases yet. This is normal for brand-new sets \u2014 they usually appear within a few weeks of release. Enter the details yourself and the app will automatically link it and fill in the value once the catalogs catch up.",
   },
   photo_quality: {
     title: 'Photo quality',
-    body: 'Glare, blur, or cropping made it harder to read your card. You can retake the photo for better results, or confirm the details manually.',
+    body: 'Glare, blur, or cropping made it harder to read your card. You can retake the photo for better results, or confirm the details yourself.',
   },
   no_back_photo: {
     title: 'No back photo',
-    body: "Without a back photo we can't verify the card number, set details, or serial number. Add a back photo for a more accurate identification.",
+    body: "Without a back photo the app can't verify the card number, set, or serial number. Add a back photo for a more accurate match.",
   },
   variation_possible: {
     title: 'Possible variant',
-    body: 'This card might be a short print, photo variation, or other variant. Check the photo and card number against known variations for this set.',
+    body: 'This card might be a short print (SP) or photo variation \u2014 the same card number with a different image, sometimes worth much more. Compare your photo to the standard version.',
   },
   serial_mismatch: {
     title: 'Serial number mismatch',
-    body: "The serial number we read doesn't match what we expected for this card. Double-check the number on the card and correct it if needed.",
+    body: "The serial number read from the card doesn't match what the catalog expects for this version. Check the number printed on the card and correct it if needed.",
   },
   rookie_conflict: {
     title: 'Rookie status conflict',
-    body: "Our catalog says this card's rookie status is different from what we detected. Verify whether the card has a rookie logo or designation.",
+    body: "The catalog says this card's rookie status is different from what the app detected. Check whether the card has an RC logo.",
   },
   no_scp_match: {
     title: 'No price match',
-    body: "We identified the card but couldn't find a matching price entry. The value shown may be less accurate until a price match is confirmed.",
+    body: "The card was identified but no matching price entry was found. The value may be less accurate until a price match is confirmed.",
   },
   provider_unavailable: {
     title: 'Service temporarily down',
-    body: 'The identification service is having issues right now. Your card has been saved and will be retried automatically. You can also try again manually.',
+    body: 'The identification service is having issues right now. Your card has been saved and will be retried automatically, or you can try again yourself.',
   },
   image_unreadable: {
     title: 'Photo not readable',
-    body: "We couldn't read enough detail from your photo. Try retaking with even lighting, no glare, and the full card in frame.",
+    body: "The app couldn't read enough detail from your photo. Try retaking with even lighting, no glare, and the full card in frame.",
   },
   redemption: {
     title: 'Redemption card',
-    body: "This looks like a redemption voucher, not the actual card. You mail it in to receive the real card. We can't value it until you know which card you'll receive.",
+    body: "This is a redemption voucher, not the actual card. You mail it to the manufacturer and they send you the real card. The app can't value it until you know which card you'll receive.",
   },
   quota_exhausted: {
-    title: 'Monthly lookups used',
-    body: "You've used all your identification lookups for this billing period. You can still add cards by entering the details manually, or wait until next month.",
+    title: 'Monthly lookups used up',
+    body: "You've used all your identification lookups for this billing period. You can still add cards by entering the details yourself. To increase the limit, go to Settings.",
+  },
+  card_number_mismatch: {
+    title: 'Card number needs checking',
+    body: 'The app read one number but a second check got a different result. Look at the top-left corner of the back of the card \u2014 the card number is usually printed there. Enter what you see.',
+  },
+  card_number_unverified: {
+    title: 'Card number not confirmed',
+    body: "The app read a card number but couldn't double-check it. Look at the back of the card \u2014 the number is usually in the top-left corner \u2014 and confirm it matches.",
+  },
+  card_number_unreadable: {
+    title: "Couldn't read the card number",
+    body: "The app couldn't read the card number from your photo. Look at the back of the card \u2014 the number is usually in the top-left corner \u2014 and type it in.",
   },
 } as const satisfies Record<HelpFlag, HelpEntry>;

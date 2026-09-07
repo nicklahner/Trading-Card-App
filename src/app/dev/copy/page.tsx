@@ -8,6 +8,7 @@ import {
   rawConditionTierCopy,
   autoTypeCopy,
   confidenceCopy,
+  valuationMethodCopy,
   saleTypeCopy,
   helpPanelContent,
 } from '@/ui/copy';
@@ -100,6 +101,7 @@ export default function CopyDevPage() {
       />
       <Section title="Auto Type" entries={autoTypeCopy} />
       <Section title="Confidence" entries={confidenceCopy} />
+      <Section title="Valuation Method" entries={valuationMethodCopy} />
       <Section title="Sale Type" entries={saleTypeCopy} />
 
       <HelpSection entries={helpPanelContent} />
