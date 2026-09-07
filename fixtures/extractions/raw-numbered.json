@@ -1,0 +1,46 @@
+{
+  "kind": "raw",
+  "players": [
+    { "name": "Anthony Richardson", "confidence": 0.97, "evidence": "Name printed on front: \"ANTHONY RICHARDSON\"" }
+  ],
+  "team": { "value": "Indianapolis Colts", "confidence": 0.94, "evidence": "Colts logo and jersey visible" },
+  "position": { "value": "QB", "confidence": 0.88, "evidence": "Quarterback stance in uniform" },
+  "set_year": { "value": 2024, "confidence": 0.95, "evidence": "Copyright 2024 on back" },
+  "copyright_year": { "value": 2024, "confidence": 0.97, "evidence": "\u00a9 2024 Panini America" },
+  "manufacturer": { "value": "Panini", "confidence": 0.99, "evidence": "Panini logo on back" },
+  "set_name": { "value": "Prizm", "confidence": 0.97, "evidence": "\"PRIZM\" logo on front" },
+  "subset_or_insert": { "value": null, "confidence": 0.88 },
+  "card_number": { "value": "215", "confidence": 0.96, "evidence": "#215 on back" },
+  "rookie_logo_printed": { "value": false, "confidence": 0.92, "evidence": "No RC logo visible" },
+  "autograph": {
+    "present": false,
+    "type": null,
+    "certification": "none_visible",
+    "confidence": 0.95
+  },
+  "memorabilia": { "value": false, "confidence": 0.95 },
+  "serial": {
+    "printed": "42/199",
+    "number": 42,
+    "print_run": 199,
+    "readable": "yes",
+    "confidence": 0.98
+  },
+  "finish": {
+    "base_color": "blue",
+    "border_color": "blue",
+    "pattern": "shimmer",
+    "refractor_sheen_visible": "yes",
+    "parallel_name_printed": "Blue",
+    "description": "Deep blue card face and borders with prismatic shimmer pattern; \"Blue\" parallel name printed on back near serial number"
+  },
+  "slab": null,
+  "photo_quality": {
+    "glare": "none",
+    "blur": "none",
+    "card_fully_in_frame": true,
+    "suggest_retake": []
+  },
+  "front_text": ["PRIZM", "ANTHONY RICHARDSON", "COLTS", "QB"],
+  "back_text": ["215", "Anthony Richardson", "Indianapolis Colts", "42/199", "Blue", "\u00a9 2024 Panini America, Inc."]
+}

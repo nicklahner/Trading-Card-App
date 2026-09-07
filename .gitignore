@@ -26,8 +26,9 @@ dist/
 *.tsbuildinfo
 next-env.d.ts
 
-# real card fixtures (not committed)
-fixtures/cards/real/
+# real card fixtures (images not committed, manifest is)
+fixtures/cards/real/*
+!fixtures/cards/real/manifest.json
 
 # playwright
 /test-results/

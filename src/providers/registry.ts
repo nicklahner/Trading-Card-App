@@ -16,7 +16,7 @@ export interface ProviderRegistry {
   /** CardSight or Ximilar image-based card identifier. */
   cardIdentifier: CardIdentifier;
 
-  /** Claude Vision text/field extractor. */
+  /** Vision text/field extractor (OpenAI or Claude, selected by config). */
   textExtractor: TextExtractor;
 
   /** CardSight catalog search. */

@@ -11,6 +11,7 @@ import { prisma } from '@/db/client';
 import { createProviders } from '@/providers';
 import { buildIdentityKey, type CardIdentity, type PlayerInfo } from '@/domain/identity/types';
 import { processPhoto } from '@/lib/photos';
+import { runIdentifyJob } from '@/jobs/identify';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -633,4 +634,347 @@ export async function uploadPhoto(
 
   revalidatePath('/', 'layout');
   return photo;
+}
+
+// ---------------------------------------------------------------------------
+// Trigger identification
+// ---------------------------------------------------------------------------
+
+export async function triggerIdentification(itemId: string) {
+  await requireAuth();
+  z.string().uuid().parse(itemId);
+
+  const item = await prisma.item.findUniqueOrThrow({
+    where: { id: itemId },
+  });
+
+  if (item.status !== 'draft' && item.status !== 'identifying') {
+    throw new Error(
+      `Cannot trigger identification for item with status '${item.status}'`,
+    );
+  }
+
+  await prisma.item.update({
+    where: { id: itemId },
+    data: { status: 'identifying' },
+  });
+
+  // Run the identify job inline (LocalQueue fires async via setTimeout)
+  runIdentifyJob({ itemIds: [itemId] }).catch((err) => {
+    console.error(`[triggerIdentification] Job failed for item ${itemId}:`, err);
+  });
+
+  revalidatePath('/', 'layout');
+  return { itemId };
+}
+
+// ---------------------------------------------------------------------------
+// Confirm identification
+// ---------------------------------------------------------------------------
+
+const confirmIdentificationSchema = z.object({
+  chosenCandidateIndex: z.number().int().min(0),
+  corrections: z
+    .array(
+      z.object({
+        field: z.string(),
+        predicted: z.unknown(),
+        corrected: z.unknown(),
+      }),
+    )
+    .default([]),
+  conditionKind: conditionKindEnum.optional(),
+  rawConditionTier: rawConditionTierEnum.nullable().optional(),
+  grader: graderEnum.nullable().optional(),
+  grade: z.number().nullable().optional(),
+  certNumber: z.string().nullable().optional(),
+  storage: storageTypeEnum.optional(),
+  acquiredVia: acquiredViaEnum.optional(),
+  costPriceCents: z.number().int().nullable().optional(),
+  notSure: z.boolean().default(false),
+});
+
+export async function confirmIdentification(
+  itemId: string,
+  data: unknown,
+) {
+  await requireAuth();
+  z.string().uuid().parse(itemId);
+  const parsed = confirmIdentificationSchema.parse(data);
+
+  // Find the latest identification for this item
+  const identification = await prisma.identification.findFirst({
+    where: { itemId, status: { in: ['needs_review', 'ready'] } },
+    orderBy: { createdAt: 'desc' },
+  });
+
+  if (!identification) {
+    throw new Error('No pending identification found for this item');
+  }
+
+  const candidates = (identification.candidates ?? []) as Array<{
+    provider: string;
+    cardId: string;
+    parallelId: string | null;
+    playerName: string;
+    year: number;
+    setName: string;
+    subsetOrInsert: string | null;
+    cardNumber: string;
+    parallelName: string | null;
+    isRookie: boolean;
+    imageUrl?: string;
+    score: number;
+  }>;
+
+  const chosen = candidates[parsed.chosenCandidateIndex];
+
+  // Update identification status
+  await prisma.identification.update({
+    where: { id: identification.id },
+    data: {
+      status: 'confirmed',
+      chosenCandidateIndex: parsed.chosenCandidateIndex,
+      confirmedVia: 'single',
+      confirmedAt: new Date(),
+    },
+  });
+
+  // Save corrections
+  if (parsed.corrections.length > 0) {
+    await prisma.identificationCorrection.createMany({
+      data: parsed.corrections.map((c) => ({
+        identificationId: identification.id,
+        field: c.field,
+        predicted: c.predicted as import('@prisma/client').Prisma.InputJsonValue,
+        corrected: c.corrected as import('@prisma/client').Prisma.InputJsonValue,
+      })),
+    });
+  }
+
+  // Find or create the Card from the candidate (or extraction if unmatched)
+  let cardData: CardFields;
+
+  if (chosen) {
+    cardData = {
+      year: chosen.year,
+      manufacturer: 'Unknown', // Candidate doesn't carry manufacturer
+      setName: chosen.setName,
+      subset: chosen.subsetOrInsert ?? null,
+      cardNumber: chosen.cardNumber,
+      players: [
+        {
+          name: chosen.playerName,
+          team: null,
+          position: null,
+        },
+      ],
+      parallel: chosen.parallelName ?? null,
+      printRun: null,
+      isAuto: false,
+      isMemorabilia: false,
+      isRookie: chosen.isRookie,
+      variation: null,
+      licensed: 'unknown' as const,
+      cardsightCardId: chosen.cardId,
+      cardsightParallelId: chosen.parallelId,
+      referenceImageUrl: chosen.imageUrl ?? null,
+    };
+  } else {
+    // Use extraction fields for unmatched
+    const extraction = identification.extraction as unknown as import('@/providers/types').CardExtraction | null;
+    if (!extraction) {
+      throw new Error('No extraction data available for unmatched identification');
+    }
+    cardData = {
+      year: extraction.set_year.value ?? extraction.copyright_year.value ?? 0,
+      manufacturer: extraction.manufacturer.value ?? 'Unknown',
+      setName: extraction.set_name.value ?? 'Unknown',
+      subset: extraction.subset_or_insert.value ?? null,
+      cardNumber: extraction.card_number.value ?? '0',
+      players: extraction.players.map((p) => ({
+        name: p.name,
+        team: extraction.team.value,
+        position: extraction.position.value,
+      })),
+      parallel: extraction.finish.parallel_name_printed ?? null,
+      printRun: extraction.serial.print_run ?? null,
+      isAuto: extraction.autograph.present ?? false,
+      isMemorabilia: extraction.memorabilia.value ?? false,
+      isRookie: extraction.rookie_logo_printed.value ?? false,
+      variation: null,
+      licensed: 'unknown' as const,
+    };
+  }
+
+  const card = await findOrCreateCard(cardData);
+
+  // Build item update
+  const itemUpdate: Record<string, unknown> = {
+    cardId: card.id,
+    status: 'owned',
+  };
+
+  // Apply condition fields if provided
+  if (parsed.conditionKind !== undefined) itemUpdate.conditionKind = parsed.conditionKind;
+  if (parsed.rawConditionTier !== undefined) itemUpdate.rawConditionTier = parsed.rawConditionTier;
+  if (parsed.grader !== undefined) itemUpdate.grader = parsed.grader;
+  if (parsed.grade !== undefined) itemUpdate.grade = parsed.grade;
+  if (parsed.certNumber !== undefined) itemUpdate.certNumber = parsed.certNumber;
+  if (parsed.storage !== undefined) itemUpdate.storage = parsed.storage;
+  if (parsed.acquiredVia !== undefined) itemUpdate.acquiredVia = parsed.acquiredVia;
+  if (parsed.costPriceCents !== undefined) itemUpdate.costPriceCents = parsed.costPriceCents;
+
+  // Handle "not sure" flow (§6.7b)
+  if (parsed.notSure) {
+    const alternateCandidates = candidates
+      .filter((_, i) => i !== parsed.chosenCandidateIndex)
+      .slice(0, 5)
+      .map((c) => ({
+        provider: c.provider,
+        cardId: c.cardId,
+        parallelId: c.parallelId,
+        playerName: c.playerName,
+        year: c.year,
+        setName: c.setName,
+        cardNumber: c.cardNumber,
+      }));
+
+    itemUpdate.identityUnverified = alternateCandidates;
+  }
+
+  await prisma.item.update({
+    where: { id: itemId },
+    data: itemUpdate,
+  });
+
+  // Update scan session count_confirmed
+  const item = await prisma.item.findUniqueOrThrow({
+    where: { id: itemId },
+    select: { scanSessionId: true },
+  });
+
+  if (item.scanSessionId) {
+    await prisma.scanSession.update({
+      where: { id: item.scanSessionId },
+      data: { countConfirmed: { increment: 1 } },
+    });
+  }
+
+  revalidatePath('/', 'layout');
+  return { itemId, cardId: card.id };
+}
+
+// ---------------------------------------------------------------------------
+// Bulk confirm identifications
+// ---------------------------------------------------------------------------
+
+const bulkConfirmSchema = z.object({
+  itemIds: z.array(z.string().uuid()).min(1),
+});
+
+export async function bulkConfirmIdentifications(
+  itemIds: string[],
+) {
+  await requireAuth();
+  const parsed = bulkConfirmSchema.parse({ itemIds });
+
+  const confirmedItems: string[] = [];
+
+  for (const itemId of parsed.itemIds) {
+    try {
+      // Find the latest identification for this item
+      const identification = await prisma.identification.findFirst({
+        where: { itemId, status: { in: ['needs_review', 'ready'] } },
+        orderBy: { createdAt: 'desc' },
+      });
+
+      if (!identification) continue;
+
+      // Confirm using the top candidate (index 0)
+      await confirmIdentification(itemId, {
+        chosenCandidateIndex: 0,
+        corrections: [],
+        notSure: false,
+      });
+
+      // Update confirmedVia to 'bulk'
+      await prisma.identification.update({
+        where: { id: identification.id },
+        data: { confirmedVia: 'bulk' },
+      });
+
+      confirmedItems.push(itemId);
+    } catch (err) {
+      console.error(`[bulkConfirm] Failed for item ${itemId}:`, err);
+    }
+  }
+
+  // Pick audit items: 10% of confirmed, minimum 2
+  if (confirmedItems.length > 0) {
+    const auditCount = Math.max(2, Math.ceil(confirmedItems.length * 0.1));
+    const shuffled = [...confirmedItems].sort(() => Math.random() - 0.5);
+    const auditItems = shuffled.slice(0, Math.min(auditCount, confirmedItems.length));
+
+    // Mark audit items with identity_unverified flag
+    for (const auditItemId of auditItems) {
+      await prisma.item.update({
+        where: { id: auditItemId },
+        data: {
+          identityUnverified: { audit: true, reason: 'bulk_confirm_audit' },
+        },
+      });
+    }
+  }
+
+  revalidatePath('/', 'layout');
+  return {
+    confirmed: confirmedItems.length,
+    total: parsed.itemIds.length,
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Retry identification
+// ---------------------------------------------------------------------------
+
+export async function retryIdentification(itemId: string) {
+  await requireAuth();
+  z.string().uuid().parse(itemId);
+
+  const item = await prisma.item.findUniqueOrThrow({
+    where: { id: itemId },
+  });
+
+  // Find the latest failed identification
+  const failedIdent = await prisma.identification.findFirst({
+    where: { itemId, status: 'failed' },
+    orderBy: { createdAt: 'desc' },
+  });
+
+  if (!failedIdent && item.status !== 'identifying') {
+    throw new Error('No failed identification found and item is not in identifying state');
+  }
+
+  // Reset item to identifying
+  await prisma.item.update({
+    where: { id: itemId },
+    data: { status: 'identifying' },
+  });
+
+  // Re-enqueue the identify job
+  runIdentifyJob({ itemIds: [itemId] }).catch((err) => {
+    console.error(`[retryIdentification] Job failed for item ${itemId}:`, err);
+  });
+
+  revalidatePath('/', 'layout');
+  return { itemId };
+}
+
+// ---------------------------------------------------------------------------
+// Delete item from review (alias for deleteItem)
+// ---------------------------------------------------------------------------
+
+export async function deleteItemFromReview(itemId: string) {
+  return deleteItem(itemId);
 }

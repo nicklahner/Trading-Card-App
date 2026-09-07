@@ -6,6 +6,8 @@ import {
   createScanSession,
   createDraftItem,
   uploadPhoto,
+  triggerIdentification,
+  retryIdentification,
 } from '@/app/(app)/actions';
 
 // ---------------------------------------------------------------------------
@@ -39,12 +41,15 @@ function processImageClientSide(file: File): Promise<Blob> {
 // Types
 // ---------------------------------------------------------------------------
 
+type CardStatus = 'draft' | 'identifying' | 'needs_review' | 'failed';
+
 interface ScannedCard {
   itemId: string;
   seq: number;
   frontUploaded: boolean;
   backUploaded: boolean;
   thumbnailUrl: string | null;
+  status: CardStatus;
 }
 
 type ScanPhase =
@@ -191,16 +196,29 @@ function CaptureView({
               frontUploaded: true,
               backUploaded: false,
               thumbnailUrl: thumbUrl,
+              status: 'draft' as CardStatus,
             },
           ]);
           setCurrentStep('back');
         } else {
-          // Update the last card to mark back as uploaded
+          // Update the last card to mark back as uploaded and trigger identification
           setCards((prev) =>
             prev.map((c, i) =>
-              i === prev.length - 1 ? { ...c, backUploaded: true } : c,
+              i === prev.length - 1
+                ? { ...c, backUploaded: true, status: 'identifying' as CardStatus }
+                : c,
             ),
           );
+          // Auto-trigger identification when back photo is uploaded
+          triggerIdentification(itemId).catch(() => {
+            setCards((prev) =>
+              prev.map((c) =>
+                c.itemId === itemId
+                  ? { ...c, status: 'failed' as CardStatus }
+                  : c,
+              ),
+            );
+          });
           setCurrentStep('between');
         }
       } catch (err: unknown) {
@@ -218,7 +236,45 @@ function CaptureView({
   }
 
   function handleSkipBack() {
+    // Trigger identification with front-only photo
+    if (currentItemId) {
+      setCards((prev) =>
+        prev.map((c) =>
+          c.itemId === currentItemId
+            ? { ...c, status: 'identifying' as CardStatus }
+            : c,
+        ),
+      );
+      triggerIdentification(currentItemId).catch(() => {
+        setCards((prev) =>
+          prev.map((c) =>
+            c.itemId === currentItemId
+              ? { ...c, status: 'failed' as CardStatus }
+              : c,
+          ),
+        );
+      });
+    }
     setCurrentStep('between');
+  }
+
+  function handleRetry(itemId: string) {
+    setCards((prev) =>
+      prev.map((c) =>
+        c.itemId === itemId
+          ? { ...c, status: 'identifying' as CardStatus }
+          : c,
+      ),
+    );
+    retryIdentification(itemId).catch(() => {
+      setCards((prev) =>
+        prev.map((c) =>
+          c.itemId === itemId
+            ? { ...c, status: 'failed' as CardStatus }
+            : c,
+        ),
+      );
+    });
   }
 
   return (
@@ -351,6 +407,35 @@ function CaptureView({
                 <span className="mt-0.5 text-xs text-gray-400">
                   #{card.seq}
                 </span>
+                {/* Status chip */}
+                <span
+                  className={`mt-0.5 rounded px-1 text-[10px] font-medium ${
+                    card.status === 'draft'
+                      ? 'bg-gray-100 text-gray-500'
+                      : card.status === 'identifying'
+                        ? 'bg-blue-100 text-blue-600'
+                        : card.status === 'needs_review'
+                          ? 'bg-amber-100 text-amber-600'
+                          : 'bg-red-100 text-red-600'
+                  }`}
+                >
+                  {card.status === 'draft'
+                    ? 'draft'
+                    : card.status === 'identifying'
+                      ? 'ID...'
+                      : card.status === 'needs_review'
+                        ? 'review'
+                        : 'failed'}
+                </span>
+                {card.status === 'failed' && (
+                  <button
+                    type="button"
+                    onClick={() => handleRetry(card.itemId)}
+                    className="mt-0.5 text-[10px] text-blue-600 underline"
+                  >
+                    retry
+                  </button>
+                )}
               </div>
             ))}
           </div>

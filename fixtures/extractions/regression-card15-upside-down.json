@@ -1,0 +1,47 @@
+{
+  "kind": "raw",
+  "players": [
+    { "name": "CeeDee Lamb", "confidence": 0.55, "evidence": "Back text mentions 'CeeDee' — front image upside-down, name not readable from front" },
+    { "name": "George Pickens", "confidence": 0.50, "evidence": "Back text mentions 'Pickens' — front image upside-down, name not readable from front" }
+  ],
+  "team": { "value": "Dallas Cowboys", "confidence": 0.45, "evidence": "Star logo partially visible on upside-down front" },
+  "position": { "value": null, "confidence": 0.10 },
+  "set_year": { "value": 2026, "confidence": 0.70, "evidence": "Copyright line on back reads '© 2026 Topps'" },
+  "copyright_year": { "value": 2026, "confidence": 0.85, "evidence": "© 2026 The Topps Company, Inc." },
+  "manufacturer": { "value": "Topps", "confidence": 0.85, "evidence": "Topps logo on back" },
+  "set_name": { "value": null, "confidence": 0.20 },
+  "subset_or_insert": { "value": "America's Duo", "confidence": 0.60, "evidence": "\"AMERICA'S DUO\" text visible on upside-down front" },
+  "card_number": { "value": "296", "confidence": 0.75, "evidence": "#296 printed on back" },
+  "rookie_logo_printed": { "value": false, "confidence": 0.70 },
+  "autograph": {
+    "present": false,
+    "type": null,
+    "certification": "none_visible",
+    "confidence": 0.80
+  },
+  "memorabilia": { "value": false, "confidence": 0.80 },
+  "serial": {
+    "printed": null,
+    "number": null,
+    "print_run": null,
+    "readable": "none_visible",
+    "confidence": 0.75
+  },
+  "finish": {
+    "base_color": null,
+    "border_color": null,
+    "pattern": null,
+    "refractor_sheen_visible": "cannot_tell",
+    "parallel_name_printed": null,
+    "description": "Cannot reliably assess finish — front image is upside-down"
+  },
+  "slab": null,
+  "photo_quality": {
+    "glare": "none",
+    "blur": "minor",
+    "card_fully_in_frame": true,
+    "suggest_retake": ["image_may_be_rotated"]
+  },
+  "front_text": ["AMERICA'S DUO"],
+  "back_text": ["296", "CeeDee Lamb", "George Pickens", "Dallas Cowboys", "© 2026 The Topps Company, Inc."]
+}

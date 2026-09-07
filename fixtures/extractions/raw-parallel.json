@@ -1,0 +1,46 @@
+{
+  "kind": "raw",
+  "players": [
+    { "name": "CJ Stroud", "confidence": 0.97, "evidence": "Name printed on front: \"C.J. STROUD\"" }
+  ],
+  "team": { "value": "Houston Texans", "confidence": 0.94, "evidence": "Texans logo and jersey visible" },
+  "position": { "value": "QB", "confidence": 0.88, "evidence": "Quarterback throwing stance" },
+  "set_year": { "value": 2023, "confidence": 0.95, "evidence": "Copyright 2023 on back" },
+  "copyright_year": { "value": 2023, "confidence": 0.96, "evidence": "\u00a9 2023 Panini America" },
+  "manufacturer": { "value": "Panini", "confidence": 0.99, "evidence": "Panini logo on back" },
+  "set_name": { "value": "Prizm", "confidence": 0.97, "evidence": "\"PRIZM\" logo on front" },
+  "subset_or_insert": { "value": null, "confidence": 0.88 },
+  "card_number": { "value": "301", "confidence": 0.98, "evidence": "#301 on back" },
+  "rookie_logo_printed": { "value": true, "confidence": 0.94, "evidence": "RC logo in bottom corner" },
+  "autograph": {
+    "present": false,
+    "type": null,
+    "certification": "none_visible",
+    "confidence": 0.95
+  },
+  "memorabilia": { "value": false, "confidence": 0.95 },
+  "serial": {
+    "printed": null,
+    "number": null,
+    "print_run": null,
+    "readable": "none_visible",
+    "confidence": 0.90
+  },
+  "finish": {
+    "base_color": "silver",
+    "border_color": null,
+    "pattern": "shimmer",
+    "refractor_sheen_visible": "cannot_tell",
+    "parallel_name_printed": null,
+    "description": "Card surface has a distinct silver metallic sheen with a subtle shimmer pattern visible across the entire face; toploader prevents confirming refractor behavior under tilt"
+  },
+  "slab": null,
+  "photo_quality": {
+    "glare": "minor",
+    "blur": "none",
+    "card_fully_in_frame": true,
+    "suggest_retake": ["tilt_shot"]
+  },
+  "front_text": ["PRIZM", "C.J. STROUD", "TEXANS", "QB"],
+  "back_text": ["301", "CJ Stroud", "Houston Texans", "\u00a9 2023 Panini America, Inc."]
+}

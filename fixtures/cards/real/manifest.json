@@ -1,0 +1,274 @@
+{
+  "cards": [
+    {
+      "id": "01",
+      "front": "01-front.jpg",
+      "back": "01-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    },
+    {
+      "id": "02",
+      "front": "02-front.jpg",
+      "back": "02-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    },
+    {
+      "id": "03",
+      "front": "03-front.jpg",
+      "back": "03-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    },
+    {
+      "id": "04",
+      "front": "04-front.jpg",
+      "back": "04-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    },
+    {
+      "id": "05",
+      "front": "05-front.jpg",
+      "back": "05-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    },
+    {
+      "id": "06",
+      "front": "06-front.jpg",
+      "back": "06-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    },
+    {
+      "id": "07",
+      "front": "07-front.jpg",
+      "back": "07-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    },
+    {
+      "id": "08",
+      "front": "08-front.jpg",
+      "back": "08-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    },
+    {
+      "id": "09",
+      "front": "09-front.jpg",
+      "back": "09-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    },
+    {
+      "id": "10",
+      "front": "10-front.jpg",
+      "back": "10-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    },
+    {
+      "id": "11",
+      "front": "11-front.jpg",
+      "back": "11-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    },
+    {
+      "id": "12",
+      "front": "12-front.jpg",
+      "back": "12-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    },
+    {
+      "id": "13",
+      "front": "13-front.jpg",
+      "back": "13-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    },
+    {
+      "id": "14",
+      "front": "14-front.jpg",
+      "back": "14-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    },
+    {
+      "id": "15",
+      "front": "15-front.jpg",
+      "back": "15-back.jpg",
+      "tilt": null,
+      "expected": {
+        "year": { "value": null, "status": "unsure" },
+        "set_name": { "value": null, "status": "unsure" },
+        "card_number": { "value": null, "status": "unsure" },
+        "player": { "value": null, "status": "unsure" },
+        "parallel": { "value": null, "status": "unsure" },
+        "print_run": { "value": null, "status": "unsure" },
+        "auto": { "value": false, "status": "unsure" },
+        "memorabilia": { "value": false, "status": "unsure" },
+        "serial": { "value": null, "status": "unsure" },
+        "storage": "toploader"
+      }
+    }
+  ]
+}

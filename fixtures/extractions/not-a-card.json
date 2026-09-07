@@ -1,0 +1,44 @@
+{
+  "kind": "not_a_card",
+  "players": [],
+  "team": { "value": null, "confidence": 0.0 },
+  "position": { "value": null, "confidence": 0.0 },
+  "set_year": { "value": null, "confidence": 0.0 },
+  "copyright_year": { "value": null, "confidence": 0.0 },
+  "manufacturer": { "value": null, "confidence": 0.0 },
+  "set_name": { "value": null, "confidence": 0.0 },
+  "subset_or_insert": { "value": null, "confidence": 0.0 },
+  "card_number": { "value": null, "confidence": 0.0 },
+  "rookie_logo_printed": { "value": null, "confidence": 0.0 },
+  "autograph": {
+    "present": null,
+    "type": null,
+    "certification": "unknown",
+    "confidence": 0.0
+  },
+  "memorabilia": { "value": null, "confidence": 0.0 },
+  "serial": {
+    "printed": null,
+    "number": null,
+    "print_run": null,
+    "readable": "none_visible",
+    "confidence": 0.0
+  },
+  "finish": {
+    "base_color": null,
+    "border_color": null,
+    "pattern": null,
+    "refractor_sheen_visible": "no",
+    "parallel_name_printed": null,
+    "description": "Image does not contain a trading card"
+  },
+  "slab": null,
+  "photo_quality": {
+    "glare": "none",
+    "blur": "none",
+    "card_fully_in_frame": false,
+    "suggest_retake": []
+  },
+  "front_text": [],
+  "back_text": []
+}

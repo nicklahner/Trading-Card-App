@@ -185,7 +185,7 @@ export interface CardExtraction {
     blur: 'none' | 'minor' | 'major';
     card_fully_in_frame: boolean;
     suggest_retake: Array<
-      'front' | 'back' | 'serial_closeup' | 'tilt_shot' | 'label_closeup'
+      'front' | 'back' | 'serial_closeup' | 'tilt_shot' | 'label_closeup' | 'image_may_be_rotated'
     >;
   };
   front_text: string[];

@@ -1,0 +1,910 @@
+'use client';
+
+import { useState, useTransition } from 'react';
+import { useRouter } from 'next/navigation';
+import {
+  confirmIdentification,
+  deleteItemFromReview,
+  getParallels,
+} from '@/app/(app)/actions';
+import type {
+  ReviewPageData,
+  ReviewCandidate,
+  ReviewPhoto,
+  CatalogParallel,
+} from './page';
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+
+function centsToStr(cents: number | null | undefined): string {
+  if (cents == null) return '';
+  return (cents / 100).toFixed(2);
+}
+
+function strToCents(val: string): number | null {
+  if (!val.trim()) return null;
+  const n = parseFloat(val);
+  if (isNaN(n)) return null;
+  return Math.round(n * 100);
+}
+
+function formatCents(cents: number): string {
+  return `$${(cents / 100).toFixed(2)}`;
+}
+
+// ---------------------------------------------------------------------------
+// Photo carousel
+// ---------------------------------------------------------------------------
+
+function PhotoCarousel({ photos }: { photos: ReviewPhoto[] }) {
+  const [current, setCurrent] = useState(0);
+
+  if (photos.length === 0) {
+    return (
+      <div className="flex h-64 items-center justify-center rounded-lg bg-gray-100 text-gray-400">
+        No photos
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative">
+      <img
+        src={photos[current].url}
+        alt={photos[current].side}
+        className="h-72 w-full rounded-lg object-contain bg-gray-50"
+      />
+      {photos.length > 1 && (
+        <>
+          <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 gap-1.5">
+            {photos.map((p, i) => (
+              <button
+                key={p.id}
+                type="button"
+                onClick={() => setCurrent(i)}
+                className={`h-2 w-2 rounded-full ${
+                  i === current ? 'bg-blue-600' : 'bg-gray-300'
+                }`}
+                aria-label={`View ${p.side}`}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={() => setCurrent((c) => (c > 0 ? c - 1 : photos.length - 1))}
+            className="absolute left-1 top-1/2 -translate-y-1/2 rounded-full bg-white/80 px-2 py-1 text-sm shadow"
+          >
+            &lsaquo;
+          </button>
+          <button
+            type="button"
+            onClick={() => setCurrent((c) => (c < photos.length - 1 ? c + 1 : 0))}
+            className="absolute right-1 top-1/2 -translate-y-1/2 rounded-full bg-white/80 px-2 py-1 text-sm shadow"
+          >
+            &rsaquo;
+          </button>
+        </>
+      )}
+      <p className="mt-1 text-center text-xs text-gray-400 capitalize">
+        {photos[current].side.replace('_', ' ')}
+      </p>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Candidate card component
+// ---------------------------------------------------------------------------
+
+function CandidateCard({
+  candidate,
+  isSelected,
+  onSelect,
+}: {
+  candidate: ReviewCandidate;
+  isSelected: boolean;
+  onSelect: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onSelect}
+      className={`w-full rounded border-2 p-3 text-left transition-colors ${
+        isSelected
+          ? 'border-blue-600 bg-blue-50'
+          : 'border-gray-200 active:bg-gray-50'
+      }`}
+    >
+      <div className="flex items-start justify-between">
+        <div className="min-w-0 flex-1">
+          <p className="text-sm font-medium">{candidate.playerName}</p>
+          <p className="text-xs text-gray-500">
+            {candidate.year} {candidate.setName}
+            {candidate.subsetOrInsert ? ` - ${candidate.subsetOrInsert}` : ''} #
+            {candidate.cardNumber}
+          </p>
+          {candidate.parallelName && (
+            <p className="text-xs text-gray-400">
+              {candidate.parallelName}
+            </p>
+          )}
+          {candidate.scpProductName && (
+            <p className="mt-1 text-xs text-gray-400">
+              SCP: {candidate.scpProductName}
+            </p>
+          )}
+        </div>
+        <div className="ml-2 flex flex-col items-end gap-1">
+          <span
+            className={`rounded px-1.5 py-0.5 text-xs font-medium ${
+              candidate.score >= 0.9
+                ? 'bg-green-100 text-green-700'
+                : candidate.score >= 0.7
+                  ? 'bg-yellow-100 text-yellow-700'
+                  : 'bg-red-100 text-red-700'
+            }`}
+          >
+            {(candidate.score * 100).toFixed(0)}%
+          </span>
+          {candidate.estValueCents != null && (
+            <span className="text-xs text-gray-500">
+              {formatCents(candidate.estValueCents)}
+            </span>
+          )}
+        </div>
+      </div>
+      {candidate.isRookie && (
+        <span className="mt-1 inline-block rounded bg-green-100 px-1.5 py-0.5 text-xs font-medium text-green-700">
+          RC
+        </span>
+      )}
+    </button>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Review form
+// ---------------------------------------------------------------------------
+
+export function ReviewForm({ data }: { data: ReviewPageData }) {
+  const router = useRouter();
+  const [pending, startTransition] = useTransition();
+  const [error, setError] = useState<string | null>(null);
+
+  // Candidate selection
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  // Editable identity fields (initialized from top candidate or extraction)
+  const topCandidate = data.candidates[0];
+  const ext = data.extraction;
+
+  const [playerNameVal, setPlayerNameVal] = useState(
+    topCandidate?.playerName ?? ext?.playerName ?? '',
+  );
+  const [year, setYear] = useState(
+    (topCandidate?.year ?? ext?.year ?? '').toString(),
+  );
+  const [setName, setSetName] = useState(
+    topCandidate?.setName ?? ext?.setName ?? data.sessionSetName ?? '',
+  );
+  const [subset, setSubset] = useState(
+    topCandidate?.subsetOrInsert ?? ext?.subset ?? '',
+  );
+  const [cardNumber, setCardNumber] = useState(
+    topCandidate?.cardNumber ?? ext?.cardNumber ?? '',
+  );
+
+  // Parallel
+  const [parallelName, setParallelName] = useState(
+    topCandidate?.parallelName ?? ext?.parallelName ?? '',
+  );
+  const [printRun, setPrintRun] = useState(
+    (ext?.printRun ?? '').toString(),
+  );
+  const [catalogParallels, setCatalogParallels] = useState<CatalogParallel[] | null>(null);
+  const [loadingParallels, setLoadingParallels] = useState(false);
+
+  // Serial number
+  const [serialNumber, setSerialNumber] = useState(
+    (ext?.serialNumber ?? '').toString(),
+  );
+  const [serialError, setSerialError] = useState<string | null>(null);
+
+  // Toggles
+  const [isAuto, setIsAuto] = useState(
+    topCandidate?.isRookie !== undefined
+      ? ext?.isAuto ?? false
+      : false,
+  );
+  const [isMemorabilia, setIsMemorabilia] = useState(ext?.isMemorabilia ?? false);
+  const [isRookie, setIsRookie] = useState(
+    topCandidate?.isRookie ?? ext?.isRookie ?? false,
+  );
+
+  // Condition
+  const [conditionKind, setConditionKind] = useState(data.conditionKind);
+  const [rawTier, setRawTier] = useState(data.rawConditionTier ?? 'market');
+  const [grader, setGrader] = useState('PSA');
+  const [grade, setGrade] = useState('');
+  const [certNumber, setCertNumber] = useState('');
+
+  // Storage
+  const [storage, setStorage] = useState(data.storage);
+
+  // Cost basis (collapsible)
+  const [showCost, setShowCost] = useState(false);
+  const [acquiredVia, setAcquiredVia] = useState('unknown');
+  const [acquiredOn, setAcquiredOn] = useState('');
+  const [costPrice, setCostPrice] = useState('');
+  const [costTax, setCostTax] = useState('');
+  const [costShipping, setCostShipping] = useState('');
+  const [costFees, setCostFees] = useState('');
+
+  // Delete confirmation
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+
+  // Track which flagged fields have been explicitly set
+  const [explicitFields, setExplicitFields] = useState<Set<string>>(new Set());
+
+  // ---------------------------------------------------------------------------
+  // Derived state
+  // ---------------------------------------------------------------------------
+
+  // Check if any "always" flag blocks confirm
+  const alwaysFlags = data.flags.filter((f) =>
+    ['numbered_serial', 'auto_detected', 'memorabilia_detected'].includes(f),
+  );
+  const unblockedFlags = alwaysFlags.filter((f) => {
+    if (f === 'numbered_serial' && explicitFields.has('serialNumber')) return false;
+    if (f === 'auto_detected' && explicitFields.has('isAuto')) return false;
+    if (f === 'memorabilia_detected' && explicitFields.has('isMemorabilia')) return false;
+    return true;
+  });
+  const isBlocked = unblockedFlags.length > 0;
+
+  // ---------------------------------------------------------------------------
+  // Handlers
+  // ---------------------------------------------------------------------------
+
+  function handleSelectCandidate(index: number) {
+    setSelectedIndex(index);
+    const c = data.candidates[index];
+    if (c) {
+      setPlayerNameVal(c.playerName);
+      setYear(c.year.toString());
+      setSetName(c.setName);
+      setSubset(c.subsetOrInsert ?? '');
+      setCardNumber(c.cardNumber);
+      setParallelName(c.parallelName ?? '');
+      setIsRookie(c.isRookie);
+    }
+  }
+
+  function handleLoadParallels() {
+    const c = data.candidates[selectedIndex];
+    if (!c) return;
+    setLoadingParallels(true);
+    getParallels({ provider: c.provider, id: c.cardId })
+      .then((parallels) => {
+        setCatalogParallels(
+          (parallels as { id: string; name: string; printRun: number | null }[]).map((p) => ({
+            id: p.id,
+            name: p.name,
+            printRun: p.printRun,
+          })),
+        );
+      })
+      .catch(() => setCatalogParallels([]))
+      .finally(() => setLoadingParallels(false));
+  }
+
+  function handleSelectParallel(p: CatalogParallel | null) {
+    if (p) {
+      setParallelName(p.name);
+      setPrintRun(p.printRun?.toString() ?? '');
+    } else {
+      setParallelName('');
+      setPrintRun('');
+    }
+    setCatalogParallels(null);
+  }
+
+  function validateSerial(val: string): boolean {
+    if (!val.trim()) {
+      setSerialError(null);
+      return true;
+    }
+    const num = parseInt(val, 10);
+    const pr = parseInt(printRun, 10);
+    if (isNaN(num) || num < 1) {
+      setSerialError('Must be a positive number');
+      return false;
+    }
+    if (!isNaN(pr) && num > pr) {
+      setSerialError(`Serial must be <= print run (${pr})`);
+      return false;
+    }
+    setSerialError(null);
+    return true;
+  }
+
+  function markExplicit(field: string) {
+    setExplicitFields((prev) => new Set(prev).add(field));
+  }
+
+  // Build corrections by comparing selected candidate to edited fields
+  function buildCorrections() {
+    const c = data.candidates[selectedIndex];
+    if (!c) return [];
+    const corrections: { field: string; predicted: unknown; corrected: unknown }[] = [];
+    if (playerNameVal !== c.playerName)
+      corrections.push({ field: 'playerName', predicted: c.playerName, corrected: playerNameVal });
+    if (year !== c.year.toString())
+      corrections.push({ field: 'year', predicted: c.year, corrected: parseInt(year, 10) });
+    if (setName !== c.setName)
+      corrections.push({ field: 'setName', predicted: c.setName, corrected: setName });
+    if ((subset || null) !== (c.subsetOrInsert || null))
+      corrections.push({ field: 'subset', predicted: c.subsetOrInsert, corrected: subset || null });
+    if (cardNumber !== c.cardNumber)
+      corrections.push({ field: 'cardNumber', predicted: c.cardNumber, corrected: cardNumber });
+    return corrections;
+  }
+
+  function handleConfirm() {
+    if (!validateSerial(serialNumber)) return;
+    setError(null);
+    startTransition(async () => {
+      try {
+        await confirmIdentification(data.itemId, {
+          chosenCandidateIndex: selectedIndex,
+          corrections: buildCorrections(),
+          conditionKind,
+          rawConditionTier: conditionKind === 'raw' ? rawTier : null,
+          grader: conditionKind === 'graded' ? grader : null,
+          grade: conditionKind === 'graded' && grade ? parseFloat(grade) : null,
+          certNumber: conditionKind === 'graded' && certNumber ? certNumber : null,
+          storage,
+          acquiredVia,
+          costPriceCents: strToCents(costPrice),
+          notSure: false,
+        });
+        router.push('/review');
+      } catch (err: unknown) {
+        setError(err instanceof Error ? err.message : 'Failed to confirm');
+      }
+    });
+  }
+
+  function handleNotSure() {
+    setError(null);
+    startTransition(async () => {
+      try {
+        // "Not sure" picks the lowest-value candidate
+        const lowestIdx = data.candidates.reduce(
+          (minIdx, c, i) =>
+            (c.estValueCents ?? Infinity) <
+            (data.candidates[minIdx].estValueCents ?? Infinity)
+              ? i
+              : minIdx,
+          0,
+        );
+        await confirmIdentification(data.itemId, {
+          chosenCandidateIndex: lowestIdx,
+          corrections: [],
+          conditionKind,
+          rawConditionTier: conditionKind === 'raw' ? rawTier : null,
+          storage,
+          notSure: true,
+        });
+        router.push('/review');
+      } catch (err: unknown) {
+        setError(err instanceof Error ? err.message : 'Failed to save');
+      }
+    });
+  }
+
+  function handleSkip() {
+    router.push('/review');
+  }
+
+  function handleDelete() {
+    setError(null);
+    startTransition(async () => {
+      try {
+        await deleteItemFromReview(data.itemId);
+        router.push('/review');
+      } catch (err: unknown) {
+        setError(err instanceof Error ? err.message : 'Failed to delete');
+      }
+    });
+  }
+
+  // ---------------------------------------------------------------------------
+  // Render
+  // ---------------------------------------------------------------------------
+
+  return (
+    <div className="space-y-6 pb-8">
+      {error && (
+        <p className="rounded bg-red-50 p-2 text-sm text-red-600">{error}</p>
+      )}
+
+      {/* Photos */}
+      <PhotoCarousel photos={data.photos} />
+
+      {/* Flag warnings */}
+      {data.flags.length > 0 && (
+        <div className="space-y-1">
+          {data.flags.map((flag) => (
+            <div
+              key={flag}
+              className="rounded border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-700"
+            >
+              {flag.replace(/_/g, ' ')}
+              {unblockedFlags.includes(flag) && (
+                <span className="ml-1 font-medium">
+                  -- must be explicitly set below
+                </span>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Candidates */}
+      <section>
+        <h2 className="mb-2 text-sm font-semibold text-gray-700">
+          Candidates
+        </h2>
+        <div className="space-y-2">
+          {data.candidates.map((c) => (
+            <CandidateCard
+              key={c.index}
+              candidate={c}
+              isSelected={selectedIndex === c.index}
+              onSelect={() => handleSelectCandidate(c.index)}
+            />
+          ))}
+          {data.candidates.length === 0 && (
+            <p className="text-sm text-gray-400">
+              No candidates found. Fill in identity manually.
+            </p>
+          )}
+        </div>
+      </section>
+
+      {/* Editable identity fields */}
+      <section>
+        <h2 className="mb-2 text-sm font-semibold text-gray-700">
+          Identity
+        </h2>
+        <div className="space-y-3">
+          <label className="block">
+            <span className="text-xs text-gray-500">Player</span>
+            <input
+              type="text"
+              value={playerNameVal}
+              onChange={(e) => setPlayerNameVal(e.target.value)}
+              className="mt-1 block w-full rounded border px-3 py-2 text-sm"
+            />
+          </label>
+          <div className="grid grid-cols-2 gap-2">
+            <label className="block">
+              <span className="text-xs text-gray-500">Year</span>
+              <input
+                type="number"
+                value={year}
+                onChange={(e) => setYear(e.target.value)}
+                className="mt-1 block w-full rounded border px-3 py-2 text-sm"
+              />
+            </label>
+            <label className="block">
+              <span className="text-xs text-gray-500">Card #</span>
+              <input
+                type="text"
+                value={cardNumber}
+                onChange={(e) => setCardNumber(e.target.value)}
+                className="mt-1 block w-full rounded border px-3 py-2 text-sm"
+              />
+            </label>
+          </div>
+          <label className="block">
+            <span className="text-xs text-gray-500">Set</span>
+            <input
+              type="text"
+              value={setName}
+              onChange={(e) => setSetName(e.target.value)}
+              className="mt-1 block w-full rounded border px-3 py-2 text-sm"
+            />
+          </label>
+          <label className="block">
+            <span className="text-xs text-gray-500">Subset / Insert</span>
+            <input
+              type="text"
+              value={subset}
+              onChange={(e) => setSubset(e.target.value)}
+              className="mt-1 block w-full rounded border px-3 py-2 text-sm"
+            />
+          </label>
+        </div>
+      </section>
+
+      {/* Parallel picker */}
+      <section>
+        <h2 className="mb-2 text-sm font-semibold text-gray-700">
+          Parallel
+        </h2>
+        <div className="flex items-center gap-2">
+          <input
+            type="text"
+            value={parallelName}
+            onChange={(e) => setParallelName(e.target.value)}
+            placeholder="Base"
+            className="min-w-0 flex-1 rounded border px-3 py-2 text-sm"
+          />
+          <input
+            type="number"
+            value={printRun}
+            onChange={(e) => setPrintRun(e.target.value)}
+            placeholder="Print run"
+            className="w-24 rounded border px-3 py-2 text-sm"
+          />
+        </div>
+        {data.candidates.length > 0 && (
+          <button
+            type="button"
+            onClick={handleLoadParallels}
+            disabled={loadingParallels}
+            className="mt-2 text-xs text-blue-600"
+          >
+            {loadingParallels ? 'Loading...' : 'Browse catalog parallels'}
+          </button>
+        )}
+        {catalogParallels && (
+          <ul className="mt-2 max-h-48 space-y-1 overflow-y-auto">
+            <li>
+              <button
+                type="button"
+                onClick={() => handleSelectParallel(null)}
+                className="w-full rounded border p-2 text-left text-sm active:bg-gray-50"
+              >
+                Base
+              </button>
+            </li>
+            {catalogParallels.map((p) => (
+              <li key={p.id}>
+                <button
+                  type="button"
+                  onClick={() => handleSelectParallel(p)}
+                  className="w-full rounded border p-2 text-left text-sm active:bg-gray-50"
+                >
+                  {p.name}
+                  {p.printRun && (
+                    <span className="ml-2 text-xs text-gray-400">
+                      /{p.printRun}
+                    </span>
+                  )}
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+
+      {/* Serial number */}
+      <section>
+        <label className="block">
+          <span className="text-sm font-medium">Serial number</span>
+          <input
+            type="number"
+            value={serialNumber}
+            onChange={(e) => {
+              setSerialNumber(e.target.value);
+              markExplicit('serialNumber');
+              validateSerial(e.target.value);
+            }}
+            placeholder="e.g. 42"
+            className={`mt-1 block w-full rounded border px-3 py-2 text-sm ${
+              serialError ? 'border-red-300' : ''
+            }`}
+          />
+          {serialError && (
+            <p className="mt-1 text-xs text-red-600">{serialError}</p>
+          )}
+        </label>
+      </section>
+
+      {/* Toggles: Auto / Memorabilia / Rookie */}
+      <section>
+        <h2 className="mb-2 text-sm font-semibold text-gray-700">Attributes</h2>
+        <div className="flex gap-4">
+          <label className="flex items-center gap-2 text-sm">
+            <input
+              type="checkbox"
+              checked={isAuto}
+              onChange={(e) => {
+                setIsAuto(e.target.checked);
+                markExplicit('isAuto');
+              }}
+              className="rounded"
+            />
+            Auto
+          </label>
+          <label className="flex items-center gap-2 text-sm">
+            <input
+              type="checkbox"
+              checked={isMemorabilia}
+              onChange={(e) => {
+                setIsMemorabilia(e.target.checked);
+                markExplicit('isMemorabilia');
+              }}
+              className="rounded"
+            />
+            Memorabilia
+          </label>
+          <label className="flex items-center gap-2 text-sm">
+            <input
+              type="checkbox"
+              checked={isRookie}
+              onChange={(e) => setIsRookie(e.target.checked)}
+              className="rounded"
+            />
+            Rookie
+          </label>
+        </div>
+      </section>
+
+      {/* Condition */}
+      <section>
+        <h2 className="mb-2 text-sm font-semibold text-gray-700">Condition</h2>
+        <div className="flex gap-3">
+          <label className="flex items-center gap-1 text-sm">
+            <input
+              type="radio"
+              name="conditionKind"
+              checked={conditionKind === 'raw'}
+              onChange={() => setConditionKind('raw')}
+            />
+            Raw
+          </label>
+          <label className="flex items-center gap-1 text-sm">
+            <input
+              type="radio"
+              name="conditionKind"
+              checked={conditionKind === 'graded'}
+              onChange={() => setConditionKind('graded')}
+            />
+            Graded
+          </label>
+        </div>
+
+        {conditionKind === 'raw' && (
+          <select
+            value={rawTier}
+            onChange={(e) => setRawTier(e.target.value)}
+            className="mt-2 block w-full rounded border px-3 py-2 text-sm"
+          >
+            <option value="market">Pack-fresh (Market)</option>
+            <option value="nm_mt">Light wear (NM-MT)</option>
+            <option value="ex_mt">Clear wear (EX-MT)</option>
+            <option value="ex">Worn (EX)</option>
+            <option value="vg">Heavy wear (VG)</option>
+            <option value="poor">Damaged (Poor)</option>
+          </select>
+        )}
+
+        {conditionKind === 'graded' && (
+          <div className="mt-2 space-y-2">
+            <select
+              value={grader}
+              onChange={(e) => setGrader(e.target.value)}
+              className="block w-full rounded border px-3 py-2 text-sm"
+            >
+              <option value="PSA">PSA</option>
+              <option value="BGS">BGS</option>
+              <option value="SGC">SGC</option>
+              <option value="CGC">CGC</option>
+              <option value="TAG">TAG</option>
+              <option value="ACE">ACE</option>
+              <option value="OTHER">Other</option>
+            </select>
+            <input
+              type="number"
+              step="0.5"
+              min="1"
+              max="10"
+              value={grade}
+              onChange={(e) => setGrade(e.target.value)}
+              placeholder="Grade (e.g. 10)"
+              className="block w-full rounded border px-3 py-2 text-sm"
+            />
+            <input
+              type="text"
+              value={certNumber}
+              onChange={(e) => setCertNumber(e.target.value)}
+              placeholder="Cert number"
+              className="block w-full rounded border px-3 py-2 text-sm"
+            />
+          </div>
+        )}
+      </section>
+
+      {/* Storage */}
+      <section>
+        <label className="block">
+          <span className="text-sm font-medium">Storage</span>
+          <select
+            value={storage}
+            onChange={(e) => setStorage(e.target.value)}
+            className="mt-1 block w-full rounded border px-3 py-2 text-sm"
+          >
+            <option value="toploader">Toploader</option>
+            <option value="penny_sleeve">Penny sleeve</option>
+            <option value="binder">Binder</option>
+            <option value="magnetic">Magnetic case</option>
+            <option value="slab">Slab</option>
+            <option value="none">None</option>
+            <option value="unknown">Unknown</option>
+          </select>
+        </label>
+      </section>
+
+      {/* Cost basis (collapsible) */}
+      <section>
+        <button
+          type="button"
+          onClick={() => setShowCost(!showCost)}
+          className="flex w-full items-center justify-between rounded border p-3 text-sm font-medium"
+        >
+          Cost basis
+          <span className="text-gray-400">{showCost ? '\u2212' : '+'}</span>
+        </button>
+        {showCost && (
+          <div className="mt-2 space-y-3">
+            <select
+              value={acquiredVia}
+              onChange={(e) => setAcquiredVia(e.target.value)}
+              className="block w-full rounded border px-3 py-2 text-sm"
+            >
+              <option value="unknown">Unknown</option>
+              <option value="purchase">Purchase</option>
+              <option value="pack_pull">Pack pull</option>
+              <option value="trade">Trade</option>
+              <option value="gift">Gift</option>
+            </select>
+            <label className="block">
+              <span className="text-xs text-gray-500">Acquired on</span>
+              <input
+                type="date"
+                value={acquiredOn}
+                onChange={(e) => setAcquiredOn(e.target.value)}
+                className="mt-1 block w-full rounded border px-3 py-2 text-sm"
+              />
+            </label>
+            <div className="grid grid-cols-2 gap-2">
+              <input
+                type="number"
+                step="0.01"
+                min="0"
+                value={costPrice}
+                onChange={(e) => setCostPrice(e.target.value)}
+                placeholder="Price ($)"
+                className="rounded border px-3 py-2 text-sm"
+              />
+              <input
+                type="number"
+                step="0.01"
+                min="0"
+                value={costTax}
+                onChange={(e) => setCostTax(e.target.value)}
+                placeholder="Tax ($)"
+                className="rounded border px-3 py-2 text-sm"
+              />
+              <input
+                type="number"
+                step="0.01"
+                min="0"
+                value={costShipping}
+                onChange={(e) => setCostShipping(e.target.value)}
+                placeholder="Shipping ($)"
+                className="rounded border px-3 py-2 text-sm"
+              />
+              <input
+                type="number"
+                step="0.01"
+                min="0"
+                value={costFees}
+                onChange={(e) => setCostFees(e.target.value)}
+                placeholder="Fees ($)"
+                className="rounded border px-3 py-2 text-sm"
+              />
+            </div>
+          </div>
+        )}
+      </section>
+
+      {/* Unmatched card banner */}
+      {data.unmatched && (
+        <section className="rounded-lg border border-amber-200 bg-amber-50 p-3 space-y-1">
+          <p className="text-sm font-medium text-amber-800">
+            Not in catalog — creating from photo
+          </p>
+          <p className="text-xs text-amber-600">
+            Verify the pre-filled fields and confirm. Set name carries from your previous card
+            {data.sessionSetName ? ` ("${data.sessionSetName}")` : ''}.
+            {data.scpProductName ? ` SCP match: ${data.scpProductName}.` : ' No SCP match yet — can link later.'}
+          </p>
+        </section>
+      )}
+
+      {/* Action buttons */}
+      <section className="space-y-3">
+        {/* Confirm */}
+        <button
+          type="button"
+          onClick={handleConfirm}
+          disabled={pending || (!data.unmatched && isBlocked)}
+          className="w-full rounded bg-green-600 py-3 text-sm font-medium text-white disabled:opacity-50"
+        >
+          {pending ? 'Confirming...' : (!data.unmatched && isBlocked) ? 'Resolve flags to confirm' : data.unmatched ? 'Add to Collection' : 'Confirm'}
+        </button>
+
+        {/* Skip */}
+        <button
+          type="button"
+          onClick={handleSkip}
+          disabled={pending}
+          className="w-full rounded border border-gray-300 py-3 text-sm font-medium text-gray-600"
+        >
+          Skip
+        </button>
+
+        {/* Not Sure */}
+        <button
+          type="button"
+          onClick={handleNotSure}
+          disabled={pending || data.candidates.length === 0}
+          className="w-full rounded border border-amber-300 py-3 text-sm font-medium text-amber-600 disabled:opacity-50"
+        >
+          {pending ? 'Saving...' : 'Not Sure'}
+        </button>
+
+        {/* Not a card / Delete */}
+        {!showDeleteConfirm ? (
+          <button
+            type="button"
+            onClick={() => setShowDeleteConfirm(true)}
+            className="w-full rounded border border-red-300 py-2.5 text-sm font-medium text-red-600"
+          >
+            Not a card / Delete
+          </button>
+        ) : (
+          <div className="rounded border border-red-300 p-3 space-y-2">
+            <p className="text-sm text-gray-600">
+              Permanently delete this item and its photos?
+            </p>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={handleDelete}
+                disabled={pending}
+                className="flex-1 rounded bg-red-600 py-2 text-sm font-medium text-white disabled:opacity-50"
+              >
+                {pending ? 'Deleting...' : 'Yes, delete'}
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowDeleteConfirm(false)}
+                className="flex-1 rounded border py-2 text-sm font-medium text-gray-600"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        )}
+      </section>
+    </div>
+  );
+}

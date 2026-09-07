@@ -1,0 +1,46 @@
+{
+  "kind": "raw",
+  "players": [
+    { "name": "CJ Stroud", "confidence": 0.97, "evidence": "Name printed on front: \"C.J. STROUD\"" }
+  ],
+  "team": { "value": "Houston Texans", "confidence": 0.94, "evidence": "Texans logo and jersey visible" },
+  "position": { "value": "QB", "confidence": 0.88, "evidence": "Quarterback throwing stance" },
+  "set_year": { "value": 2023, "confidence": 0.95, "evidence": "Copyright 2023 on back" },
+  "copyright_year": { "value": 2023, "confidence": 0.96, "evidence": "\u00a9 2023 Panini America" },
+  "manufacturer": { "value": "Panini", "confidence": 0.99, "evidence": "Panini logo on back" },
+  "set_name": { "value": "Prizm", "confidence": 0.97, "evidence": "\"PRIZM\" logo on front" },
+  "subset_or_insert": { "value": "Rookie Autographs", "confidence": 0.95, "evidence": "\"ROOKIE AUTOGRAPHS\" printed on front" },
+  "card_number": { "value": "RA-CS", "confidence": 0.97, "evidence": "RA-CS on back" },
+  "rookie_logo_printed": { "value": true, "confidence": 0.94, "evidence": "RC logo in bottom corner" },
+  "autograph": {
+    "present": true,
+    "type": "on_card",
+    "certification": "manufacturer_certified",
+    "confidence": 0.96
+  },
+  "memorabilia": { "value": false, "confidence": 0.92 },
+  "serial": {
+    "printed": null,
+    "number": null,
+    "print_run": null,
+    "readable": "none_visible",
+    "confidence": 0.90
+  },
+  "finish": {
+    "base_color": "silver",
+    "border_color": null,
+    "pattern": "none",
+    "refractor_sheen_visible": "no",
+    "parallel_name_printed": null,
+    "description": "Standard base finish with no special refractor pattern; on-card ink autograph across card center"
+  },
+  "slab": null,
+  "photo_quality": {
+    "glare": "none",
+    "blur": "none",
+    "card_fully_in_frame": true,
+    "suggest_retake": []
+  },
+  "front_text": ["PRIZM", "ROOKIE AUTOGRAPHS", "C.J. STROUD", "TEXANS", "QB"],
+  "back_text": ["RA-CS", "CJ Stroud", "Houston Texans", "Rookie Autographs", "\u00a9 2023 Panini America, Inc."]
+}

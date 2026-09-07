@@ -1,0 +1,44 @@
+{
+  "kind": "redemption",
+  "players": [],
+  "team": { "value": "Houston Texans", "confidence": 0.80, "evidence": "\"Houston Texans\" printed on redemption slip" },
+  "position": { "value": null, "confidence": 0.50 },
+  "set_year": { "value": 2023, "confidence": 0.85, "evidence": "\"2023 Prizm\" printed on redemption slip" },
+  "copyright_year": { "value": 2023, "confidence": 0.90, "evidence": "\u00a9 2023 Panini America on slip" },
+  "manufacturer": { "value": "Panini", "confidence": 0.98, "evidence": "Panini logo on redemption slip" },
+  "set_name": { "value": "Prizm", "confidence": 0.85, "evidence": "\"Prizm\" printed on redemption slip" },
+  "subset_or_insert": { "value": null, "confidence": 0.60 },
+  "card_number": { "value": "RR-17", "confidence": 0.92, "evidence": "\"RR-17\" printed on redemption slip" },
+  "rookie_logo_printed": { "value": false, "confidence": 0.80 },
+  "autograph": {
+    "present": null,
+    "type": null,
+    "certification": "unknown",
+    "confidence": 0.40
+  },
+  "memorabilia": { "value": null, "confidence": 0.40 },
+  "serial": {
+    "printed": null,
+    "number": null,
+    "print_run": null,
+    "readable": "none_visible",
+    "confidence": 0.85
+  },
+  "finish": {
+    "base_color": null,
+    "border_color": null,
+    "pattern": null,
+    "refractor_sheen_visible": "no",
+    "parallel_name_printed": null,
+    "description": "Redemption slip with plain cardstock; no finish characteristics applicable"
+  },
+  "slab": null,
+  "photo_quality": {
+    "glare": "none",
+    "blur": "none",
+    "card_fully_in_frame": true,
+    "suggest_retake": []
+  },
+  "front_text": ["REDEMPTION", "2023 Prizm", "RR-17", "Houston Texans", "Panini"],
+  "back_text": ["Redeem at paniniamerica.net", "\u00a9 2023 Panini America, Inc."]
+}
