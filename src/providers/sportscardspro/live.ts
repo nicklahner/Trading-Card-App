@@ -1,6 +1,7 @@
 /**
- * Live SportsCardsPro (PriceCharting) provider implementations.
- * Base URL: https://www.pricecharting.com
+ * Live SportsCardsPro provider implementations.
+ * Base URL: https://www.sportscardspro.com (NOT pricecharting.com — that's
+ * the parent site and serves video games, comics, etc.)
  * Auth: query param t={SPORTSCARDSPRO_TOKEN}
  * Rate limit: 1 request per second.
  * All prices returned from the API are in integer cents (pennies).
@@ -22,7 +23,7 @@ import { LocalRateLimiter, type RateLimiter } from '@/lib/rate-limiter';
 // Constants
 // ---------------------------------------------------------------------------
 
-const BASE_URL = 'https://www.pricecharting.com';
+const BASE_URL = 'https://www.sportscardspro.com';
 const PROVIDER = 'sportscardspro';
 const RATE_LIMIT_INTERVAL_MS = 1_000;
 const MAX_RESULTS = 100;
@@ -76,28 +77,24 @@ async function checkedFetch(url: string): Promise<unknown> {
  * Map PriceCharting price fields to our standard GradeKey format.
  * Field names from the PriceCharting API response.
  */
+/**
+ * Map SportsCardsPro price fields to our standard GradeKey format.
+ * Field names verified against M0.5 spike results (03-sportscardspro.json).
+ * The API uses 'loose-price' for ungraded, NOT 'price'.
+ */
 const PRICE_FIELD_MAP: Record<string, string> = {
-  'price': 'RAW',
+  'loose-price': 'RAW',
   'graded-price': 'GRADED:9',
-  'psa-10-price': 'PSA:10',
-  'psa-9-price': 'GRADED:9',
-  'psa-8-price': 'GRADED:8',
-  'psa-7-price': 'GRADED:7',
-  'psa-6-price': 'GRADED:6',
-  'psa-5-price': 'GRADED:5',
-  'psa-4-price': 'GRADED:4',
-  'psa-3-price': 'GRADED:3',
-  'psa-2-price': 'GRADED:2',
-  'psa-1-price': 'GRADED:1',
   'bgs-10-price': 'BGS:10',
   'bgs-10-pristine-price': 'BGS:10B',
   'bgs-9-5-price': 'GRADED:9.5',
-  'bgs-9-price': 'GRADED:9',
   'cgc-10-price': 'CGC:10',
   'cgc-10-pristine-price': 'CGC:10P',
   'sgc-10-price': 'SGC:10',
   'tag-10-price': 'TAG:10',
   'ace-10-price': 'ACE:10',
+  // condition-17 through condition-20 appear in some products but
+  // their grade mapping isn't documented — skip until verified
 };
 
 function buildPriceTable(product: Record<string, unknown>): GradePriceTable {

@@ -43,22 +43,24 @@ import type { TextExtractor } from './interfaces';
 import { FakeCardSightIdentifier, FakeCardSightCatalog, FakeCardSightComps } from './cardsight/fake';
 import { FakeSportsCardsProPrices, FakeSportsCardsProCatalog } from './sportscardspro/fake';
 import { FakeClaudeVisionExtractor } from './anthropic/fake';
+import { LiveCardSightIdentifier, LiveCardSightCatalog, LiveCardSightComps } from './cardsight/live';
+import { LiveSportsCardsProCatalog, LiveSportsCardsProPrices } from './sportscardspro/live';
 
 /**
  * Select the live text extractor based on available API keys.
  * Claude wins when both keys are present.
  */
-function createLiveTextExtractor(): TextExtractor {
+async function createLiveTextExtractor(): Promise<TextExtractor> {
   const anthropicKey = process.env.ANTHROPIC_API_KEY;
   const openaiKey = process.env.OPENAI_API_KEY;
 
   if (anthropicKey) {
-    const { ClaudeVisionExtractor } = require('./anthropic/extractor') as typeof import('./anthropic/extractor');
+    const { ClaudeVisionExtractor } = await import('./anthropic/extractor');
     return new ClaudeVisionExtractor({ apiKey: anthropicKey });
   }
 
   if (openaiKey) {
-    const { OpenAIVisionExtractor } = require('./openai/extractor') as typeof import('./openai/extractor');
+    const { OpenAIVisionExtractor } = await import('./openai/extractor');
     return new OpenAIVisionExtractor({ apiKey: openaiKey });
   }
 
@@ -72,17 +74,23 @@ export function createProviders(mode: 'fake' | 'live'): ProviderRegistry {
     const csKey = process.env.CARDSIGHTAI_API_KEY;
     const scpToken = process.env.SPORTSCARDSPRO_TOKEN;
 
-    // Lazy-load live adapters to avoid bundling SDKs in fake mode
-    const { LiveCardSightIdentifier, LiveCardSightCatalog, LiveCardSightComps } =
-      require('./cardsight/live') as typeof import('./cardsight/live');
-    const { LiveSportsCardsProCatalog, LiveSportsCardsProPrices } =
-      require('./sportscardspro/live') as typeof import('./sportscardspro/live');
+    // Text extractor is created lazily (async) on first use
+    let textExtractorPromise: Promise<TextExtractor> | null = null;
+    const lazyTextExtractor: TextExtractor = {
+      async extract(images, kind) {
+        if (!textExtractorPromise) {
+          textExtractorPromise = createLiveTextExtractor();
+        }
+        const extractor = await textExtractorPromise;
+        return extractor.extract(images, kind);
+      },
+    };
 
     return {
       cardIdentifier: csKey
         ? new LiveCardSightIdentifier({ apiKey: csKey })
         : new FakeCardSightIdentifier(),
-      textExtractor: createLiveTextExtractor(),
+      textExtractor: lazyTextExtractor,
       cardSightCatalog: csKey
         ? new LiveCardSightCatalog({ apiKey: csKey })
         : new FakeCardSightCatalog(),
