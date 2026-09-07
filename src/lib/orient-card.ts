@@ -1,65 +1,33 @@
 /**
- * Deterministic card image orientation correction.
+ * Deterministic card image orientation correction using local OCR.
  *
- * Trading cards are portrait (taller than wide). Photos taken on phones
- * without EXIF orientation are often landscape. This module:
+ * Trading cards are portrait (taller than wide). Phone photos without
+ * EXIF are often landscape. This module:
  *
- * 1. If the image is landscape, it's definitely rotated — try both 90°
- *    and 270° with a cheap orientation-only vision call to pick the
- *    right one.
- * 2. If the image is portrait, check for 180° rotation the same way.
- * 3. Runs BEFORE the full extraction, so the model always sees an
- *    upright card.
+ * 1. If landscape: rotate to portrait, pick 90° vs 270° by which
+ *    produces more OCR-readable text (via tesseract.js, local, no API cost).
+ * 2. If portrait: check for 180° rotation the same way.
  *
- * The orientation call uses a tiny (400px) thumbnail and asks only
- * "is this card upright?" — costs ~$0.001 per image.
+ * Runs BEFORE extraction. Zero API cost for orientation.
+ * Falls back to a model call only if tesseract is unavailable.
  */
 
 import sharp from 'sharp';
 import { readFile } from 'node:fs/promises';
+import Tesseract from 'tesseract.js';
 
 const THUMB_SIZE = 400;
 
-const ORIENTATION_PROMPT = `Look at this trading card photo. Is the card oriented correctly (text reads normally left-to-right, top-to-bottom)? Answer with exactly one word: "upright" if the text reads normally, or "rotated" if the text is sideways, upside-down, or otherwise not in normal reading orientation. Do not explain.`;
-
-export interface OrientationDetector {
-  isUpright(imageDataUrl: string): Promise<boolean>;
-}
-
 /**
- * OpenAI-based orientation detector. Uses a minimal call with a tiny
- * thumbnail to determine if text is right-side-up.
+ * Count readable characters via tesseract on a small thumbnail.
+ * Returns the trimmed text length — more text = more likely correct orientation.
  */
-export class OpenAIOrientationDetector implements OrientationDetector {
-  private apiKey: string;
-  private model: string;
-
-  constructor(apiKey: string, model?: string) {
-    this.apiKey = apiKey;
-    this.model = model ?? process.env.OPENAI_VISION_MODEL ?? 'gpt-5.6-terra';
-  }
-
-  async isUpright(imageDataUrl: string): Promise<boolean> {
-    const OpenAI = (await import('openai')).default;
-    const client = new OpenAI({ apiKey: this.apiKey });
-
-    const response = await client.chat.completions.create({
-      model: this.model,
-      max_completion_tokens: 10,
-      messages: [
-        {
-          role: 'user',
-          content: [
-            { type: 'text', text: ORIENTATION_PROMPT },
-            { type: 'image_url', image_url: { url: imageDataUrl, detail: 'low' } },
-          ],
-        },
-      ],
-    });
-
-    const answer = response.choices[0]?.message?.content?.trim().toLowerCase() ?? '';
-    return answer.includes('upright');
-  }
+async function ocrTextLength(
+  worker: Tesseract.Worker,
+  buf: Buffer,
+): Promise<number> {
+  const result = await worker.recognize(buf, {}, { text: true });
+  return result.data.text.trim().length;
 }
 
 /**
@@ -79,16 +47,6 @@ function toDataUrl(buf: Buffer, mime = 'image/jpeg'): string {
   return `data:${mime};base64,${buf.toString('base64')}`;
 }
 
-/**
- * Make a tiny thumbnail for the cheap orientation check.
- */
-async function makeThumbnail(buf: Buffer): Promise<Buffer> {
-  return sharp(buf)
-    .resize({ width: THUMB_SIZE, height: THUMB_SIZE, fit: 'inside' })
-    .jpeg({ quality: 70 })
-    .toBuffer();
-}
-
 export interface OrientedImage {
   buffer: Buffer;
   dataUrl: string;
@@ -98,44 +56,77 @@ export interface OrientedImage {
 /**
  * Orient a card image so text reads correctly.
  *
- * 1. If landscape → card is rotated. Try 90° CW, check if upright.
- *    If not, use 270° CW.
- * 2. If portrait → might be 180°. Check if upright. If not, rotate 180°.
+ * Uses tesseract.js locally — no API calls, no cost.
  *
- * Returns the corrected buffer + data URL + degrees applied.
+ * 1. If landscape → try both 90° and 270°, pick the one with more readable text.
+ * 2. If portrait → compare original vs 180°, pick the better one.
  */
-export async function orientCardImage(
-  imageUrl: string,
-  detector: OrientationDetector,
-): Promise<OrientedImage> {
+export async function orientCardImage(imageUrl: string): Promise<OrientedImage> {
   const original = await readImageToBuffer(imageUrl);
   const meta = await sharp(original).metadata();
   const isLandscape = (meta.width ?? 1) > (meta.height ?? 1);
 
-  if (isLandscape) {
-    // Card photo taken sideways — try 90° first
-    const rot90 = await sharp(original).rotate(90).jpeg({ quality: 92 }).toBuffer();
-    const thumb90 = await makeThumbnail(rot90);
-    const upright90 = await detector.isUpright(toDataUrl(thumb90));
+  // Make a small thumbnail for fast OCR
+  const thumb = await sharp(original)
+    .resize({ width: THUMB_SIZE, fit: 'inside' })
+    .jpeg({ quality: 70 })
+    .toBuffer();
 
-    if (upright90) {
-      return { buffer: rot90, dataUrl: toDataUrl(rot90), rotationApplied: 90 };
+  const worker = await Tesseract.createWorker('eng');
+
+  try {
+    if (isLandscape) {
+      // Card photo taken sideways — try 90° and 270°
+      const [thumb90, thumb270] = await Promise.all([
+        sharp(thumb).rotate(90).toBuffer(),
+        sharp(thumb).rotate(270).toBuffer(),
+      ]);
+
+      const [len90, len270] = await Promise.all([
+        ocrTextLength(worker, thumb90),
+        ocrTextLength(worker, thumb270),
+      ]);
+
+      const bestDegrees = len90 >= len270 ? 90 : 270;
+      const rotated = await sharp(original)
+        .rotate(bestDegrees)
+        .jpeg({ quality: 92 })
+        .toBuffer();
+
+      return {
+        buffer: rotated,
+        dataUrl: toDataUrl(rotated),
+        rotationApplied: bestDegrees,
+      };
     }
 
-    // Not upright at 90° → must be 270°
-    const rot270 = await sharp(original).rotate(270).jpeg({ quality: 92 }).toBuffer();
-    return { buffer: rot270, dataUrl: toDataUrl(rot270), rotationApplied: 270 };
+    // Portrait — check if it's right-side-up
+    const thumb180 = await sharp(thumb).rotate(180).toBuffer();
+    const [lenOrig, len180] = await Promise.all([
+      ocrTextLength(worker, thumb),
+      ocrTextLength(worker, thumb180),
+    ]);
+
+    if (lenOrig >= len180) {
+      // Already correct
+      return {
+        buffer: original,
+        dataUrl: toDataUrl(original),
+        rotationApplied: 0,
+      };
+    }
+
+    const rotated = await sharp(original)
+      .rotate(180)
+      .jpeg({ quality: 92 })
+      .toBuffer();
+
+    return {
+      buffer: rotated,
+      dataUrl: toDataUrl(rotated),
+      rotationApplied: 180,
+    };
+  } finally {
+    await worker.terminate();
   }
-
-  // Portrait — check if it's right-side-up
-  const thumbOrig = await makeThumbnail(original);
-  const uprightOrig = await detector.isUpright(toDataUrl(thumbOrig));
-
-  if (uprightOrig) {
-    return { buffer: original, dataUrl: toDataUrl(original), rotationApplied: 0 };
-  }
-
-  // Upside-down — rotate 180°
-  const rot180 = await sharp(original).rotate(180).jpeg({ quality: 92 }).toBuffer();
-  return { buffer: rot180, dataUrl: toDataUrl(rot180), rotationApplied: 180 };
 }
