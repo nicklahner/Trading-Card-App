@@ -1,0 +1,5429 @@
+{
+  "pages": [
+    {
+      "skip": 0,
+      "count": 100,
+      "parallels": [
+        {
+          "id": "4986d535-2897-4438-af69-dd8a59998a02",
+          "name": "Aqua Holo Foil",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "fa81675f-c778-498d-a782-f2fdda79d64b",
+          "name": "Aqua Rainbow Foil",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "150cf27c-74c0-4df9-a15e-322a85f67361",
+          "name": "Aqua Refractor",
+          "numberedTo": 199,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "7a383743-bef7-4996-a53d-8900076a8ea2",
+          "name": "Aqua Refractor",
+          "numberedTo": 199,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "ba8fdd62-5a64-42fe-bcb4-7b7c651f6c79",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "829c98f7-d69b-4db9-b15b-b22a15c7b0c1",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "31fead31-e6fa-41f6-a806-02af6e37adaf",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "301cb189-6a8f-49c6-bb1d-48a322fb120a",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "6ce8fcb7-b94a-419e-9254-f0716bd4f640",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "02ea3f9a-cdf8-48e8-ae4a-8dbb43a27372",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "2a6b1a52-551f-4026-bae3-c35a0612ecc2",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "2f7dad7f-e171-470f-b660-8dc0714c2f44",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "f3e27d27-25ec-471d-a636-0d4c5cd73f64",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "1cd84e4d-3397-488d-bf5b-688be6cd9307",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "fcc22296-394d-4813-bfa9-9f6388cbd4fd",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "de8b3df0-9ad6-4694-ad9e-08a4157da8d0",
+          "name": "Black",
+          "numberedTo": 70,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "34b1c17d-4624-4ff2-801f-f4c1878035c9",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "af6f3e91-b8ca-4528-83d9-544c6507e2db",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a386f882-f2d0-4d4f-aa42-3b6781faa827",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "98b90f2f-65f1-4bd8-8bee-0eca84502b02",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "2e130960-d864-418c-a60e-e1fd0cc8db6f",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "72712313-c571-4106-8b40-1e86b271753b",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "099e429a-c38c-41a2-8163-37efb50133f3",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "04440905-b4a4-4b7a-a482-eed8738bef68",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "b7761908-f524-4e73-8496-6e6c7c9b58c3",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "8a92a7d4-cd1d-4568-8795-43e086f9f31e",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "9f125fe1-9383-4da5-ae23-28ca89463387",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "b2ad1dcb-5219-4994-a1c1-82768b11d7a0",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "bc90ccbc-18ea-417f-bdbc-5e498853c2b0",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "df424748-256f-4567-8725-2aa2d87daa33",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "adbb28ef-8025-4954-8327-ca24f9caeeff",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "d57011d1-40dc-428f-869f-904542cb9c39",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "fe5d3fdd-2ea0-4e00-973e-b39ce0359149",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "0cbe783d-4097-4fd0-8287-f58ba05accdc",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "37b10eba-9543-4a1f-9a4d-ad154b3e4a5e",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "2df6812c-301a-4faa-b0d2-e50aff2a9b5f",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "73af3274-6720-4d30-8624-cbe5fb515881",
+          "name": "Black",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "30828206-c358-426f-a39b-2a045fe94ecf",
+          "name": "Black Crackle",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a87a3dfa-3a25-4877-8cfc-3815b04f6055",
+          "name": "Black Crackle",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "cdfed79c-7e8e-4d35-b19d-675e40a273d9",
+          "name": "Black Crackle",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "0316a559-f85d-49fa-90d3-04438d757095",
+          "name": "Black Crackle",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "e1f393a0-f606-49de-8250-8fff53e51a50",
+          "name": "Black Crackle",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "7b516ea3-d424-4aaa-b3b0-16718e3a23d6",
+          "name": "Black Diamante Foil",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "83cf8317-a985-47c3-a719-1e9934356292",
+          "name": "Black Football",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "bd8e7019-2320-499d-b0e1-77a9f2f89b20",
+          "name": "Black Holo Foil",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "0625b4f3-9660-4ed9-bc88-155c7db14f99",
+          "name": "Black Rainbow Foil",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "7b21bcb9-f4c6-45b5-a308-dfe2f89ffe13",
+          "name": "Black Refractor",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "80feabb1-d1ca-4656-ab45-bf948b8f88d0",
+          "name": "Black Refractor",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "b85c851a-4993-473f-96c8-0e143065707c",
+          "name": "Black Refractor",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "ff25cf1b-9c31-47c2-b974-02c47a2ed384",
+          "name": "Black Refractor",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "40a74db6-b785-4687-8477-433e258fcfa0",
+          "name": "Black Sandglitter",
+          "numberedTo": 10,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "c9ce7e73-ff29-4ec3-82f1-f3ed8d31360a",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "5f49add6-0cd2-4d14-87a8-fed3096582fb",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "bf8e2f37-fa8a-4a47-8043-a4b7753e863b",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "ddc869af-1819-4d1c-8df0-e7654ee936a4",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "59d2b3dc-f55a-4dda-8745-71868de6b089",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "8e7c2a8f-07df-4bdc-9bab-24aed691c44e",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "92f2b30a-85f5-469d-a3aa-b206b330594c",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "c59fb60b-52e3-46ae-b922-3a1511fba92b",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "ffc26f22-03c9-4596-ae12-990813ee7cd8",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "fa815651-d269-4be5-b1a7-f760aa156dc9",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a2e9f2dd-fa55-4b1c-8649-fb0ef7fe9b72",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "04747f4f-dbb7-45bb-9c57-b691b68cf08c",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "9f3952c3-ae24-4cf4-9124-5e8ce391e82e",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "2da9782f-fe99-46c3-b44c-9b376726323a",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "22fabc38-c432-46ef-b096-cad81f97f557",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "9172c17b-ba53-4eba-b943-c2faec8b37ed",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "520b118c-90d2-4247-90c2-4278e088d55e",
+          "name": "Blue",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "5e89df05-f853-4d28-a863-a2daacf7baaa",
+          "name": "Blue Crackle",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "baa0e927-331c-4756-b58b-6db2b5ca87b6",
+          "name": "Blue Crackle",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "7ffb5d98-3afa-4068-be66-0ecac3f1829b",
+          "name": "Blue Holo Foil",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a647e1ca-642e-47df-b238-f540f2fdbf1e",
+          "name": "Blue Refractor",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "7838b1f9-f5c3-48f6-9835-a5ee9be60d2f",
+          "name": "Blue Refractor",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "6e77decb-3570-4684-b430-c525044028e2",
+          "name": "Camo",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "6ae0baa2-f7c3-4404-9810-287ecfd72b8d",
+          "name": "Canvas",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "3d5730c3-f256-4a1f-967b-8e5561847b38",
+          "name": "Crackle Foil",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "4ab5610d-7eee-4622-a67b-d0c68d613177",
+          "name": "Crackle Foil",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "7117ed5e-0a5e-48f3-a4ee-59d3caa5579a",
+          "name": "Crackle Foil",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "0c5331a1-5196-4beb-bb8d-1593d80f906a",
+          "name": "Crackle Foil",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "37c14a41-2aa6-4a25-b5aa-88d5432a1650",
+          "name": "Crackle Foil",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a0dd48c0-4282-4944-97d4-ab8011722670",
+          "name": "Diamante Foil",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a6b3c179-fc6e-4f97-a153-bafe069a2e7a",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "09e5c8e9-8e81-459a-95d9-fdd6d6c4d553",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a2d83e69-8a27-4cd0-ab23-07ef60799883",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "2a206cf2-e2b1-4441-ba35-11c65b227ca2",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "00191749-64a3-4f10-ad27-60d88632c6bf",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "097f8056-ca37-47a9-812b-f1e6e5459410",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "7be4f67b-c51c-4e3e-a7e0-c08e7a68df72",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "c807cd0a-c269-46d1-92b5-1d40e10f4041",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "55cee00f-f941-4d0e-88aa-6120f97140ac",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "bd924e57-797b-438c-a8f8-73e7f0cc5f1b",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "3fd74ba7-045e-4f52-a87a-ae5c6d8acf23",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "d9e3e051-9a65-4ab1-98b6-765005ae07e4",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "dd4422d3-671d-4656-9c69-5c3c5a507f04",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "6834ab6b-a213-46ec-9391-bd38a90c058f",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "5be8d2a6-fb36-4d80-b165-5c5cd19f6acf",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "7c7dd85b-191e-49a0-bce5-647f694ae36f",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "d95ca4a9-ef0b-4f47-9073-d413a3444bef",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "ff6e2aec-7d0d-41cd-a8b8-5f9b7d9b7304",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "c08ad193-9aea-4360-a2ff-3a6ddd4e779b",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        }
+      ]
+    },
+    {
+      "skip": 100,
+      "count": 100,
+      "parallels": [
+        {
+          "id": "58e62140-972b-4d47-acff-4def58d75524",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "f465273e-f3e1-43f0-9ea8-8473e5fd413d",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "91db597c-b993-4361-a46b-d7c6fde63165",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "84bf97cd-30c2-4646-9b3a-87a29e21988b",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "9ccfbd8e-3122-4732-bb76-93ae4c354016",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "3cd00372-2a44-4d51-94c3-acc87e88b7b4",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "1108fd48-b075-4357-9ae1-1baf4d6eba2f",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "ebff195d-a1f2-436f-850a-3352e94f67e4",
+          "name": "FoilFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "6196df70-218b-420c-aba4-90a50ce27207",
+          "name": "Football",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "bb921b45-20dc-40e6-a25f-29c6af30a843",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "6913bbed-68e8-4a59-b215-6ab7beaaf5a7",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "733bf43c-ef6c-40f0-9943-12078407d143",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "60fde7f3-774a-431c-bc70-defafc662998",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "6e38870e-7481-4606-b5f2-625988c27121",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "5f8d741b-551a-4169-9b0c-c9833f344627",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "38228ba6-152a-4654-b886-4c253fad719f",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "c7cf5431-246c-4839-9a10-fcdadb9423af",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "c1daca6b-7c78-4edf-bd8e-aa7077c6f162",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "03e3d33c-3da5-46f3-9259-09585dc7de4d",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "5e944700-de86-4737-a770-b1e7d741a22d",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "865837fc-2094-4ff5-b94f-b94c20ede484",
+          "name": "Gold",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "0237beea-8e84-4ec3-a1f5-512a1eb78ff4",
+          "name": "Gold",
+          "numberedTo": 2026,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "d97f992a-a14c-4150-ba34-6330923510ec",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "fab4d02c-7b56-4374-8807-6d0acf3d0d4f",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "05137da5-f723-4072-bd93-a1c901767c3e",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "53a7164f-e43b-45b2-9a5b-2fc04f85dc3e",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "aa6d6d34-83d2-49c0-aaf8-6bce39f2d3d3",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "55675c3e-47b4-4589-a88b-9e348046d0c8",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "19860d13-81ee-4224-85f2-c5de3684ac04",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "0202cf89-541a-4f78-a526-9719a65af144",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "7e3b6ee3-47b1-4649-9bb8-305657452393",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a63c3050-4b4d-4a69-973d-f7a888811929",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "385ffe73-caf9-4099-9c05-ece94baab38a",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "d0389383-5b52-4983-8f4c-5b5cd884e2a3",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "8bcd66cf-f961-4244-8fe3-c7c93ea95945",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "c96e5097-70e1-499f-b545-071bd22eb58e",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "df239019-f1b6-4900-9100-1c7b11f000fe",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "fe07479d-9a6f-43d6-94ce-83427b6c2c06",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "139f0484-7f3d-42ad-a8cd-8f163f1df8fb",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "4414561f-73ad-4d5c-9fa5-c48fcd6a3c11",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "f6967de9-41d9-4388-ad27-02cc0cee995b",
+          "name": "Gold",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "0c2aa124-71d6-453d-a109-d264b07e7bef",
+          "name": "Gold Crackle",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "befdf367-d993-4914-a819-c61ff12bf365",
+          "name": "Gold Crackle",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "37e01402-aa5b-4eb0-bb23-61db26639fef",
+          "name": "Gold Crackle",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "4ffb0a25-8bbd-47f7-8dd8-9d0b9276cbe9",
+          "name": "Gold Crackle",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "b0b90fc6-30ba-4ed6-8322-231e5f629fa7",
+          "name": "Gold Crackle",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "e4c341f9-0738-4156-81c6-8e4bd06053dc",
+          "name": "Gold Diamante",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "68ac9114-a830-46c1-a6cf-783be608265b",
+          "name": "Gold Football",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "862adbe4-58f6-43f3-86e3-efd414413afc",
+          "name": "Gold Holo Foil",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "7b919f82-ecea-4e20-b463-da23f7e6cfc8",
+          "name": "Gold Ink",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "d7044cea-ab10-41c9-b50b-b2bcefa61f91",
+          "name": "Gold Rainbow Foil",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "63a19364-8cc0-4cdc-84d5-2496792cc6fe",
+          "name": "Gold Refractor",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "fb1f42e7-6bda-4c55-8c92-ef970b0f5144",
+          "name": "Gold Refractor",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "d85a4f8e-d331-4951-9cfd-6a92d94fe09e",
+          "name": "Gold Refractor",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "47addb68-7978-4ace-b451-5db9523d11d0",
+          "name": "Gold Refractor",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "7f644a77-ccfc-4992-9f6f-d49ca23d6884",
+          "name": "Gold Sandglitter",
+          "numberedTo": 50,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "d716acaf-103c-43ef-9bcc-f4163ea6defe",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "39981ae7-8235-4dc3-a08f-3f3d17d9c97b",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "f95ee784-380a-4b46-8ee5-3d7f403a3b78",
+          "name": "Green",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "d8b83cf7-c3cd-46d0-b34d-6803eeaf5af8",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a1ac6fcc-b29c-465b-94d9-035413231195",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "8c720104-aad0-4776-9dcf-5d01e9edd4e8",
+          "name": "Green",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "ec798f56-f463-460b-b4e6-2d20b360e977",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "5dc44281-61f6-4070-adae-a3c8686d6b06",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "f343bcbf-1a9f-4352-8639-a9e5f674d95f",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "be69b1bb-a753-4a68-807f-25cf19868799",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "b9a1da7f-acd1-4f08-9b86-a140b56f4659",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "486f4cfb-6975-4209-b23f-5d95cb7ec714",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "eed581de-5991-4b0d-8cd3-c2cee258278a",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "083462ed-7971-4d00-8aa0-6ab40346930b",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "144ef58c-e3f2-4673-b331-75475e15ec76",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "2c87d08c-8762-4644-aa5a-3665545e388e",
+          "name": "Green",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "ae1dfd48-7cba-4426-a66b-9c7eb0a0756b",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "2c5a63da-6f51-4333-aa70-6cb0d2cd340d",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "b5c64541-34c1-489d-bf0a-b885b8b29657",
+          "name": "Green",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "e430f04a-0cf6-400c-98be-b6d6025dcb57",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "98d92f23-7b5f-4616-bb8e-4d02a96771b9",
+          "name": "Green",
+          "numberedTo": 150,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "822e95b4-c73b-4ed0-9173-c93b954520b6",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "08338745-1259-45c0-8344-89720e4f7ba1",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "46aa605f-3caa-4cbd-9319-d5ab854a6f09",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "33d2fa18-296f-4609-8e0f-6794f136000e",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "15708b3e-a4d5-4462-ac23-0d6b51fb565c",
+          "name": "Green",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "149bb351-8a16-4f3f-b30a-9db41e7e0008",
+          "name": "Green Crackle",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "6808bc16-351d-402d-ab63-45d2a458ce74",
+          "name": "Green Crackle",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "e31333a4-2596-45d6-9c35-a48297f81ed9",
+          "name": "Green Diamante Foil",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "1232efde-21b6-4764-b243-f97199976d43",
+          "name": "Green Football",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "54314c87-ddbf-4c0f-a31e-da958e4525de",
+          "name": "Green Holo Foil",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "c1ed323f-9ffb-4d1e-add4-3edcb3b3a9fd",
+          "name": "Green Rainbow Foil",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "42c29d66-c8ee-49a4-946f-3e3515542af0",
+          "name": "Green Refractor",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "6c9b156d-8c46-42ff-bc2f-6546569ada17",
+          "name": "Green Refractor",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "9e9c6015-e10b-4018-96e1-eeaf5c3829ee",
+          "name": "Green Refractor",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a0678f50-17f7-4362-b337-dc4e3a095a7b",
+          "name": "Green Refractor",
+          "numberedTo": 99,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "4e37b819-5815-42c5-8b2d-b68832d93ee7",
+          "name": "Holo Foil",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "1161e73f-0b4f-45bf-ab76-9e9378ccb632",
+          "name": "Independence Day",
+          "numberedTo": 76,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "40547d68-bab0-46f1-8cc2-dfee1554e212",
+          "name": "No Name",
+          "numberedTo": 35,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "e32516c1-eb1b-4f69-b2ff-6a94b0813ab3",
+          "name": "No Name",
+          "numberedTo": 35,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "1285cf6c-05cd-477f-8f00-2e7085f40548",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "f4307efc-f1a3-482c-822b-42b8227a5e85",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "578c69d8-f6a8-4490-8b0e-bf78f4edfe90",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "f5cb8442-83c1-4ea0-8c14-e90c608114d2",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        }
+      ]
+    },
+    {
+      "skip": 200,
+      "count": 100,
+      "parallels": [
+        {
+          "id": "ea28e867-10e5-4dd8-b36a-50baa594025f",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "de926fff-669c-47ab-bdd3-cf1d19d898a7",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "b915ae6a-6f92-4232-9601-4506f0b20e49",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "61961568-c809-4ff7-834f-cb7876be86df",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "0797240d-8887-4191-bd52-5b75efcaa477",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "6923e21b-8c2f-4b4c-b086-7a3e566697b5",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "6922ac93-04b8-40c2-972b-5c5f60e0e149",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "d2c9c419-3ff5-4ff8-bd1f-ea22e677f51e",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "cf37d718-8f3e-4307-8d0b-ee2abb3c169d",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "dfa1926b-c025-4b85-8353-a5f72ef6c5cb",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a03bee4b-08b4-40bf-b973-03fee9888889",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "f98fe0f3-6709-4d8a-94a7-c7c3fefd3f62",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "fa1ffe77-f970-4872-9bb9-cdb707b70b30",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "e7078139-77e3-47bd-b551-b2f62bcb5def",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "c699d847-6fe2-4770-8eaf-ba129e964d36",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a05be098-5fbe-4b37-be09-f0ce78fa051c",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "949f8c73-48ec-41d8-a4b3-ee7a20508e36",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "70893b31-9a2a-4ec7-98c8-e50d48d92da4",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "e3fd7436-7ab5-4b54-bf2c-8f65794e1883",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "610cdc60-bf9d-496f-940a-3da80e78ce93",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "00a01ccf-4751-4b4a-94c5-5f2a4dd7dbf8",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "c8ab795a-e0ae-4c02-8b9d-93ec689fe5ed",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "2450882b-3f0a-47cc-aecd-e56ca03b495d",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "26feac7e-7ae0-455f-b8d8-0ad93d46d4db",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "1a7eeb83-cbee-425d-89b1-5b77916e7707",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "244d275f-06fa-4ad8-b411-dcd503260682",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "b3e40aea-040a-4fcc-929e-e9c4a5fc8a64",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "305bec8b-c2b4-4903-be05-86e3fbe817b3",
+          "name": "Orange",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "b1967ed3-5978-4265-ac26-e2b0300a045e",
+          "name": "Orange Crackle",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "8122aae3-461d-46d2-9dc8-5e928b0cbc6c",
+          "name": "Orange Crackle",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "8b0cfc67-db14-44ee-b442-39fb1f4bde0a",
+          "name": "Orange Crackle",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "47c269cb-bf31-45cd-b1f4-257c452c840a",
+          "name": "Orange Crackle",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "543bba7b-feea-4c35-b4b7-0faad3361f0c",
+          "name": "Orange Crackle",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "906429e8-a901-469b-8ddc-2cff2c88bcbc",
+          "name": "Orange Diamante Foil",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "c259dd1c-9945-428d-9fab-828390eec481",
+          "name": "Orange Football",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "ad0480ed-515f-4ffc-aba7-bad32f57388a",
+          "name": "Orange Holo Foil",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "e911da55-d5eb-44d2-9260-036f6ba64910",
+          "name": "Orange Rainbow Foil",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "8104ff37-ec28-49a5-939f-d51b987aafb2",
+          "name": "Orange Refractor",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "cf8d22c6-a5e9-4633-9ea9-edd96c67a35b",
+          "name": "Orange Refractor",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "9e097a24-2af9-47ba-bd74-695c3aeb3625",
+          "name": "Orange Refractor",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "bcfc5d44-6fd0-40d0-9278-f39f87c71add",
+          "name": "Orange Refractor",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "27be14d8-74a3-4c70-99b0-b7be99bd7c06",
+          "name": "Orange Sandglitter",
+          "numberedTo": 25,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "016c14da-b6fd-432a-b54a-c85d30dfb4ed",
+          "name": "Pink",
+          "numberedTo": 1000,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "9e3c2dae-e5c1-4031-b764-1d4b4ec83d11",
+          "name": "Pink",
+          "numberedTo": 1000,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "d4d358fe-e0a9-41a1-a2cb-6f77b6904634",
+          "name": "Pink",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "f6c75ea5-d429-49e3-b9db-a09e158f16bd",
+          "name": "Pink",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "808de6b1-47f3-43da-ac7e-7aaf27d0ef01",
+          "name": "Pink",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "793bb765-f414-4430-a449-f2e7730a545f",
+          "name": "Pink",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "bee8765c-e127-4515-9029-6e1178b4ff95",
+          "name": "Pink Crackle",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "1d7339b8-e073-475d-a232-0687bf3eac4b",
+          "name": "Pink Crackle",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "2df217bb-4fc1-4861-8b6e-e42e234f75fa",
+          "name": "Pink Diamante Foil",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "aa28712b-ea2b-4b5d-8632-b3e9e129e572",
+          "name": "Pink Holo Foil",
+          "numberedTo": 1200,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "795d3ed4-445c-4257-95c7-b9fcf1b9bc36",
+          "name": "Platinum",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "2f1f0a7b-e850-49ea-8799-d34fa9cf9406",
+          "name": "Platinum",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "205534be-5ca7-4b9c-9095-0a5b3c6c28df",
+          "name": "Platinum",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "e29a2af6-55a6-4909-8d3e-4a116ac1fc42",
+          "name": "Platinum",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "663f62e8-d2d5-4962-9a37-d855d08e30db",
+          "name": "Platinum",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "eef3047e-1211-4b8d-bca5-0a07089416e0",
+          "name": "Platinum",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "94d7f0ad-937e-4966-b709-5a54d93b9604",
+          "name": "Platinum",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "9b999ee0-3a06-46a0-a354-49a83587c84c",
+          "name": "Platinum",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "291bbb8a-3438-4943-83f1-7c1dda70213f",
+          "name": "Platinum",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "3ff1a657-f569-4646-bb3a-fa31ec1f498b",
+          "name": "Printing Plates",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "803427eb-e8c9-47ff-b5e4-dc71899db5a7",
+          "name": "Purple Holo Foil",
+          "numberedTo": 250,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "c6559712-9afe-4b76-ae11-4c8e79355f7e",
+          "name": "Purple Refractor",
+          "numberedTo": 250,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "b5c5585a-cefd-4f1c-92f6-f2384b87b815",
+          "name": "Purple Refractor",
+          "numberedTo": 250,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "b40b1c98-2b5f-4c9b-88fb-1bf31ceb7717",
+          "name": "Rainbow Foil",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "0bddada7-6ada-438e-b8d2-b7299d210af0",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "c577dcde-e6be-420e-abd2-f998cd4a80a2",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "f9d495b5-5495-40f6-966c-e06bf87dc445",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "145aae4c-30b3-4abc-8d64-4a7693836e09",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "caccf534-6168-4cfb-9742-afc425817812",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "1fb3ac49-170a-439b-86ed-82bcf10e5876",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "f03a9a8e-d65a-4d20-acfb-d86b6a94699c",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "f07aa1a4-e841-408a-879d-a2a7bc067ee5",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "0a2916c0-7d89-4f13-bed7-60e988534406",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "5b7c2bb6-5f85-48c9-9686-928307f64b60",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "556c0b71-da1b-4cd3-adc9-862729d30d51",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "07278c17-9f05-468c-a57d-c6d867fbe0a9",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "f6e755bb-bbe9-4193-8812-0c910596592a",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a3f4ee15-52c7-487a-a9ab-56d8a1c25a2e",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "323b6c29-a918-4b32-b09a-98c294487642",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "8fc6ef68-9f8b-459c-a565-134695330909",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "439eac02-36db-4b7c-a252-ca9bdafc3bbf",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a7d12ffa-6040-4446-9ae9-3fc661918614",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "00448de4-34df-431b-a6eb-99edfe841005",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "714391b3-8156-4c26-b790-d5dc1fc71935",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "8072a04c-fc21-4c41-941c-f3e8c490c870",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "a02dad92-8285-4534-b2b6-67587ae494ac",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "1c324f34-a3b3-41b7-923d-ed48b9998a26",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "11fe9405-4179-432a-92e0-b435f3b82a1d",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "6e2e1cc0-1b08-4693-9960-ea5358f0fba6",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "f5bc5ec6-6cf0-42f0-a5f0-ba8bc5234a81",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "1f971299-23f1-4d76-b4ca-eeb501f34f25",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "9f65bb08-ce22-4bd0-b26c-58378ab3e774",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "1a3702d9-4adf-431e-bd02-00b8be7951aa",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "6e088454-5140-447f-adc5-10be53993cfb",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "60f5318d-c309-4edb-90b5-0468c80a032d",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "264144ad-44ee-499e-a1f3-edcf13bf7c76",
+          "name": "Red",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "7f58a8d1-aaa6-461e-b74a-48c471b5f059",
+          "name": "Red Crackle",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "ba989ec2-86ad-46ac-841d-4d60783ce207",
+          "name": "Red Crackle",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        }
+      ]
+    },
+    {
+      "skip": 300,
+      "count": 23,
+      "parallels": [
+        {
+          "id": "6d4059ba-110c-4e69-a596-2f0d19c14d91",
+          "name": "Red Crackle",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "bd226b11-b841-437e-ab26-99506ec2f6b0",
+          "name": "Red Crackle",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "3794d532-8a8d-410d-b800-2a7e0a717128",
+          "name": "Red Crackle",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "d3715d45-b42a-4ea6-8e9a-d35b07e368b6",
+          "name": "Red Diamante Foil",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "d0fd38ea-2446-4724-9e51-cbded76bc424",
+          "name": "Red Football",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "5077d732-2fc6-46f4-8924-b8b6cab05c26",
+          "name": "Red Holo Foil",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "76bf6567-d7dd-4309-857a-99e583cab0b9",
+          "name": "Red Ink",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "22961cf9-f51c-40d9-b85f-e614c5e14827",
+          "name": "Red Rainbow Foil",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "312d8128-907d-4f49-85a0-88f02ba8cbb5",
+          "name": "Red Refractor",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "4b5ff4f7-63ca-454c-b81e-e4e078bd7bb0",
+          "name": "Red Refractor",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "2edf1f4a-3b0a-4c41-abe0-20108be3fac6",
+          "name": "Red Refractor",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "2ccc2c35-ebb9-40a7-8796-9cacab08684d",
+          "name": "Red Refractor",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "8dd91df9-5ae3-4518-bc55-631c48d9fc28",
+          "name": "Red Sandglitter",
+          "numberedTo": 5,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "e7947e96-0024-4970-88ea-f8574afe83fe",
+          "name": "Rose Gold Football",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "b5bbd124-38af-4f1c-8040-bc9482190584",
+          "name": "Rose Gold Holo Foil",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "ebe72ddc-e26a-4a5c-8d59-b3cc7599959a",
+          "name": "Sandglitter",
+          "numberedTo": null,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "65af4dd4-7b08-4239-a170-6bc5223da8eb",
+          "name": "SuperFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "c3749c78-aeb8-41de-b924-e2fa0f9831ea",
+          "name": "SuperFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "7020ff35-f1df-4382-a730-5fb0f6cb0277",
+          "name": "SuperFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "62cd6e58-3d7e-4bcc-ac4d-37b1080120b9",
+          "name": "SuperFractor",
+          "numberedTo": 1,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "cc41ff84-8cc4-4334-b447-fa7168c568a6",
+          "name": "The Real One",
+          "numberedTo": 91,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "d888a232-0589-4bfa-8bfb-a1a7d9485ceb",
+          "name": "The Real One",
+          "numberedTo": 91,
+          "_allKeys": [
+            "id",
+            "name",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        },
+        {
+          "id": "6131e732-a9cd-4b98-8181-32edfdebdca0",
+          "name": "Yellow Holo Foil",
+          "numberedTo": 399,
+          "_allKeys": [
+            "id",
+            "name",
+            "isPartial",
+            "numberedTo",
+            "setId",
+            "setName",
+            "releaseId",
+            "releaseName",
+            "releaseYear",
+            "cardCount"
+          ]
+        }
+      ]
+    }
+  ]
+}

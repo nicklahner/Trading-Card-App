@@ -89,8 +89,8 @@ Nick is new to the hobby, and most "inaccurate price" complaints about existing 
 ### 3.1 What's available (researched Sept 2026)
 | Source | What it gives us | API | Cost | Role in V1 |
 |---|---|---|---|---|
-| **CardSight AI** | Image identification (parallel-aware; **one image per identify call**; use `identify.cardBySegment('football', …)`), catalog (cards, sets, `catalog.parallels.list/get`), **price records per card, split raw vs. graded by company and grade: completed auction sales plus Buy-It-Now asking prices** (`listing_type` auction\|fixed\|both, default both). Documented per-record fields: price, date, source, listing_type, optional title, url, image_url, parallel_id (null = base), parallel_name. Also active listings | Yes. REST + Node SDK, API key. `identify.cardBySegment('football', …)`, `catalog.*`, **`pricing.get` (accepts a parallel ID)**. `pricing.get` query: `parallel_id` (UUID, or 'null' = base only), `period`, `listing_type`, `as_of_date`, `limit`; ≤500 rows per call, page older rows with `as_of_date`. `pricing.bulk` (≤100 cards) **takes no parallel ID**, so V1 doesn't use it for comps. | Free 750 calls/mo · Pro $14.95 (5k) · Premium $74.95 (30k) · overage ≈ $0.003/call | **Primary identification + primary sold comps** |
-| **SportsCardsPro** (PriceCharting's sports site) | Daily modeled value per card: ungraded, grades 1–9.5, and company-specific 10s. Each parallel is its own product. Yearly `sales-volume`. | Yes. `GET /api/product?id=` or `?q=`, `/api/products?q=` (≤20), token `t`, **1 call/sec**, prices in **pennies**. Daily CSV per set. | **Legendary $49/mo** (required for API) | **Model value + catalog cross-check + fallback** |
+| **CardSight AI** | Image identification (parallel-aware; **one image per identify call**; use `identify.cardBySegment('football', …)`), catalog (cards, sets, `catalog.parallels.list/get`), **price records per card, split raw vs. graded by company and grade: completed auction sales plus Buy-It-Now asking prices** (`listing_type` auction\|fixed\|both, default both). Documented per-record fields: price (USD float — ADR-0001), date, source, listing_type, optional title, url, image_url, parallel_id (null = base), parallel_name. **ADR-0001: `parallel_id` and `parallel_name` are never populated on football pricing records; parallel isolation does not work.** Also active listings | Yes. REST + Node SDK (`cardsightai` v4), API key. `identify.cardBySegment('football', …)`, `catalog.*`, **`pricing.get` (accepts a parallel ID but it has no effect — ADR-0001)**. `pricing.get` query: `parallel_id` (UUID, or 'null' = base only), `period`, `listing_type`, `as_of_date` (YYYY-MM-DD), `limit`; ≤500 rows per call, page older rows with `as_of_date`. `pricing.bulk` (≤100 cards) **takes no parallel ID**, so V1 doesn't use it for comps. | Free 750 calls/mo · Pro $14.95 (5k) · Premium $74.95 (30k) · overage ≈ $0.003/call | **Primary identification + ~~primary sold comps~~ comps role TBD (ADR-0001)** |
+| **SportsCardsPro** (PriceCharting's sports site) | Daily modeled value per card: ungraded, grades 1–9.5, and company-specific 10s. Each parallel is its own product. Yearly `sales-volume`. | Yes. `GET /api/product?id=` or `?q=`, `/api/products?q=` (≤100; ADR-0001 confirmed), token `t`, **1 call/sec**, prices in **pennies**, response shape `{ products: [...] }`. Daily CSV per set. | **Legendary $49/mo** (required for API) | **Model value + catalog cross-check + fallback** |
 | **Claude (Anthropic API) vision** | Reads printed text on the card front and back and on slab labels. Returns structured JSON. | Yes | ≈ a few cents per card | **Text extraction / second opinion** |
 | Card Hedge | Comps with anomaly filtering, FMV with confidence, cert lookup, image search | Yes, but subscription pricing is sales-only. Pay-per-call runs over x402 (USDC). | $0.01–0.02/call | **Optional adapter (V1.1)** if CardSight comps prove weak |
 | PSA Public API | Cert lookup for PSA slabs | OAuth token. **The free tier's status is unclear as of mid-2026.** | Free / unclear | Optional adapter. Nick has no PSA slabs today. |
@@ -135,9 +135,13 @@ type UnavailableReason = 'rate_limited' | 'quota_exceeded' | 'timeout' | 'server
 type CompsResult = { status: 'ok'; sales: Sale[] } | { status: 'unavailable'; reason: UnavailableReason };
 // Only { status: 'ok', sales: [] } means "no sales".
 interface CompsProvider {            // CardSightComps, (later) CardHedgeComps
-  // One request per exact card+parallel (base = `parallel_id: 'null'`), auction records only. The adapter checks
-  // every record's `parallel_id` against the request and treats any mismatch as an invalid payload (never a
-  // filtered or mixed list). If the 500-row cap warning is returned, page with `as_of_date` until 365 days are covered.
+  // ADR-0001: CardSight `parallel_id` on pricing records is never populated for football cards.
+  // The adapter fetches with `parallel_id: 'null'` (returns all records for the card regardless of parallel),
+  // then relies on the engine's title-based parallel filtering (§7.2 step 5, ADR-0002) to isolate records.
+  // Records without titles are excluded (§7.2 step 0).
+  // The adapter MUST paginate `catalog.parallels.list` completely for the card's release and pass the full
+  // parallel vocabulary to the engine. A truncated vocabulary is treated as `unavailable` (reason `invalid_payload`);
+  // the engine falls back to model-only. If the 500-row cap warning is returned, page with `as_of_date` (YYYY-MM-DD).
   getSales(ref: { cardId: string; parallelId: string | null }, opts?: { period?: '3m' | '1y'; asOfDate?: Date }): Promise<CompsResult>;
 }
 type ModelPriceResult = { status: 'ok'; table: GradePriceTable } | { status: 'unavailable'; reason: UnavailableReason };
@@ -561,7 +565,7 @@ CSV import is deferred to V1.1 (§16). With 100–500 cards, photo scanning is t
 6. Parallel resolution (§6.5).
 7. SportsCardsPro linkage (<= 3 calls per identification). Other candidates are linked on demand when Nick selects one in review:
    (1) /api/products?q="<year> <set> <player> <card_no>"  (no parallel term, returning the parallel family)
-   (2) if (1) returned 20 results or the resolved parallel is absent: query with the canonical parallel name
+   (2) if (1) returned 100 results (the API cap; see ADR-0001) or the resolved parallel is absent: query with the canonical parallel name
    (3) if still absent and a print run is known: query with '/<print_run>'
    Merge, dedupe, score with the SCP variant of §6.4 and apply its hard reject; keep the best score >= 0.8,
    else flag no_scp_match. Store scp_product_id, scp_product_name, est_value_cents in the candidate.
@@ -674,25 +678,31 @@ All defaults below are **[TUNABLE]** and live in `ValuationConfig`, stored in `s
 - A missing field or a 0 means **no M**.
 
 ### 7.2 Comp cleaning (in order; record an exclusion reason per sale for the "Why this value" view)
-Steps 1–5 clean; step 6 runs after §7.3 window selection.
+Steps 0–5 clean; step 6 runs after §7.3 window selection; step 7 runs after M is available (§7.7 step 3b).
 
+0. **No-title exclusion (ADR-0002).** Drop every record with a missing or empty title. Reason: `no_title`. Title presence is mandatory because parallel isolation relies on title-based filtering (ADR-0001 showed CardSight does not populate `parallel_id` on pricing records).
 1. Ignore sales dated after D (§7.3 `age_days`). Keep only sales whose `gradeKey` equals the item's grade key.
 2. Drop sales with `age_days` > 365.
 3. Drop `best_offer_unknown_price`, since the real price paid isn't known.
 4. **Dedupe:** if `providerSaleId` exists, drop repeats. Otherwise, drop repeats only when `url` is present and identical. Same-day, same-price sales are **not** merged, because multi-quantity listings produce real repeated sales.
-5. **Title filters** (only when a title exists; case-insensitive, word boundaries). Titles may not exist at all; the engine must work without them.
+5. **Title filters** (case-insensitive, word boundaries).
    - Lots and multiples: `\b(lot|lots|bundle)\b|\bx\s?\d+\b|\(\d+\)|\b\d+\s?cards\b`
    - Not the real card: `\b(reprint|rp|custom|digital|facsimile|replica)\b`
    - Damaged, altered or not delivered: `\b(altered|trimmed|damaged|creased?|redemption)\b`
    - Wrong format: `\b(you pick|pick your|choose)\b`
    - **Raw items only:** drop titles matching `\b(psa|bgs|sgc|cgc|tag|beckett)\s?(10|9\.5|9|8\.5|8|7|6|5|4|3|2|1)\b` **unless** they also match `\b(ready|worthy|candidate|potential|gem\?)\b|\?`.
    - **Non-auto cards:** drop titles matching `\b(auto|autograph(ed)?|signed|signature)\b`, except when that text is part of a set name the card itself has. **Auto cards:** drop `\b(no auto|non-auto|unsigned)\b`.
+   - **Parallel-name filtering (ADR-0002).** Requires the **complete** parallel vocabulary for the card's release (fully paginated from `catalog.parallels.list`). If the vocabulary is incomplete or unavailable, skip comps entirely and fall back to model-only (fail closed — ADR-0002 §3). Matching is case-insensitive, word-boundary, longest-match-wins for overlapping names (e.g., "Silver Holo" beats "Silver").
+     - **Base cards:** drop any record whose title matches a known parallel name. Reason: `title_parallel_mismatch`.
+     - **Parallel cards:** drop any record whose title does **not** match the card's resolved parallel name(s). Reason: `title_parallel_mismatch`.
 6. **Outliers**, run **after window selection (§7.3)** on the cleaned sales inside the chosen window, in log-price space:
    - n ≥ 5: robust z = |ln p − median(ln p)| / (1.4826 · MAD), standard median; flag if z > 3; skip when MAD = 0.
    - n = 3–4: flag a sale if it is > 2.5× or < 0.4× the standard median of the other sales; drop at most one (the largest |ln(p ÷ median of others)|).
    - n ≤ 2: none.
    - **Cluster protection:** keep a flagged sale if another cleaned sale in the window lies within 21 days **[TUNABLE]** of it and within ±25% **[TUNABLE]** of its price.
    - After removal, if n < 3 and the window is < 365, move to the next window and redo this step on that window's cleaned sales.
+
+7. **Model-anchored trim (ADR-0002).** Runs after M is available (§7.7 step 3b). When M exists and comps were title-filtered (step 5 parallel-name bullet): drop any surviving comp with `price > K × M` (K = 2.5 **[TUNABLE]**). Reason: `model_anchor_trim`. Log the count dropped. If more than 30% **[TUNABLE]** of post-title-filter comps (before outlier removal) are dropped by this step, flag `title_filter_unreliable` — the vocabulary is likely insufficient for this set. Re-compute C, tier and n from the trimmed set.
 
 In M3, log counts of exclusions by reason so the filters can be tuned against real data.
 
@@ -742,6 +752,8 @@ Base confidence for each row, and every other confidence rule, is in the **confi
 
 **Thin market:** flag `thin_market` whenever the tier is WEAK or NONE.
 
+**No-model conservative rule (ADR-0002):** when the card is base, comps are title-filtered (§7.2 step 5), and no M exists: use quantile **0.35 [TUNABLE]** instead of 0.5 for C (§7.3). This deliberately undervalues rather than overvalues, because title filtering's false-negative rate always inflates (sellers who omit a parallel name are selling the expensive version). Confidence is low (reason `title_filtered_no_model`). "Why this value" explains: "Value is conservative because no model cross-check is available for title-filtered comps."
+
 **Confidence table (normative).** Implemented in `/src/domain/valuation/confidence.ts`. Final confidence = the minimum over all applicable caps (order high > medium > low > none). The valuation row stores the binding reason codes in `confidence_reasons`, and each is shown as a chip. Chips render the `src/ui/copy.ts` text for each reason code, never the code itself.
 
 | Rule | Applies when | Cap | Reason code | Source |
@@ -760,6 +772,9 @@ Base confidence for each row, and every other confidence rule, is in the **confi
 | Condition | `raw_condition_tier` ≠ `market` | medium | `condition_adjusted` | §7.6 |
 | Raw cap | method `model_only`, `model_primary` or `grade_inferred`, and the §7.6 raw cap applies to the pre-condition value | medium | `raw_capped` | §7.6 |
 | Grade inference | method `grade_inferred` | low | `grade_inferred` | §7.5 |
+| Title-filtered comps | comps provided via title-based parallel filtering (ADR-0002) | medium | `title_filtered` | §7.2, ADR-0002 |
+| Title filter unreliable | `title_filter_unreliable` flag set (>30% of comps dropped by model-anchor trim) | low | `title_filter_unreliable` | §7.2, ADR-0002 |
+| No-model title-filtered base | base card with title-filtered comps and no M | low | `title_filtered_no_model` | §7.4, ADR-0002 |
 | Unverified identity | `item.identity_unverified` is set (§6.7) | low | `identity_unverified` | §6.7 |
 | Manual override | method `manual` | min(medium, the confidence the market method would have had), never below low | `manual` | §7.8 |
 | Unpriced | method `unpriced` | none | `unpriced` | §7.5, §7.7 |
@@ -795,7 +810,7 @@ Cards from before 1980 get no inference in V1 (`unpriced`).
 - `market` (the default) means "priced like a typical raw copy", which is what raw comps and SportsCardsPro's ungraded value represent. The UI explains this in one line.
 
 ### 7.7 Order of operations (normative)
-`ALGORITHM_VERSION = 1.0.0`. This block is the normative order; §7.1–7.6 and §7.8–7.10 define each step.
+`ALGORITHM_VERSION = 1.1.0`. This block is the normative order; §7.1–7.6 and §7.8–7.10 define each step. Version bumped from 1.0.0 for ADR-0002 (title-filtered comps, model-anchored trim, no-title exclusion).
 
 ```text
 valueItem(input, cfg, fees):
@@ -803,14 +818,20 @@ valueItem(input, cfg, fees):
   key = gradeKey(input.item)              // §7.1
 
   1.   No inputs at all (no C, no M, no anchor, no manual value) → method unpriced, confidence none.
-  2.   S = clean(input.sales, key, D)                        // §7.2 steps 1–5; sales = auction records for this exact
-                                                             // card+parallel (§3.4)
+  2.   S = clean(input.sales, key, D)                        // §7.2 steps 0–5; includes no-title exclusion (step 0),
+                                                             // parallel-name title filtering (step 5), and content filters.
+                                                             // Sales arrive from the adapter unfiltered (ADR-0001).
        window = smallest of [90, 180, 365] with ≥ 3 sales in S, else 365   // §7.3, counted before outlier removal
        loop:
          W = removeOutliers(S within window)                 // §7.2 step 6, including cluster protection
          if |W| < 3 and window < 365: window = next window; repeat
        C, p25, p75, n, n_eff, dispersion, tier = compsStats(W)            // §7.3 (tier uses n_eff and top weight share)
   3.   M = modelLookup(input.modelTable, key); set model_cross_grader      // §7.1
+  3b.  if title-filtered comps and M exists:                               // §7.2 step 7: model-anchored trim (ADR-0002)
+         drop W entries with price > K × M (K = 2.5 [TUNABLE])
+         if dropped > 30% of S (post step 5, pre step 6): set title_filter_unreliable
+         re-compute C, p25, p75, n, n_eff, dispersion, tier from trimmed W
+       if base card, title-filtered, no M: C = quantile 0.35 of W          // §7.4 no-model conservative rule
        d = |ln(C / M)| when both exist
   4.   market value, method = §7.4 table row (wc + 0.15, max 0.9, when model_cross_grader)
   5.   if no C and no M: grade inference (§7.5), else unpriced
@@ -879,36 +900,42 @@ Uses the active `settings` row of kind `fees`. **Defaults** (checked Sept 2026; 
 ### 7.12 Worked examples (frozen unit tests; hand-verified)
 Every frozen example's inputs and expected outputs (C, n, n_eff, tier, method, confidence, value, low, high, net, flags) live in `/fixtures/valuation/examples.json` and are computed by an independent reference script `/tools/oracle` (sharing no code with `/src/domain`) or by hand, **before** the engine code for that path is written. CI checks that the oracle reproduces examples.json.
 
-**Example A (titles available).** 2020 Prizm Justin Herbert #325 **Silver**, raw, tier `market`, asOf = D (ages in whole days). Raw inputs for `RAW` (auction records, before cleaning):
+**Example A (title-filtered Silver comps).** 2020 Prizm Justin Herbert #325 **Silver**, raw, tier `market`, asOf = D (ages in whole days). Raw inputs for `RAW` (auction records from CardSight, before cleaning; the adapter fetched all records for the card, and these are the ones that arrive at the engine):
 
 | Price | Age | Type | Title |
 |---|---|---|---|
-| $210 | 5d | auction | — |
-| $195 | 12d | auction | — |
-| $230 | 20d | auction | — |
+| $210 | 5d | auction | "2020 Panini Prizm Justin Herbert Silver Prizm #325 RC" |
+| $195 | 12d | auction | "Justin Herbert 2020 Panini Prizm Silver RC #325" |
+| $230 | 20d | auction | "2020 Panini Prizm Football Justin Herbert Silver #325 RC" |
 | $120 | 25d | auction | "…Silver Prizm lot of 2" |
-| $205 | 41d | auction | — |
-| $640 | 60d | auction | — |
+| $205 | 41d | auction | "Justin Herbert Silver Prizm #325 2020 Panini" |
+| $640 | 60d | auction | "2020 Panini Prizm Justin Herbert #325 Silver Prizm RC" |
 
-M = $200 (`RAW`), `model_sales_volume` = 150. No PSA:10 M.
+M = $200 (`RAW`), `model_sales_volume` = 150. No PSA:10 M. Parallel vocabulary complete.
 
-1. Cleaning (§7.2 steps 1–5): the title filter drops $120 (`lot`).
+1. Cleaning (§7.2 steps 0–5): step 0 passes (all have titles). Step 5 parallel-name filter: card is Silver parallel, so keep records whose title matches "Silver" — all 6 pass. Content filter drops $120 (`lot`).
 2. Window (§7.3): all 5 cleaned sales are ≤ 90 days old, so the window is 90.
 3. Outliers inside the window (§7.2 step 6): n = 5, median ln = ln 210, MAD = 0.0741. z($640) = 10.14, and no cleaned sale lies within 21 days and ±25% of it, so it's dropped; all other z ≤ 0.83. n = 4 ≥ 3, so the window stays 90.
-4. Weights: $195 → 0.758, $205 → 0.388, $210 → 0.891, $230 → 0.630. Cumulative share in price order: 0.284, 0.430, 0.764, 1.0.
+4. Model-anchored trim (§7.2 step 7): $640 already removed by outlier step; remaining max $230 < 2.5 × $200 = $500, so no further drops. `title_filter_unreliable` not set.
+5. Weights: $195 → 0.758, $205 → 0.388, $210 → 0.891, $230 → 0.630. Cumulative share in price order: 0.284, 0.430, 0.764, 1.0.
    - **C = $210.00**
    - Quartiles: p25 = $195, p75 = $210
    - n_eff = 3.71, top weight share = 0.334, dispersion = 0.071
    - Tier **OK** (STRONG needs n ≥ 5; n_eff ≥ 2 and the latest sale is 5 days old).
-5. d = |ln(210/200)| = 0.0488, so not divergent. Value = blend(210, 200, 0.6) = **$205.94**. Confidence **medium** (reason `comps_ok`), method `blend`.
-6. Range (§7.7 step 7): h_comps = 1.2816 × ln(210/195) ÷ 1.349 = 0.070, below the medium floor, so h = 0.25. low = 205.94 × e^(−0.25) = **$160.39**, high = 205.94 × e^(0.25) = **$264.43**. [min(C, M), max(C, M)] = [$200, $210] is already inside.
-7. Net: fee = 0.1325 × 205.94 × 1.08 + 0.40 = $29.87 (rounded on its own). Shipping = $5.00. **Net = $171.07**.
+6. d = |ln(210/200)| = 0.0488, so not divergent. Value = blend(210, 200, 0.6) = **$205.94**. Confidence: min(`comps_ok` → medium, `title_filtered` → medium) = **medium** (reasons: `comps_ok`, `title_filtered`), method `blend`.
+7. Range (§7.7 step 7): h_comps = 1.2816 × ln(210/195) ÷ 1.349 = 0.070, below the medium floor, so h = 0.25. low = 205.94 × e^(−0.25) = **$160.39**, high = 205.94 × e^(0.25) = **$264.43**. [min(C, M), max(C, M)] = [$200, $210] is already inside.
+8. Net: fee = 0.1325 × 205.94 × 1.08 + 0.40 = $29.87 (rounded on its own). Shipping = $5.00. **Net = $171.07**.
 
-**Example B (no titles; CardSight's `title` field is optional).** Same sales, no titles.
-- Window 90 (all 6 sales are ≤ 90 days old). Outliers inside the window: n = 6, and z($120) = 4.47 and z($640) = 9.20, so both are dropped (neither has a cluster neighbour within 21 days and ±25%).
-- The remaining four sales are identical to Example A, so every output is identical. The only difference: $120's exclusion reason is `outlier`, not `title_lot`.
+Example A outputs are identical to the pre-ADR-0002 version; the title-filtered confidence cap was already medium.
 
-Examples A and B keep the same exclusions under window-first outlier detection (§7.2 step 6).
+**Example B (no titles → model-only fallback).** Same card and M, but all 6 sales have no title.
+- §7.2 step 0 drops all 6 records (`no_title`). n = 0, tier = NONE.
+- M = $200, `model_sales_volume` = 150, grade key = `RAW`. §7.4: NONE + M → method `model_only`, value = **$200.00**.
+- Confidence: min(`model_liquid` → medium) = **medium**. `title_filtered` does not apply (no comps were used).
+- Range: h = floor[medium] = 0.25. low = 200 × e^(−0.25) = **$155.76**, high = 200 × e^(0.25) = **$256.81**.
+- Net: fee = 0.1325 × 200 × 1.08 + 0.40 = $29.02 (rounded on its own). Shipping = $5.00. **Net = $165.98**.
+
+Example B changed from v1.0.0: previously the 6 untitled records survived cleaning, outlier removal dropped 2, and the result matched Example A. Under v1.1.0, untitled records are excluded at step 0, and the card falls back to model-only. This is the intended behaviour (ADR-0002): without titles, parallel isolation cannot work, so comps are not used.
 
 **Required frozen examples** (expected outputs for C–K come from `/tools/oracle` or hand computation, per the rule above):
 
@@ -1180,7 +1207,7 @@ Build in order. Each milestone ends with a working, tested app, a `CHANGELOG.md`
   5. Whether prices include shipping.
   6. How `catalog.parallels.list` exposes print runs (fixed vs per-player) and SP/SSP image variations.
   7. Identify response shape: detections, confidence tier, parallelSuggestions.
-  8. SportsCardsPro `/api/products` result count for a modern Prizm/Optic rookie without the parallel term (does the 20-result cap truncate the family?).
+  8. SportsCardsPro `/api/products` result count for a modern Prizm/Optic rookie without the parallel term (does the 100-result cap — updated from 20 per ADR-0001 — truncate the family?).
   9. Projected §7.4 method mix on these cards (comps-based / model_only / unpriced).
 - **Go/no-go [TUNABLE]:** (a) base and parallel records are isolated for every card tested; (b) ≥60% of cards with a SportsCardsPro RAW value ≥ $10 have ≥1 raw auction sale in 180 days. If either fails, stop and ask Nick whether to use Card Hedge as the V1 `CompsProvider` or run model-primary (the engine already handles tier NONE).
 
@@ -1424,7 +1451,7 @@ Prices come back as **integers in pennies** (1732 = $17.32). Other fields: `id`,
 
 The "cross-grader" rows (grades 1–9.5) set `model_cross_grader` for every grader except PSA (§7.1). A 10 from any grader not listed above (e.g., `OTHER:10`) has **no M**.
 
-Endpoints: `GET https://www.sportscardspro.com/api/product?t=TOKEN&id=ID` (or `&q=search`); `GET /api/products?t=TOKEN&q=search` (≤ 20 results). Limit: **1 call/second**. CSV downloads: at most one per 10 minutes, and each set's CSV is regenerated every 24h. A missing field or a price of 0 means "no value" and must never be treated as $0. **Re-verify this mapping against the live docs in M3.**
+Endpoints: `GET https://www.sportscardspro.com/api/product?t=TOKEN&id=ID` (or `&q=search`); `GET /api/products?t=TOKEN&q=search` (≤ 100 results; response shape `{ products: [...] }` — ADR-0001). Limit: **1 call/second**. CSV downloads: at most one per 10 minutes, and each set's CSV is regenerated every 24h. A missing field or a price of 0 means "no value" and must never be treated as $0. **Re-verify this mapping against the live docs in M3.**
 
 ---
 

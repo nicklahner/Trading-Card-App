@@ -1,0 +1,180 @@
+[
+  {
+    "test": "paging",
+    "page1": {
+      "count": 5,
+      "total": 5,
+      "dates": [
+        "2026-09-11T01:04:01Z",
+        "2026-09-05T04:26:54Z",
+        "2026-09-05T00:02:00Z",
+        "2026-09-01T01:35:19Z",
+        "2026-08-31T14:50:59Z"
+      ],
+      "messages": [
+        {
+          "type": "warning",
+          "message": "Returned the maximum 5 listings for this card; older sales exist beyond this page. To page further back, set as_of_date to the oldest date in this response and query again."
+        }
+      ]
+    },
+    "page2": {
+      "count": 4,
+      "total": 4,
+      "asOfDate": "2026-08-31",
+      "dates": [
+        "2026-08-31T14:50:59Z",
+        "2026-08-31T00:53:01Z",
+        "2026-08-30T19:54:43Z",
+        "2026-08-27T03:06:06Z"
+      ]
+    },
+    "overlap": 1
+  },
+  {
+    "test": "fixed_records",
+    "totalCollected": 18,
+    "samples": [
+      {
+        "card": "Makai Lemon",
+        "price": 1.19,
+        "date": "2026-09-13T10:17:30.654609Z",
+        "title": "2026 Topps Flagship Football No. 319 Makai Lemon RC. Eagles ",
+        "url": "https://showme.cards/i4aYn",
+        "listing_type": "fixed"
+      },
+      {
+        "card": "Makai Lemon",
+        "price": 2.99,
+        "date": "2026-09-13T10:15:55.875174Z",
+        "title": "Makai Lemon Rookie #319 2026 Topps Flagship Philadelphia Eagles Football Card",
+        "url": "https://showme.cards/nqfwr",
+        "listing_type": "fixed"
+      },
+      {
+        "card": "Makai Lemon",
+        "price": 1.13,
+        "date": "2026-09-13T10:15:45.642416Z",
+        "title": "2026 Topps Flagship Football - Makai Lemon RC Eagles #319",
+        "url": "https://showme.cards/bCEHG",
+        "listing_type": "fixed"
+      },
+      {
+        "card": "Eli Heidenreich",
+        "price": 69.99,
+        "date": "2026-09-13T10:15:18.733827Z",
+        "title": "Eli Heidenreich 2026 Topps Flagship Football RC #398 Canvas /50 Steelers (RC)",
+        "url": "https://showme.cards/GIFIj",
+        "listing_type": "fixed"
+      },
+      {
+        "card": "Eli Heidenreich",
+        "price": 1.89,
+        "date": "2026-09-13T10:14:57.596144Z",
+        "title": "2026 Topps Flagship Football Eli Heidenreich #398 (RC) Steelers",
+        "url": "https://showme.cards/BETUq",
+        "listing_type": "fixed"
+      },
+      {
+        "card": "Eli Heidenreich",
+        "price": 4,
+        "date": "2026-09-13T10:14:50.837417Z",
+        "title": "2026 Topps Flagship Football Eli Heidenreich RC #398 Diamante Foil Steelers 🏈",
+        "url": "https://showme.cards/8gqxn",
+        "listing_type": "fixed"
+      },
+      {
+        "card": "Mike Evans (base set)",
+        "price": 3.75,
+        "date": "2026-09-13T10:14:43.401619Z",
+        "title": "Topps 2026 Flagship Football Mike Evans #156 Leather Refractor 49ers",
+        "url": "https://showme.cards/Obpsh",
+        "listing_type": "fixed"
+      },
+      {
+        "card": "Mike Evans (base set)",
+        "price": 1,
+        "date": "2026-09-12T10:17:48.256098Z",
+        "title": "2026 Topps Flagship Football Mike Evans #156 San Francisco 49ers",
+        "url": "https://showme.cards/7SPvP",
+        "listing_type": "fixed"
+      },
+      {
+        "card": "Mike Evans (base set)",
+        "price": 1.99,
+        "date": "2026-09-12T10:17:13.886272Z",
+        "title": "2026 Topps Flagship Football Mike Evans Diamante Foil #156 San Francisco 49ers",
+        "url": "https://showme.cards/uFT9f",
+        "listing_type": "fixed"
+      },
+      {
+        "card": "Omarion Hampton",
+        "price": 0.99,
+        "date": "2026-09-13T10:13:15.434699Z",
+        "title": "2026 Topps Flagship Football Omarion Hampton #107",
+        "url": "https://showme.cards/UVR3N",
+        "listing_type": "fixed"
+      },
+      {
+        "card": "Omarion Hampton",
+        "price": 1.74,
+        "date": "2026-09-11T10:15:43.650470Z",
+        "title": "2026 Topps Flagship Football #107 Omarion Hampton  Base  Los Angeles Chargers",
+        "url": "https://showme.cards/LuZ4g",
+        "listing_type": "fixed"
+      },
+      {
+        "card": "Omarion Hampton",
+        "price": 4.99,
+        "date": "2026-09-10T10:18:56.226467Z",
+        "title": "2026 Topps Flagship Football - Omarion Hampton #107 Gold /2026 Chargers",
+        "url": "https://showme.cards/jtt7t",
+        "listing_type": "fixed"
+      },
+      {
+        "card": "Jacoby Brissett",
+        "price": 4.99,
+        "date": "2026-09-13T10:17:24.651368Z",
+        "title": "2026 Topps Flagship Football Jacoby Brissett #2 /2026 Cardinals",
+        "url": "https://showme.cards/fhvzB",
+        "listing_type": "fixed"
+      },
+      {
+        "card": "Jacoby Brissett",
+        "price": 1.25,
+        "date": "2026-09-13T10:16:34.776134Z",
+        "title": "2026 Topps Flagship Football Jacoby Brissett #2 Arizona Cardinals Base Mint 🔥🏈",
+        "url": "https://showme.cards/ofLsI",
+        "listing_type": "fixed"
+      },
+      {
+        "card": "Jacoby Brissett",
+        "price": 9.99,
+        "date": "2026-09-13T10:16:01.925482Z",
+        "title": "JACOBY BRISSETT 2026 Topps Flagship Football #2 Gold Diamante /50 Cardinals",
+        "url": "https://showme.cards/P7a2T",
+        "listing_type": "fixed"
+      }
+    ]
+  },
+  {
+    "test": "parallel_isolation",
+    "card": "Makai Lemon",
+    "parallel": "Holo Foil",
+    "parallelId": "4e37b819-5815-42c5-8b2d-b68832d93ee7",
+    "baseCount": 7,
+    "parallelCount": 0,
+    "baseParallelIds": [
+      "undefined"
+    ],
+    "parallelParallelIds": [],
+    "baseBleedCount": 0,
+    "parallelBleedCount": 0,
+    "sharedUrls": 0
+  },
+  {
+    "test": "shipping",
+    "shippingFieldPresent": false,
+    "recordFields": []
+  }
+]

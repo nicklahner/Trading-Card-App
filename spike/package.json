@@ -1,0 +1,9 @@
+{
+  "name": "card-tracker-spike",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "cardsightai": "^4.0.0",
+    "dotenv": "^16.0.0"
+  }
+}

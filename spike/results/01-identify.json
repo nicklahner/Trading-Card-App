@@ -1,0 +1,319 @@
+[
+  {
+    "card": "01",
+    "success": true,
+    "requestId": "56d6d443-dae1-8a54-9c04-08e4d78ff408",
+    "processingTime": 477,
+    "detectionCount": 1,
+    "detections": [
+      {
+        "confidence": "High",
+        "card": {
+          "id": "e2699195-72b0-44aa-802c-772395a042c2",
+          "segmentId": "5b86ca75-c5be-4621-aca1-57bd4f6dd111",
+          "releaseId": "7d7b6650-5ea9-4340-b3e7-83a29ec52480",
+          "setId": "1d529543-0e41-4bdb-b3ff-437eb41fad2d",
+          "year": "2026",
+          "manufacturer": "Topps",
+          "releaseName": "Topps Flagship Football",
+          "setName": "Base Set",
+          "name": "Eli Heidenreich",
+          "number": "398",
+          "attributes": [
+            "NFL-PIT",
+            "RC"
+          ],
+          "suggestionCount": 0
+        }
+      }
+    ]
+  },
+  {
+    "card": "02",
+    "success": true,
+    "requestId": "5301cdca-2597-4e01-8c78-91b5ac806cbf",
+    "processingTime": 288,
+    "detectionCount": 1,
+    "detections": [
+      {
+        "confidence": "Low",
+        "card": {
+          "id": "6f582fcb-7b11-4d3c-b250-06bf3d6d9de6",
+          "segmentId": "5b86ca75-c5be-4621-aca1-57bd4f6dd111",
+          "releaseId": "7d7b6650-5ea9-4340-b3e7-83a29ec52480",
+          "setId": "1d529543-0e41-4bdb-b3ff-437eb41fad2d",
+          "year": "2026",
+          "manufacturer": "Topps",
+          "releaseName": "Topps Flagship Football",
+          "setName": "Base Set",
+          "name": "America's Duo Combo Card",
+          "number": "296",
+          "attributes": [
+            "NFL-DAL"
+          ],
+          "suggestionCount": 0
+        }
+      }
+    ]
+  },
+  {
+    "card": "03",
+    "success": false,
+    "requestId": "e19f9212-8b4d-4c83-8534-8a445ae5455f",
+    "processingTime": 138,
+    "detectionCount": 0,
+    "detections": []
+  },
+  {
+    "card": "04",
+    "success": false,
+    "requestId": "67eff549-e202-4963-9fec-3e7024516421",
+    "processingTime": 135,
+    "detectionCount": 0,
+    "detections": []
+  },
+  {
+    "card": "05",
+    "success": true,
+    "requestId": "7abd4515-db0c-437e-9efc-a8d80214ff9f",
+    "processingTime": 210,
+    "detectionCount": 1,
+    "detections": [
+      {
+        "confidence": "High",
+        "card": {
+          "id": "f6d3585c-ecee-4a8f-9424-b1bb89613590",
+          "segmentId": "5b86ca75-c5be-4621-aca1-57bd4f6dd111",
+          "releaseId": "7d7b6650-5ea9-4340-b3e7-83a29ec52480",
+          "setId": "1d529543-0e41-4bdb-b3ff-437eb41fad2d",
+          "year": "2026",
+          "manufacturer": "Topps",
+          "releaseName": "Topps Flagship Football",
+          "setName": "Base Set",
+          "name": "Makai Lemon",
+          "number": "319",
+          "attributes": [
+            "NFL-PHI",
+            "RC"
+          ],
+          "suggestionCount": 0
+        }
+      }
+    ]
+  },
+  {
+    "card": "06",
+    "success": true,
+    "requestId": "b1d85491-b4d4-4efd-be33-c5a4a750c261",
+    "processingTime": 162,
+    "detectionCount": 1,
+    "detections": [
+      {
+        "confidence": "High",
+        "card": {
+          "segmentId": "5b86ca75-c5be-4621-aca1-57bd4f6dd111",
+          "releaseId": "7d7b6650-5ea9-4340-b3e7-83a29ec52480",
+          "setId": "57bb85e3-fbfe-4b67-8834-52bfdf26f050",
+          "year": "2026",
+          "manufacturer": "Topps",
+          "releaseName": "Topps Flagship Football",
+          "setName": "1991 Topps",
+          "suggestionCount": 0
+        }
+      }
+    ]
+  },
+  {
+    "card": "07",
+    "success": false,
+    "requestId": "9e923da2-18b6-46b1-94f5-47a797454220",
+    "processingTime": 139,
+    "detectionCount": 0,
+    "detections": []
+  },
+  {
+    "card": "08",
+    "success": false,
+    "requestId": "0e07dd6a-d12f-481d-81f3-c1c24037cf35",
+    "processingTime": 143,
+    "detectionCount": 0,
+    "detections": []
+  },
+  {
+    "card": "09",
+    "success": true,
+    "requestId": "dede69ad-ce16-4e1c-9260-08cf11b9847e",
+    "processingTime": 336,
+    "detectionCount": 1,
+    "detections": [
+      {
+        "confidence": "Low",
+        "card": {
+          "id": "c3fdb585-d2fd-4d3c-a79a-def644dcbb71",
+          "segmentId": "5b86ca75-c5be-4621-aca1-57bd4f6dd111",
+          "releaseId": "7d7b6650-5ea9-4340-b3e7-83a29ec52480",
+          "setId": "1d529543-0e41-4bdb-b3ff-437eb41fad2d",
+          "year": "2026",
+          "manufacturer": "Topps",
+          "releaseName": "Topps Flagship Football",
+          "setName": "Base Set",
+          "name": "Isaiah Likely",
+          "number": "206",
+          "attributes": [
+            "NFL-NYG"
+          ],
+          "suggestionCount": 0
+        }
+      }
+    ]
+  },
+  {
+    "card": "10",
+    "success": true,
+    "requestId": "66cc5529-3c6c-49b7-9cc0-cef639c35326",
+    "processingTime": 183,
+    "detectionCount": 1,
+    "detections": [
+      {
+        "confidence": "Low",
+        "card": {
+          "id": "6b8ac061-3746-4927-9327-7f31b3eb4873",
+          "segmentId": "5b86ca75-c5be-4621-aca1-57bd4f6dd111",
+          "releaseId": "7d7b6650-5ea9-4340-b3e7-83a29ec52480",
+          "setId": "1d529543-0e41-4bdb-b3ff-437eb41fad2d",
+          "year": "2026",
+          "manufacturer": "Topps",
+          "releaseName": "Topps Flagship Football",
+          "setName": "Base Set",
+          "name": "Avieon Terrell",
+          "number": "379",
+          "attributes": [
+            "NFL-ATL",
+            "RC"
+          ],
+          "suggestionCount": 0
+        }
+      }
+    ]
+  },
+  {
+    "card": "11",
+    "success": false,
+    "requestId": "1e6e3f29-aa23-4927-a8e8-e969e62176a1",
+    "processingTime": 137,
+    "detectionCount": 0,
+    "detections": []
+  },
+  {
+    "card": "12",
+    "success": true,
+    "requestId": "41475557-bdf2-4a35-a44f-f608972a30fb",
+    "processingTime": 160,
+    "detectionCount": 1,
+    "detections": [
+      {
+        "confidence": "High",
+        "card": {
+          "id": "bd4ebf43-d7a6-48f9-bd2f-b7f30c37f170",
+          "segmentId": "5b86ca75-c5be-4621-aca1-57bd4f6dd111",
+          "releaseId": "7d7b6650-5ea9-4340-b3e7-83a29ec52480",
+          "setId": "1d529543-0e41-4bdb-b3ff-437eb41fad2d",
+          "year": "2026",
+          "manufacturer": "Topps",
+          "releaseName": "Topps Flagship Football",
+          "setName": "Base Set",
+          "name": "Seattle Slays Combo Card",
+          "number": "294",
+          "attributes": [
+            "NFL-SEA"
+          ],
+          "suggestionCount": 0
+        }
+      }
+    ]
+  },
+  {
+    "card": "13",
+    "success": true,
+    "requestId": "81254f74-e2ab-47cc-9be6-009e97eb9cde",
+    "processingTime": 141,
+    "detectionCount": 1,
+    "detections": [
+      {
+        "confidence": "Low",
+        "card": {
+          "id": "1a2bdc35-fb90-434f-9039-4c2808c44084",
+          "segmentId": "5b86ca75-c5be-4621-aca1-57bd4f6dd111",
+          "releaseId": "7d7b6650-5ea9-4340-b3e7-83a29ec52480",
+          "setId": "1d529543-0e41-4bdb-b3ff-437eb41fad2d",
+          "year": "2026",
+          "manufacturer": "Topps",
+          "releaseName": "Topps Flagship Football",
+          "setName": "Base Set",
+          "name": "Jacoby Brissett",
+          "number": "2",
+          "attributes": [
+            "NFL-ARI"
+          ],
+          "suggestionCount": 0
+        }
+      }
+    ]
+  },
+  {
+    "card": "14",
+    "success": true,
+    "requestId": "13644a38-b152-41da-9c03-441004166967",
+    "processingTime": 165,
+    "detectionCount": 1,
+    "detections": [
+      {
+        "confidence": "Medium",
+        "card": {
+          "id": "bd4ebf43-d7a6-48f9-bd2f-b7f30c37f170",
+          "segmentId": "5b86ca75-c5be-4621-aca1-57bd4f6dd111",
+          "releaseId": "7d7b6650-5ea9-4340-b3e7-83a29ec52480",
+          "setId": "1d529543-0e41-4bdb-b3ff-437eb41fad2d",
+          "year": "2026",
+          "manufacturer": "Topps",
+          "releaseName": "Topps Flagship Football",
+          "setName": "Base Set",
+          "name": "Seattle Slays Combo Card",
+          "number": "294",
+          "attributes": [
+            "NFL-SEA"
+          ],
+          "suggestionCount": 0
+        }
+      }
+    ]
+  },
+  {
+    "card": "15",
+    "success": true,
+    "requestId": "acc8222c-61eb-40dc-9d5d-a95b1dde9833",
+    "processingTime": 154,
+    "detectionCount": 1,
+    "detections": [
+      {
+        "confidence": "High",
+        "card": {
+          "id": "6f582fcb-7b11-4d3c-b250-06bf3d6d9de6",
+          "segmentId": "5b86ca75-c5be-4621-aca1-57bd4f6dd111",
+          "releaseId": "7d7b6650-5ea9-4340-b3e7-83a29ec52480",
+          "setId": "1d529543-0e41-4bdb-b3ff-437eb41fad2d",
+          "year": "2026",
+          "manufacturer": "Topps",
+          "releaseName": "Topps Flagship Football",
+          "setName": "Base Set",
+          "name": "America's Duo Combo Card",
+          "number": "296",
+          "attributes": [
+            "NFL-DAL"
+          ],
+          "suggestionCount": 0
+        }
+      }
+    ]
+  }
+]

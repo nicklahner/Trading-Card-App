@@ -13,3 +13,13 @@
 - Engine rule changes need a matching test update in the same commit. Never generate or update expected values for frozen valuation or reporting fixtures by running src/. They come from /tools/oracle or hand computation. If the engine disagrees with an example, stop and report which rule is ambiguous; never edit expected values to match code.
 - When a vendor API differs from DESIGN.md, write an ADR in docs/adr/ and adapt the adapter, not the domain types, where possible.
 - Commands: pnpm dev | pnpm test | pnpm e2e | pnpm job:nightly [--date YYYY-MM-DD] | pnpm cache:purge-all --provider cardsight | pnpm smoke:identify <images> | pnpm smoke:value <itemId> (smoke = real APIs, manual only) | pnpm validate [--config candidate.json]
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

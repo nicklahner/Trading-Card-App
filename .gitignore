@@ -1,9 +1,34 @@
+# dependencies
 node_modules/
+/.pnp
+.pnp.*
+
+# next.js
 .next/
+/out/
+/build
+
+# env files
 .env
 .env.local
+.env.*.local
+
+# testing
 coverage/
+
+# build artifacts
 dist/
-*.log
+
+# misc
 .DS_Store
+*.pem
+*.log
+*.tsbuildinfo
+next-env.d.ts
+
+# real card fixtures (not committed)
 fixtures/cards/real/
+
+# playwright
+/test-results/
+/playwright-report/

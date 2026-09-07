@@ -1,0 +1,1813 @@
+[
+  {
+    "label": "2020 Prizm Justin Herbert #325",
+    "cardId": "7f0be670-ed0a-4fbd-ad90-74e6cb043832",
+    "data": {
+      "card": {
+        "card_id": "7f0be670-ed0a-4fbd-ad90-74e6cb043832",
+        "name": "Justin Herbert",
+        "number": "325",
+        "set": {
+          "set_id": "aab59daf-16bc-4852-93c1-3ce6bfd01be8",
+          "name": "Base Set",
+          "year": "2020",
+          "release": "Panini Prizm"
+        }
+      },
+      "query": {
+        "parallel_id": null,
+        "period": "1y",
+        "listing_type": "auction",
+        "as_of_date": "2026-09-13"
+      },
+      "raw": {
+        "period_days": 365,
+        "count": 7,
+        "records": [
+          {
+            "title": "Panini 2020 Prizm Football Justin Herbert #325 RC Lazer Prizm Chargers",
+            "price": 33,
+            "date": "2026-09-10T18:10:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/Dt7pd",
+            "image_url": "https://i.ebayimg.com/images/g/ZX4AAeSwbr9qh0LH/s-l225.jpg"
+          },
+          {
+            "title": "Justin Herbert 2020 Panini Prizm RC #325",
+            "price": 4.25,
+            "date": "2026-08-15T01:30:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/2NSU8",
+            "image_url": "https://i.ebayimg.com/images/g/PUEAAeSw0hNqdkzZ/s-l225.jpg"
+          },
+          {
+            "title": "2020 Prizm Football Justin Herbert RC #325 Red, White and Blue LA Chargers",
+            "price": 21.5,
+            "date": "2026-08-12T01:51:39Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/U7tPe",
+            "image_url": "https://i.ebayimg.com/images/g/iwYAAeSwDF1qbkPM/s-l225.jpg"
+          },
+          {
+            "title": "2020 Panini Prizm #325 Justin Herbert",
+            "price": 6.5,
+            "date": "2026-07-22T01:25:20Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/zAq1x",
+            "image_url": "https://i.ebayimg.com/images/g/7IYAAeSwQERqOeAM/s-l225.jpg"
+          },
+          {
+            "title": "JUSTIN HERBERT 2020 PANINI PRIZM ROOKIE RC #325 FOOTBALL CHARGERS Q7389",
+            "price": 7.5,
+            "date": "2026-07-15T00:29:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/uhPWQ",
+            "image_url": "https://i.ebayimg.com/images/g/0gwAAeSwjvNqQ7vF/s-l225.jpg"
+          },
+          {
+            "title": "2020 Panini Prizm Justin Herbert RC Rookie #325 Chargers",
+            "price": 3.85,
+            "date": "2026-07-15T00:01:26Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/iuvIm",
+            "image_url": "https://i.ebayimg.com/images/g/tmsAAeSwe41qUAQ3/s-l225.jpg"
+          },
+          {
+            "title": "2020 Justin Herbert Panini Prizm Football Orange Disco Prizm Rookie #325 RC",
+            "price": 33,
+            "date": "2026-07-13T01:38:50Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/loE3P",
+            "image_url": "https://i.ebayimg.com/images/g/PUoAAeSwC9NqTaoK/s-l225.jpg"
+          }
+        ]
+      },
+      "graded": [
+        {
+          "company_name": "PSA",
+          "company_id": "7acc6827-3794-4205-bc73-08a9060d5af7",
+          "grades": [
+            {
+              "grade_value": "10",
+              "grade_id": "4c004b81-2c7d-4d29-b69a-dc8d2f477aeb",
+              "period_days": 365,
+              "count": 6,
+              "records": [
+                {
+                  "title": "2020 Panini Prizm Justin Herbert Rc #325 PSA 10",
+                  "price": 61,
+                  "date": "2026-09-12T02:31:01Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/wJqfe",
+                  "image_url": "https://i.ebayimg.com/images/g/BeEAAeSwaGNqmxtx/s-l225.jpg"
+                },
+                {
+                  "title": "Justin Herbert RC 2020 Panini Prizm Football Rookie #325 Chargers PSA 10 ② [3hk",
+                  "price": 48.75,
+                  "date": "2026-07-15T02:44:53Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/zUe5C",
+                  "image_url": "https://i.ebayimg.com/images/g/nyQAAeSwYG9qUF1e/s-l225.jpg"
+                },
+                {
+                  "title": "Justin Herbert RC 2020 Panini Prizm Football Rookie #325 Chargers PSA 10 ③ [3hk",
+                  "price": 48.47,
+                  "date": "2026-07-15T02:39:55Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/1juSd",
+                  "image_url": "https://i.ebayimg.com/images/g/5c4AAeSwvjlqUFv3/s-l225.jpg"
+                },
+                {
+                  "title": "Justin Herbert RC 2020 Panini Prizm Football Rookie #325 Chargers PSA 10 ① [3hk",
+                  "price": 47,
+                  "date": "2026-07-15T02:20:10Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/GOMgu",
+                  "image_url": "https://i.ebayimg.com/images/g/LggAAeSwA5dqUFgJ/s-l225.jpg"
+                },
+                {
+                  "title": "Justin Herbert RC 2020 Panini Prizm Football Rookie #325 Chargers PSA 10 ④ [3hk",
+                  "price": 50,
+                  "date": "2026-07-15T02:17:51Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/3KbPR",
+                  "image_url": "https://i.ebayimg.com/images/g/WLYAAeSw-4NqUFbN/s-l225.jpg"
+                },
+                {
+                  "title": "2020 Panini Prizm Justin Herbert Rookie # 325 PSA 10 Gem Mint!",
+                  "price": 51,
+                  "date": "2026-07-13T01:31:47Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/YYQcU",
+                  "image_url": "https://i.ebayimg.com/images/g/dRoAAeSwDftqSwRO/s-l225.jpg"
+                }
+              ]
+            },
+            {
+              "grade_value": "9",
+              "grade_id": "f14655b7-0047-4add-9ae9-e2a8fcec0526",
+              "period_days": 365,
+              "count": 5,
+              "records": [
+                {
+                  "title": "Justin Herbert #325 Los Angeles Chargers PSA 9 Panini 2020 Prizm",
+                  "price": 20.5,
+                  "date": "2026-09-05T21:15:30Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/UTyB8",
+                  "image_url": "https://i.ebayimg.com/images/g/IM0AAeSwNRJqk0tE/s-l225.jpg"
+                },
+                {
+                  "title": "2020 Panini Prizm Justin Herbert #325 Black White Checker Prizm (RC) PSA 9 🏁",
+                  "price": 499,
+                  "date": "2026-08-18T16:21:42Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/aKpws",
+                  "image_url": "https://i.ebayimg.com/images/g/HrUAAeSwAzZqV~a0/s-l225.jpg"
+                },
+                {
+                  "title": "2020 Panini Prizm Justin Herbert RC Rookie #325 Chargers PSA 9 MINT",
+                  "price": 20.5,
+                  "date": "2026-07-15T09:55:12Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/hjhKL",
+                  "image_url": "https://i.ebayimg.com/images/g/nN4AAeSwU7hqU2QL/s-l225.jpg"
+                },
+                {
+                  "title": "67041026 Justin Herbert 2020 Panini Prizm #325 Lazer Rookie RC PSA 9",
+                  "price": 40,
+                  "date": "2026-06-01T01:36:20Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/coWy",
+                  "image_url": "https://i.ebayimg.com/images/g/zokAAeSwnLZqAQDa/s-l225.jpg"
+                },
+                {
+                  "title": "2020 Panini Prizm Justin Herbert RC PSA 9 #325 Los Angeles Chargers",
+                  "price": 15.97,
+                  "date": "2026-05-22T02:24:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/e0Ig",
+                  "image_url": "https://i.ebayimg.com/images/g/az0AAeSwv5dp86So/s-l225.jpg"
+                }
+              ]
+            },
+            {
+              "grade_value": "8",
+              "grade_id": "8cf6b653-cbee-4ffd-92aa-c3de253560a2",
+              "period_days": 365,
+              "count": 1,
+              "records": [
+                {
+                  "title": "2020 Panini Prizm Justin Herbert RC Silver Rookie #325 Chargers PSA 8",
+                  "price": 123.07,
+                  "date": "2026-05-29T00:54:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/qDNh",
+                  "image_url": "https://i.ebayimg.com/images/g/oMwAAeSwPY9qEcQs/s-l225.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company_name": "SGC",
+          "company_id": "aa797bb1-ae21-440f-91b6-7484e47ce0ce",
+          "grades": [
+            {
+              "grade_value": "10",
+              "grade_id": "19f85364-8400-4826-8e8a-e8420135e9ea",
+              "period_days": 365,
+              "count": 3,
+              "records": [
+                {
+                  "title": "2020 Panini Prizm Justin Herbert #325 SGC 10 GM",
+                  "price": 47.66,
+                  "date": "2026-08-24T23:06:51Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/dsuMe",
+                  "image_url": "https://i.ebayimg.com/images/g/hhAAAeSwkAlqg5P8/s-l225.jpg"
+                },
+                {
+                  "title": "2020 Panini Prizm #325 Justin Herbert RC GM SGC 10 Los Angeles Chargers 9861",
+                  "price": 29.01,
+                  "date": "2026-08-24T00:50:58Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/ccdPv",
+                  "image_url": "https://i.ebayimg.com/images/g/eloAAeSwSG9qfSHv/s-l225.jpg"
+                },
+                {
+                  "title": "2020 Panini Prizm Justin Herbert #325 SGC 10 GM",
+                  "price": 37.03,
+                  "date": "2026-07-25T18:37:22Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/LmbUN",
+                  "image_url": "https://i.ebayimg.com/images/g/494AAeSwLrBpWWP6/s-l225.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company_name": "BGS",
+          "company_id": "11bfc982-39bc-4813-99fc-70483a4dd653",
+          "grades": [
+            {
+              "grade_value": "9.5",
+              "grade_id": "f99bdb92-0bba-4236-b1d8-4a2093cf80f0",
+              "period_days": 365,
+              "count": 1,
+              "records": [
+                {
+                  "title": "2020 Panini Prizm Black & White Checker Justin Herbert #325 BGS 9.5 GEM",
+                  "price": 560,
+                  "date": "2026-07-25T17:29:42Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/iA3C7",
+                  "image_url": "https://i.ebayimg.com/images/g/USQAAeSw8vVqVV3i/s-l225.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "sources": [
+          {
+            "source": "ebay",
+            "count": 23
+          }
+        ],
+        "last_sale_date": "2026-09-12T02:31:01Z",
+        "total_records": 23
+      }
+    }
+  },
+  {
+    "label": "2023 Prizm C.J. Stroud #6 Prizmatic",
+    "cardId": "d581a05c-55f2-4bfd-bd37-c768fdc4592b",
+    "data": {
+      "card": {
+        "card_id": "d581a05c-55f2-4bfd-bd37-c768fdc4592b",
+        "name": "C.J. Stroud",
+        "number": "6",
+        "set": {
+          "set_id": "ebeb87f4-8956-453a-9353-ff0de8bec407",
+          "name": "Prizmatic",
+          "year": "2023",
+          "release": "Panini Prizm"
+        }
+      },
+      "query": {
+        "parallel_id": null,
+        "period": "1y",
+        "listing_type": "auction",
+        "as_of_date": "2026-09-13"
+      },
+      "raw": {
+        "period_days": 365,
+        "count": 3,
+        "records": [
+          {
+            "title": "2023 Panini Prizm C.J. Stroud Prizmatic #6 RC Houston Texans Rookie",
+            "price": 0.99,
+            "date": "2026-08-28T02:27:22Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/4TkYi",
+            "image_url": "https://i.ebayimg.com/images/g/QV4AAeSwGflqh7dG/s-l225.jpg"
+          },
+          {
+            "title": "2023 Panini Prizm C.J. Stroud Prizmatic RC Rookie #6 Texans",
+            "price": 0.99,
+            "date": "2026-06-19T01:58:59Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/0KzQX",
+            "image_url": "https://i.ebayimg.com/images/g/teAAAeSwwfFqLX-Y/s-l225.jpg"
+          },
+          {
+            "title": "2023 Panini Prizm - Prizmatic C.J. Stroud #6 (RC)",
+            "price": 1.5,
+            "date": "2026-05-19T19:01:37Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/qVbW",
+            "image_url": "https://i.ebayimg.com/images/g/9n0AAeSwSQRqA3jo/s-l225.jpg"
+          }
+        ]
+      },
+      "graded": [
+        {
+          "company_name": "PSA",
+          "company_id": "7acc6827-3794-4205-bc73-08a9060d5af7",
+          "grades": [
+            {
+              "grade_value": "9",
+              "grade_id": "f14655b7-0047-4add-9ae9-e2a8fcec0526",
+              "period_days": 365,
+              "count": 1,
+              "records": [
+                {
+                  "title": "2023 Panini Prizm C.J. Stroud Prizmatic RC Rookie #6 Texans PSA 9",
+                  "price": 11.5,
+                  "date": "2026-09-02T01:54:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/KsE3S",
+                  "image_url": "https://i.ebayimg.com/images/g/uuoAAeSwIK1qkHCS/s-l225.jpg"
+                }
+              ]
+            },
+            {
+              "grade_value": "10",
+              "grade_id": "4c004b81-2c7d-4d29-b69a-dc8d2f477aeb",
+              "period_days": 365,
+              "count": 5,
+              "records": [
+                {
+                  "title": "2023 Panini Prizm C.J. Stroud Prizmatic RC Rookie #6 Texans PSA 10 GEM MINT",
+                  "price": 39,
+                  "date": "2026-09-01T01:55:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/yKfdA",
+                  "image_url": "https://i.ebayimg.com/images/g/ZggAAeSwo5FqjrOq/s-l225.jpg"
+                },
+                {
+                  "title": "2023 Panini Prizm C.J. Stroud Prizmatic RC Rookie #6 Texans PSA 10 GEM MINT",
+                  "price": 39,
+                  "date": "2026-08-27T01:56:56Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/fffvg",
+                  "image_url": "https://i.ebayimg.com/images/g/IVsAAeSwiCJqiAj~/s-l225.jpg"
+                },
+                {
+                  "title": "Panini Prizm 2023 C.J. Stroud Rookie Prizmatic Insert #6 PSA 10 Texans",
+                  "price": 25,
+                  "date": "2026-08-26T11:55:19Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/PDaEx",
+                  "image_url": "https://i.ebayimg.com/images/g/Nj4AAeSwaONqhZlk/s-l225.jpg"
+                },
+                {
+                  "title": "2023 Panini Prizm #6 C.J. Stroud Prizmatic Rookie RC Texans PSA 10",
+                  "price": 36,
+                  "date": "2026-08-21T03:12:01Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/7ORLV",
+                  "image_url": "https://i.ebayimg.com/images/g/yIMAAeSwr-1qfMn6/s-l225.jpg"
+                },
+                {
+                  "title": "2023 Panini Prizm C.J. Stroud Prizmatic RC Rookie #6 Texans PSA 10 GEM MINT",
+                  "price": 32.66,
+                  "date": "2026-08-17T01:39:43Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/9kSEn",
+                  "image_url": "https://i.ebayimg.com/images/g/UukAAeSw8vxqeuZt/s-l225.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company_name": "SGC",
+          "company_id": "aa797bb1-ae21-440f-91b6-7484e47ce0ce",
+          "grades": [
+            {
+              "grade_value": "9.5",
+              "grade_id": "9bce239c-4dff-4d0e-9833-7da3349938e4",
+              "period_days": 365,
+              "count": 2,
+              "records": [
+                {
+                  "title": "Panini Prizm 2023 Prizmatic #6 C.J. Stroud RC SGC 9.5 Houston Texans",
+                  "price": 5.1,
+                  "date": "2026-06-30T00:00:01Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/ayC2E",
+                  "image_url": "https://i.ebayimg.com/images/g/LIQAAeSwcVhqPA1c/s-l225.jpg"
+                },
+                {
+                  "title": "2023 Panini Prizm C.J. Stroud (Prizmatic) Football Rookie Insert #6 (SGC 9.5)",
+                  "price": 7.5,
+                  "date": "2026-05-23T19:37:11Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/quRD",
+                  "image_url": "https://i.ebayimg.com/images/g/guAAAeSwGTpqCMYl/s-l225.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "sources": [
+          {
+            "source": "ebay",
+            "count": 11
+          }
+        ],
+        "last_sale_date": "2026-09-02T01:54:00Z",
+        "total_records": 11
+      }
+    }
+  },
+  {
+    "label": "2024 Donruss Optic Caleb Williams #201",
+    "cardId": "342db670-113d-4306-8919-a57a55163303",
+    "data": {
+      "card": {
+        "card_id": "342db670-113d-4306-8919-a57a55163303",
+        "name": "Caleb Williams",
+        "number": "201",
+        "set": {
+          "set_id": "e3983279-d99a-4119-8a0b-2d7f20b5fa71",
+          "name": "Base Set",
+          "year": "2024",
+          "release": "Donruss Optic"
+        }
+      },
+      "query": {
+        "parallel_id": null,
+        "period": "1y",
+        "listing_type": "auction",
+        "as_of_date": "2026-09-13"
+      },
+      "raw": {
+        "period_days": 365,
+        "count": 81,
+        "records": [
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Rated Rookie purple scope #201",
+            "price": 24.5,
+            "date": "2026-09-13T13:12:14Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/9SgUd",
+            "image_url": "https://i.ebayimg.com/images/g/qX8AAeSwd~9qoAlj/s-l225.jpg"
+          },
+          {
+            "title": "2024 Donruss Optic Football Panini CALEB WILLIAMS #201 Bears",
+            "price": 3.25,
+            "date": "2026-09-12T03:49:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/dGtGF",
+            "image_url": "https://i.ebayimg.com/images/g/3PUAAeSwzMRqmyG7/s-l225.jpg"
+          },
+          {
+            "title": "2024 Caleb Williams Donruss Optic Rated Rookie Green Hyper #201 Chicago Bears",
+            "price": 18.59,
+            "date": "2026-09-11T03:03:53Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/Sj8GE",
+            "image_url": "https://i.ebayimg.com/images/g/56gAAeSwaGNqnNfg/s-l225.jpg"
+          },
+          {
+            "title": "Panini Donruss Optic 2024 Caleb Williams Chicago Bears Rated Rookie Holo #201",
+            "price": 29,
+            "date": "2026-09-10T16:22:13Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/9LVvJ",
+            "image_url": "https://i.ebayimg.com/images/g/VJoAAeSwzadqmZ5c/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears",
+            "price": 42.5,
+            "date": "2026-09-09T00:30:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/rZorp",
+            "image_url": "https://i.ebayimg.com/images/g/~DoAAeSwrBFqmYQZ/s-l225.jpg"
+          },
+          {
+            "title": "CALEB WILLIAMS 2024 DONRUSS OPTIC RATED ROOKIE PURPLE SHOCK PRIZM #201 Q2596",
+            "price": 18.5,
+            "date": "2026-09-07T00:17:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/fIYud",
+            "image_url": "https://i.ebayimg.com/images/g/jlsAAeSwRUZqlH-m/s-l225.jpg"
+          },
+          {
+            "title": "Panini 2024 Donruss Optic Caleb Williams #201 Chicago Bears Rated Rookie RC",
+            "price": 4,
+            "date": "2026-09-06T14:02:37Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/wV9k2",
+            "image_url": "https://i.ebayimg.com/images/g/pskAAeSwp05qlDfu/s-l225.jpg"
+          },
+          {
+            "title": "CALEB WILLIAMS 2024 PANINI DONRUSS OPTIC BLUE HYPER PRIZM #201 ROOKIE RC *BEARS*",
+            "price": 30.25,
+            "date": "2026-09-02T02:06:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/Ju2se",
+            "image_url": "https://i.ebayimg.com/images/g/9oUAAeSwNRJqjcQl/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears",
+            "price": 33.01,
+            "date": "2026-09-02T01:26:11Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/ElTxY",
+            "image_url": "https://i.ebayimg.com/images/g/F14AAeSwW8NqkKVS/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears",
+            "price": 33,
+            "date": "2026-09-01T00:48:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/Bp5Yr",
+            "image_url": "https://i.ebayimg.com/images/g/0YEAAeSwoxhqj1an/s-l225.jpg"
+          },
+          {
+            "title": "2024 Donruss Optic - Rated Rookie Caleb Williams #201 Red Hyper Prizm",
+            "price": 50.09,
+            "date": "2026-08-30T01:43:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/LHK3Q",
+            "image_url": "https://i.ebayimg.com/images/g/sS4AAeSwehZqjMC0/s-l225.jpg"
+          },
+          {
+            "title": "2024 Donruss Optic Caleb Williams Rookie #201 Chicago Bears RC",
+            "price": 3.25,
+            "date": "2026-08-28T22:26:13Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/hVrgx",
+            "image_url": "https://i.ebayimg.com/images/g/aC4AAeSwLQFqaqu~/s-l225.jpg"
+          },
+          {
+            "title": "2024 Donruss Optic #201 Caleb Williams Bears Rated Rookie Purple Shock",
+            "price": 18.05,
+            "date": "2026-08-28T22:13:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/PX5Zw",
+            "image_url": "https://i.ebayimg.com/images/g/GcgAAeSwnu5qfhO6/s-l225.jpg"
+          },
+          {
+            "title": "2024 Donruss Optic Rated Rookie Blue Hyper Prizm - Caleb Williams #201 Bears",
+            "price": 22,
+            "date": "2026-08-28T18:21:14Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/GeKmx",
+            "image_url": "https://i.ebayimg.com/images/g/eH8AAeSwHUpqhKH6/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Rated Rookie Purple Shock Prizm Caleb Williams #201",
+            "price": 20.5,
+            "date": "2026-08-28T02:38:57Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/BHBQ6",
+            "image_url": "https://i.ebayimg.com/images/g/Z4cAAeSwuVhqhjHX/s-l225.jpg"
+          },
+          {
+            "title": "CALEB WILLIAMS 2024 DONRUSS OPTIC RATED ROOKIE PURPLE SCOPE ROOKIE RC #201 Q2596",
+            "price": 54,
+            "date": "2026-08-28T00:00:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/cJNtV",
+            "image_url": "https://i.ebayimg.com/images/g/D3QAAeSwZERqhfc8/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Rated Rookie Caleb Williams #201 Blue Hyper Prizm (RC)",
+            "price": 18.5,
+            "date": "2026-08-27T19:58:43Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/0gfd9",
+            "image_url": "https://i.ebayimg.com/images/g/aCEAAeSw2npqh1v4/s-l225.jpg"
+          },
+          {
+            "title": "Panini 2024 Donruss Optic Caleb Williams #201 Chicago Bears Rated Rookie Prizm",
+            "price": 34.51,
+            "date": "2026-08-26T16:58:01Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/orVfL",
+            "image_url": "https://i.ebayimg.com/images/g/wbUAAeSwrd5qheBc/s-l225.jpg"
+          },
+          {
+            "title": "CALEB WILLIAMS 2024 DONRUSS OPTIC RATED ROOKIE PURPLE SHOCK #201 BEARS Q6011",
+            "price": 16.5,
+            "date": "2026-08-26T00:47:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/Z6TEQ",
+            "image_url": "https://i.ebayimg.com/images/g/KUsAAeSwEphqhFwc/s-l225.jpg"
+          },
+          {
+            "title": "2024 Donruss Optic Caleb Williams #201 RC",
+            "price": 4.75,
+            "date": "2026-08-25T21:46:53Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/FtWVO",
+            "image_url": "https://i.ebayimg.com/images/g/4hgAAeSwAnRqhNJt/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Rated Rookie Caleb Williams (RC) #201 Blue Hyper Prizm",
+            "price": 28,
+            "date": "2026-08-24T03:00:01Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/9WbSl",
+            "image_url": "https://i.ebayimg.com/images/g/D0YAAeSwtAZqfLz9/s-l225.jpg"
+          },
+          {
+            "title": "Caleb Williams 2024 Donruss Optic Stars #201 RR RC Rookie",
+            "price": 36,
+            "date": "2026-08-24T02:00:01Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/yMQsK",
+            "image_url": "https://i.ebayimg.com/images/g/pycAAeSwnu5qgfN2/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Rated Rookie Blue Hyper Prizm #201",
+            "price": 24.5,
+            "date": "2026-08-22T03:44:47Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/3P31J",
+            "image_url": "https://i.ebayimg.com/images/g/GF4AAeSw-BBqf-CD/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears",
+            "price": 44.05,
+            "date": "2026-08-21T01:36:34Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/8y9SV",
+            "image_url": "https://i.ebayimg.com/images/g/m4UAAeSwG~VqgB~R/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears",
+            "price": 47.26,
+            "date": "2026-08-21T00:31:50Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/aoeaP",
+            "image_url": "https://i.ebayimg.com/images/g/b2QAAeSwWXtqgB8V/s-l225.jpg"
+          },
+          {
+            "title": "Panini 2024 Donruss Optic Caleb Williams Chicago Bears #201 Rated Rookie RC",
+            "price": 4,
+            "date": "2026-08-20T02:48:13Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/o6SK8",
+            "image_url": "https://i.ebayimg.com/images/g/TEQAAeSwIGNqfTAP/s-l225.jpg"
+          },
+          {
+            "title": "CALEB WILLIAMS 2024 DONRUSS OPTIC RATED ROOKIE PURPLE SHOCK ROOKIE RC #201 Q7762",
+            "price": 20.5,
+            "date": "2026-08-20T01:26:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/e8j7z",
+            "image_url": "https://i.ebayimg.com/images/g/fHAAAeSwa4FqfON7/s-l225.jpg"
+          },
+          {
+            "title": "2024 Donruss Optic Caleb Williams Rated Rookie Green Velocity Prizm #201 Bears",
+            "price": 26.5,
+            "date": "2026-08-17T01:21:05Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/0XCvj",
+            "image_url": "https://i.ebayimg.com/images/g/IHQAAeSwaJdqeSdO/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Rated Rookie Caleb Williams #201 Blue Hyper Prizm (RC)",
+            "price": 35,
+            "date": "2026-08-16T02:47:09Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/n4phw",
+            "image_url": "https://i.ebayimg.com/images/g/BBMAAeSwo4NqVC0-/s-l225.jpg"
+          },
+          {
+            "title": "CALEB WILLIAMS 2024 DONRUSS OPTIC RATED ROOKIE PURPLE SHOCK #201 BEARS Q5692",
+            "price": 31,
+            "date": "2026-08-15T02:12:32Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/JW6ux",
+            "image_url": "https://i.ebayimg.com/images/g/DekAAeSwuvdqdpBi/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears",
+            "price": 41,
+            "date": "2026-08-14T01:31:25Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/OfwvN",
+            "image_url": "https://i.ebayimg.com/images/g/Pb4AAeSw5Vxqd3Ud/s-l225.jpg"
+          },
+          {
+            "title": "2024 Donruss Optic #201 Caleb Williams Bears Rated Rookie Purple Shock MINT",
+            "price": 29.18,
+            "date": "2026-08-13T03:01:30Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/8ibzY",
+            "image_url": "https://i.ebayimg.com/images/g/c-cAAeSwRTtqc-JW/s-l225.jpg"
+          },
+          {
+            "title": "Caleb Williams 2024 Panini Donruss Optic Rated Rookie Purple Shock Prizm #201",
+            "price": 12.5,
+            "date": "2026-08-12T02:30:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/LCyKa",
+            "image_url": "https://i.ebayimg.com/images/g/GgYAAeSwjYdqcf6w/s-l225.jpg"
+          },
+          {
+            "title": "Caleb Williams 2024 Donruss Optic Rated Rookie Green Hyper Prizm #201 RC Bears",
+            "price": 20.51,
+            "date": "2026-08-12T00:30:01Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/jDQxU",
+            "image_url": "https://i.ebayimg.com/images/g/reUAAeSwfCxqcjue/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic - Rated Rookie Caleb Williams #201 Blue Hyper Prizm...",
+            "price": 24.99,
+            "date": "2026-08-11T16:46:27Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/ZDsvK",
+            "image_url": "https://i.ebayimg.com/images/g/MsUAAeSwBEtqchbw/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears",
+            "price": 41.34,
+            "date": "2026-08-11T01:30:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/OP931",
+            "image_url": "https://i.ebayimg.com/images/g/vBIAAeSwWEBqc4zr/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears",
+            "price": 44,
+            "date": "2026-08-11T01:24:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/agQh7",
+            "image_url": "https://i.ebayimg.com/images/g/TJgAAeSwKs5qc4v3/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic - Caleb Williams #201 Red Hyper Prizm (RC)",
+            "price": 47,
+            "date": "2026-08-11T01:23:07Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/2bDxu",
+            "image_url": "https://i.ebayimg.com/images/g/g6MAAeSwwCpqcT7N/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic - Rated Rookie Stars Prizm Caleb Williams #201",
+            "price": 34,
+            "date": "2026-08-10T23:08:16Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/MqJWt",
+            "image_url": "https://i.ebayimg.com/images/g/u98AAeSwYelqcR8s/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears",
+            "price": 44,
+            "date": "2026-08-10T01:03:45Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/uzfnH",
+            "image_url": "https://i.ebayimg.com/images/g/dpYAAeSwvA9qcn1x/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears",
+            "price": 49.51,
+            "date": "2026-08-10T00:00:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/2n4JI",
+            "image_url": "https://i.ebayimg.com/images/g/TXEAAeSw3jFqcjlW/s-l225.jpg"
+          },
+          {
+            "title": "Caleb Williams 2024 Donruss Optic #201 Rated Rookie Purple Shock Chicago Bears",
+            "price": 22.5,
+            "date": "2026-08-08T23:17:01Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/k4UEX",
+            "image_url": "https://i.ebayimg.com/images/g/xyYAAeSwB-dqbl7u/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic - Rated Rookie Caleb Williams #201 Blue Hyper Prizm ",
+            "price": 28,
+            "date": "2026-08-06T02:50:14Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/THFZB",
+            "image_url": "https://i.ebayimg.com/images/g/-28AAeSw-1dqaruP/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic - Rated Rookie Caleb Williams #201 Blue Hyper Prizm",
+            "price": 27,
+            "date": "2026-08-02T05:39:44Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/pEqUC",
+            "image_url": "https://i.ebayimg.com/images/g/eM8AAeSw0XBqZZ1Z/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Rated Rookie Caleb Williams #201 Blue Hyper Prizm (RC)",
+            "price": 22.19,
+            "date": "2026-07-31T02:45:01Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/PhaDw",
+            "image_url": "https://i.ebayimg.com/images/g/D3MAAeSwzOhqYfr-/s-l225.jpg"
+          },
+          {
+            "title": "CALEB WILLIAMS 2024 DONRUSS OPTIC RATED ROOKIE PURPLE SHOCK #201 BEARS Q5692",
+            "price": 18.5,
+            "date": "2026-07-30T01:08:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/mNWJO",
+            "image_url": "https://i.ebayimg.com/images/g/sZIAAeSwlslqY2LK/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Nfl Caleb Williams “SILVER ROOKIE PRIZM” #201 Raw",
+            "price": 40,
+            "date": "2026-07-28T01:46:25Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/DYD62",
+            "image_url": "https://i.ebayimg.com/images/g/iL4AAeSwAbdqXs8z/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic - Rated Rookie Caleb Williams #201 (RC) Silver Holo ",
+            "price": 30,
+            "date": "2026-07-27T19:49:38Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/HZ2ju",
+            "image_url": "https://i.ebayimg.com/images/g/mZ0AAeSwOk1qXnux/s-l225.jpg"
+          },
+          {
+            "title": "CALEB WILLIAMS 2024 DONRUSS OPTIC RATED ROOKIE GREEN VELOCITY #201 BEARS Q3922",
+            "price": 31,
+            "date": "2026-07-25T00:51:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/NMif8",
+            "image_url": "https://i.ebayimg.com/images/g/I~kAAeSwstBqWiFN/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic - Rated Rookie Caleb Williams #201 Blue Hyper Prizm RC",
+            "price": 16.5,
+            "date": "2026-07-22T01:26:01Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/PgC7g",
+            "image_url": "https://i.ebayimg.com/images/g/NEsAAeSw-1dqWOiu/s-l225.jpg"
+          },
+          {
+            "title": "CALEB WILLIAMS 2024 DONRUSS OPTIC FIRE EMOJI PRIZM RATED ROOKIE #201 BEARS Q7442",
+            "price": 115.78,
+            "date": "2026-07-21T01:09:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/7tSmT",
+            "image_url": "https://i.ebayimg.com/images/g/mHQAAeSwf79qVQ6h/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic - Rated Rookie Caleb Williams #201 Blue Hyper Prizm RC",
+            "price": 24,
+            "date": "2026-07-20T17:34:06Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/1od1y",
+            "image_url": "https://i.ebayimg.com/images/g/3sQAAeSwrBNqVSDF/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic - Rated Rookie Caleb Williams #201 Blue Hyper Prizm",
+            "price": 20,
+            "date": "2026-07-19T21:00:01Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/uVYtv",
+            "image_url": "https://i.ebayimg.com/images/g/KdUAAeSwUKRqU~1v/s-l225.jpg"
+          },
+          {
+            "title": "2024 Donruss Optic Caleb Williams Silver Holo Rookie Card #201",
+            "price": 36,
+            "date": "2026-07-19T17:12:59Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/hwwW5",
+            "image_url": "https://i.ebayimg.com/images/g/ceIAAeSw6PpqU8rg/s-l225.jpg"
+          },
+          {
+            "title": "Panini 2024 Donruss Optic Caleb Williams Chicago Bears Rated Rookie #201",
+            "price": 18.5,
+            "date": "2026-07-17T22:11:18Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/LooT5",
+            "image_url": "https://i.ebayimg.com/images/g/fP0AAeSwSFFqUW2e/s-l225.jpg"
+          },
+          {
+            "title": "Caleb Williams 2024 Panini Donruss Optic #201 Holo Rated Rookie",
+            "price": 29,
+            "date": "2026-07-17T02:40:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/l8U7n",
+            "image_url": "https://i.ebayimg.com/images/g/pVsAAeSwQw5qT-hP/s-l225.jpg"
+          },
+          {
+            "title": "Panini 2024 Donruss Optic SCOPE Rookie Caleb Williams #201 Chicago Bears NFL",
+            "price": 23.5,
+            "date": "2026-07-10T21:37:35Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/12V1u",
+            "image_url": "https://i.ebayimg.com/images/g/PAgAAeSwupxqSCtm/s-l225.jpg"
+          },
+          {
+            "title": "Caleb Williams 2024 Panini Donruss Optic Rated Rookie RC #201",
+            "price": 3.88,
+            "date": "2026-07-09T15:32:05Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/SsQ9b",
+            "image_url": "https://i.ebayimg.com/images/g/h4QAAeSwT3JqRoQn/s-l225.jpg"
+          },
+          {
+            "title": "CALEB WILLIAMS 2024 DONRUSS OPTIC GREEN HYPER PRIZM RATED ROOKIE #201 Q3205",
+            "price": 30,
+            "date": "2026-06-30T02:49:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/YIZ6",
+            "image_url": "https://i.ebayimg.com/images/g/gyEAAeSwwsJqOW27/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears",
+            "price": 43,
+            "date": "2026-06-30T01:22:30Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/ixfY",
+            "image_url": "https://i.ebayimg.com/images/g/cR0AAeSw3alqPB0n/s-l225.jpg"
+          },
+          {
+            "title": "Panini 2024 Donruss Optic Caleb Williams Rookie purple shock Prizm #201 Bears",
+            "price": 25,
+            "date": "2026-06-28T03:34:50Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/PUI7",
+            "image_url": "https://i.ebayimg.com/images/g/UzYAAeSw1Hpp5Hsl/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic - Rated Rookie Caleb Williams #201 Purple Scope Prizm",
+            "price": 28,
+            "date": "2026-06-26T22:40:51Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/tgcj",
+            "image_url": "https://i.ebayimg.com/images/g/iJgAAeSwSHJqNcVX/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Rated Rookie Caleb Williams #201 Holo Prizm (RC)",
+            "price": 37,
+            "date": "2026-06-25T01:00:01Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/qGwS",
+            "image_url": "https://i.ebayimg.com/images/g/50gAAeSw7SlqIhtl/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Rated Rookie Caleb Williams #201 Purple Shock RC 🔥",
+            "price": 19.5,
+            "date": "2026-06-24T01:17:46Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/9TSB",
+            "image_url": "https://i.ebayimg.com/images/g/yUQAAeSwBsFqMfUr/s-l225.jpg"
+          },
+          {
+            "title": "Panini 2024 Donruss Optic Rated Rookie Prizm Caleb Williams #201 Bears",
+            "price": 33,
+            "date": "2026-06-24T01:10:49Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/Qt6p",
+            "image_url": "https://i.ebayimg.com/images/g/5kAAAeSwbyJqMfNR/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears",
+            "price": 39.88,
+            "date": "2026-06-23T01:24:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/xPZU",
+            "image_url": "https://i.ebayimg.com/images/g/3oIAAeSwA8BqMsaU/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears",
+            "price": 44,
+            "date": "2026-06-22T01:03:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/GtNH",
+            "image_url": "https://i.ebayimg.com/images/g/4QgAAeSwNbRqMYND/s-l225.jpg"
+          },
+          {
+            "title": "2024 Donruss Optic #201 Caleb Williams Holo",
+            "price": 28,
+            "date": "2026-06-17T05:09:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/lQ4J",
+            "image_url": "https://i.ebayimg.com/images/g/NvwAAeSw1JZqKPHr/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Rated Rookie  Blue Hyper Caleb Williams #201 Bears NFL",
+            "price": 24.99,
+            "date": "2026-06-17T00:11:03Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/0yno",
+            "image_url": "https://i.ebayimg.com/images/g/dT8AAeSwqyxqFjZI/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Rated Rookie Caleb Williams #201 Holo Prizm (RC)",
+            "price": 36,
+            "date": "2026-06-16T05:38:16Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/AuWy",
+            "image_url": "https://i.ebayimg.com/images/g/9HgAAeSwQ4NqJ6Yy/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic - Rated Rookie Caleb Williams #201 Blue Hyper Prizm",
+            "price": 26,
+            "date": "2026-06-14T01:00:01Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/Bn5f",
+            "image_url": "https://i.ebayimg.com/images/g/MNMAAeSwlWlqGZpK/s-l225.jpg"
+          },
+          {
+            "title": "CALEB WILLIAMS 2024 PANINI DONRUSS OPTIC #201 ROOKIE BLUE PRIZM 161/199 BEARS",
+            "price": 172.5,
+            "date": "2026-06-08T02:02:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/zR5B",
+            "image_url": "https://i.ebayimg.com/images/g/bYQAAeSwOrdqGeiz/s-l225.jpg"
+          },
+          {
+            "title": "2024 Donruss Optic Rated Rookie Purple Shock Prizm #201 Caleb Williams RC",
+            "price": 12.3,
+            "date": "2026-06-05T02:28:00Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/qcQW",
+            "image_url": "https://i.ebayimg.com/images/g/DckAAeSwcWdqF9kK/s-l225.jpg"
+          },
+          {
+            "title": "Panini Donruss Optic Rated Rookie Prizm Caleb Williams Chicago Bears #201 2024",
+            "price": 14.5,
+            "date": "2026-06-03T15:16:57Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/OcOW",
+            "image_url": "https://i.ebayimg.com/images/g/xdsAAeSwwSZqFwrJ/s-l225.jpg"
+          },
+          {
+            "title": "Caleb Williams RC 2024 Donruss Optic #201 Purple Shock Rated Rookie",
+            "price": 18,
+            "date": "2026-05-28T02:30:01Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/mrrk",
+            "image_url": "https://i.ebayimg.com/images/g/prIAAeSwVRdqCflR/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic Rookie Card Caleb Williams #201 Green Hyper Prizm (RC)",
+            "price": 33,
+            "date": "2026-05-26T01:07:20Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/UTld",
+            "image_url": "https://i.ebayimg.com/images/g/RlQAAeSwlKlqC7dE/s-l225.jpg"
+          },
+          {
+            "title": "Panini 2024 Donruss Optic Rated Rookie Caleb Williams #201 Bears Football Card",
+            "price": 33,
+            "date": "2026-05-25T19:05:20Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/W8vl",
+            "image_url": "https://i.ebayimg.com/images/g/aZoAAeSw-8pqC2LJ/s-l225.jpg"
+          },
+          {
+            "title": "Caleb Williams 2024 Panini Donruss Optic Rated Rookie Green Hyper Prizm #201",
+            "price": 26,
+            "date": "2026-05-24T02:22:32Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/SH99",
+            "image_url": "https://i.ebayimg.com/images/g/0D8AAeSw3w1qCSY8/s-l225.jpg"
+          },
+          {
+            "title": "2024 Donruss Optic Caleb Williams Purple Shock #201 RC RATED ROOKIE",
+            "price": 16.5,
+            "date": "2026-05-21T01:05:01Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/nhjs",
+            "image_url": "https://i.ebayimg.com/images/g/OIgAAeSwxYdqBKq1/s-l225.jpg"
+          },
+          {
+            "title": "2024 Panini Donruss Optic - Rated Rookie Caleb Williams #201 Red Mojo Prizm (RC)",
+            "price": 75.6,
+            "date": "2026-05-20T01:00:01Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/BxQZ",
+            "image_url": "https://i.ebayimg.com/images/g/9H0AAeSw1ClqAouh/s-l225.jpg"
+          },
+          {
+            "title": "Panini 2024 Donruss Optic Caleb Williams Chicago Bears Rated Rookie Prizm #201",
+            "price": 15,
+            "date": "2026-05-19T16:32:10Z",
+            "source": "ebay",
+            "listing_type": "auction",
+            "url": "https://showme.cards/uIac",
+            "image_url": "https://i.ebayimg.com/images/g/jkgAAeSwKE5p-htS/s-l225.jpg"
+          }
+        ]
+      },
+      "graded": [
+        {
+          "company_name": "PSA",
+          "company_id": "7acc6827-3794-4205-bc73-08a9060d5af7",
+          "grades": [
+            {
+              "grade_value": "8",
+              "grade_id": "8cf6b653-cbee-4ffd-92aa-c3de253560a2",
+              "period_days": 365,
+              "count": 7,
+              "records": [
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC PINK #201 CALEB WILLIAMS ROOKIE RC PSA 8",
+                  "price": 30.45,
+                  "date": "2026-09-13T01:10:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/hMSIH",
+                  "image_url": "https://i.ebayimg.com/images/g/m6oAAeSwWkZql-47/s-l225.jpg"
+                },
+                {
+                  "title": "141075073 Caleb Williams 2024 Panini Donruss Optic #201 Holo Rated Rookie PSA 8",
+                  "price": 50.5,
+                  "date": "2026-08-19T02:21:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/yMgpd",
+                  "image_url": "https://i.ebayimg.com/images/g/6igAAeSwn1Jqe7Uf/s-l225.jpg"
+                },
+                {
+                  "title": "2024 DONRUSS OPTIC CALEB WILLIAMS RC # 201 PSA 8 NM-MT CHICAGO BEARS ",
+                  "price": 11,
+                  "date": "2026-08-08T19:07:01Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/QwAHK",
+                  "image_url": "https://i.ebayimg.com/images/g/TK0AAeSwErFqanbN/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC #201 CALEB WILLIAMS ROOKIE RC PSA 8",
+                  "price": 15,
+                  "date": "2026-08-06T01:02:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/ccANT",
+                  "image_url": "https://i.ebayimg.com/images/g/OcYAAeSwWXRqaPyR/s-l225.jpg"
+                },
+                {
+                  "title": "2024 DONRUSS OPTIC CALEB WILLIAMS RC # 201 PSA 8 NM-MT CHICAGO BEARS ",
+                  "price": 9.5,
+                  "date": "2026-07-25T01:57:52Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/GAAds",
+                  "image_url": "https://i.ebayimg.com/images/g/N3sAAeSwtPhqWt1c/s-l225.jpg"
+                },
+                {
+                  "title": "2024 Donruss Optic Caleb Williams Green Velocity #201 RC PSA 8",
+                  "price": 29.99,
+                  "date": "2026-07-15T16:31:02Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/nbXBD",
+                  "image_url": "https://i.ebayimg.com/images/g/uTgAAeSwZZBp-1l2/s-l225.jpg"
+                },
+                {
+                  "title": "1124 Caleb Williams 2024 Panini Donruss Optic #201 Blue Scope Rated Rookie PSA 8",
+                  "price": 27,
+                  "date": "2026-06-02T02:30:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/Pwu9",
+                  "image_url": "https://i.ebayimg.com/images/g/rg0AAeSwTFBqFHn4/s-l225.jpg"
+                }
+              ]
+            },
+            {
+              "grade_value": "9",
+              "grade_id": "f14655b7-0047-4add-9ae9-e2a8fcec0526",
+              "period_days": 365,
+              "count": 29,
+              "records": [
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC HOLO #201 CALEB WILLIAMS ROOKIE RC PSA 9",
+                  "price": 67.51,
+                  "date": "2026-09-09T01:42:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/HIkU8",
+                  "image_url": "https://i.ebayimg.com/images/g/F9cAAeSwJfhqlMYR/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC HOLO #201 CALEB WILLIAMS ROOKIE RC PSA 9",
+                  "price": 60,
+                  "date": "2026-09-09T01:27:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/SCdvN",
+                  "image_url": "https://i.ebayimg.com/images/g/Mt0AAeSwUkpqlMYk/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC HOLO #201 CALEB WILLIAMS ROOKIE RC PSA 9",
+                  "price": 77,
+                  "date": "2026-09-09T01:02:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/JZZkd",
+                  "image_url": "https://i.ebayimg.com/images/g/SrUAAeSww-FqlMWx/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC #201 CALEB WILLIAMS ROOKIE RC PSA 9",
+                  "price": 31,
+                  "date": "2026-09-08T23:00:01Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/nja4L",
+                  "image_url": "https://i.ebayimg.com/images/g/fYwAAeSwy-ZqlE8H/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC HOLO #201 CALEB WILLIAMS ROOKIE RC PSA 9",
+                  "price": 70,
+                  "date": "2026-09-03T22:24:11Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/QuRvV",
+                  "image_url": "https://i.ebayimg.com/images/g/ifkAAeSwa1BqkLiu/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC #201 CALEB WILLIAMS ROOKIE RC PSA 9",
+                  "price": 38,
+                  "date": "2026-08-30T01:26:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/mtBmu",
+                  "image_url": "https://i.ebayimg.com/images/g/86cAAeSwyIRqg1-Q/s-l225.jpg"
+                },
+                {
+                  "title": "PSA 9 2024 Donruss Optic #201 Caleb Williams Chicago Bears Holo Rated Rookie",
+                  "price": 75,
+                  "date": "2026-08-24T03:27:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/cANsE",
+                  "image_url": "https://i.ebayimg.com/images/g/XcwAAeSwJtNqgGje/s-l225.jpg"
+                },
+                {
+                  "title": "CALEB WILLIAMS PSA 9 2024 PANINI DONRUSS OPTIC #201 AQUA RATED ROOKIE 164/299",
+                  "price": 222.5,
+                  "date": "2026-08-24T01:52:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/Uyo9F",
+                  "image_url": "https://i.ebayimg.com/images/g/q3EAAeSwB7tqff0W/s-l225.jpg"
+                },
+                {
+                  "title": "CALEB WILLIAMS PSA 9 2024 PANINI DONRUSS OPTIC #201 FLEX RATED ROOKIE 83/149",
+                  "price": 237.5,
+                  "date": "2026-08-24T01:45:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/fJHlS",
+                  "image_url": "https://i.ebayimg.com/images/g/2OIAAeSwGbJqff~M/s-l225.jpg"
+                },
+                {
+                  "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears PSA 9",
+                  "price": 68,
+                  "date": "2026-08-20T02:27:34Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/ltIq3",
+                  "image_url": "https://i.ebayimg.com/images/g/bVsAAeSw4U1qf0sd/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC HOLO #201 CALEB WILLIAMS ROOKIE RC PSA 9",
+                  "price": 76,
+                  "date": "2026-08-18T01:54:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/LcSrA",
+                  "image_url": "https://i.ebayimg.com/images/g/F78AAeSwgYVqeREj/s-l225.jpg"
+                },
+                {
+                  "title": "2024 Donruss Optic RC Caleb Williams Holo Refractor PSA 9 Bears MVP 🔥 #201",
+                  "price": 77,
+                  "date": "2026-08-17T04:00:38Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/Bvrfl",
+                  "image_url": "https://i.ebayimg.com/images/g/s40AAeSwWKNqeUj4/s-l225.jpg"
+                },
+                {
+                  "title": "2024 DONRUSS OPTIC CALEB WILLIAMS RC # 201 PSA 9 MINT CHICAGO BEARS ",
+                  "price": 24.27,
+                  "date": "2026-08-17T00:16:50Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/jMhh5",
+                  "image_url": "https://i.ebayimg.com/images/g/whIAAeSwMyRqeRg6/s-l225.jpg"
+                },
+                {
+                  "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears PSA 9",
+                  "price": 96,
+                  "date": "2026-08-16T02:12:45Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/YCfU2",
+                  "image_url": "https://i.ebayimg.com/images/g/pEcAAeSwWUhqei7d/s-l225.jpg"
+                },
+                {
+                  "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears PSA 9",
+                  "price": 93,
+                  "date": "2026-08-16T00:47:45Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/oV8Hh",
+                  "image_url": "https://i.ebayimg.com/images/g/emUAAeSwCz5qei93/s-l225.jpg"
+                },
+                {
+                  "title": "2024 Donruss Optic Caleb Williams Rated Rookie Pink #201 RC PSA 9 MINT!",
+                  "price": 66,
+                  "date": "2026-08-09T01:02:48Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/e918P",
+                  "image_url": "https://i.ebayimg.com/images/g/uwMAAeSwYrtqY4c9/s-l225.jpg"
+                },
+                {
+                  "title": "2024 Donruss Optic Caleb Williams RC  Fresh Slab #201 Rated Rookie PSA 9 MINT!",
+                  "price": 29.99,
+                  "date": "2026-08-09T01:02:48Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/6TpQ0",
+                  "image_url": "https://i.ebayimg.com/images/g/7bgAAeSwD-BqY5S9/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC #201 CALEB WILLIAMS ROOKIE RC PSA 9",
+                  "price": 23.51,
+                  "date": "2026-08-05T01:08:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/eF7Na",
+                  "image_url": "https://i.ebayimg.com/images/g/X8cAAeSwuzZqZ7kn/s-l225.jpg"
+                },
+                {
+                  "title": "2024 Donruss Optic Caleb Williams #201 Blue Hyper Prizm (RC) PSA 9 Mint",
+                  "price": 52,
+                  "date": "2026-08-04T00:07:54Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/mfHgG",
+                  "image_url": "https://i.ebayimg.com/images/g/7Y4AAeSwROhqZ~LD/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC PINK #201 CALEB WILLIAMS ROOKIE RC PSA 9",
+                  "price": 41.55,
+                  "date": "2026-07-30T01:56:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/BoYVN",
+                  "image_url": "https://i.ebayimg.com/images/g/p1UAAeSwzIxqX69-/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC HOLO #201 CALEB WILLIAMS ROOKIE RC PSA 9",
+                  "price": 73,
+                  "date": "2026-07-29T01:54:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/fiWMj",
+                  "image_url": "https://i.ebayimg.com/images/g/2wEAAeSwQ7dqXh5e/s-l225.jpg"
+                },
+                {
+                  "title": "CALEB WILLIAMS PSA 9 2024 PANINI DONRUSS OPTIC #201 RATED ROOKIE PURPLE SHOCK 29",
+                  "price": 33,
+                  "date": "2026-06-24T01:19:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/BqNz",
+                  "image_url": "https://i.ebayimg.com/images/g/tH4AAeSwEiJqMDOe/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC BLUE HYPER #201 CALEB WILLIAMS ROOKIE RC PSA 9",
+                  "price": 51,
+                  "date": "2026-06-08T01:29:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/IKjr",
+                  "image_url": "https://i.ebayimg.com/images/g/ptMAAeSwOzVqG6FL/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC #201 CALEB WILLIAMS ROOKIE RC PSA 9",
+                  "price": 19.5,
+                  "date": "2026-06-01T01:57:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/PkG0",
+                  "image_url": "https://i.ebayimg.com/images/g/nxYAAeSwSzBqET8Y/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC BLUE #201 CALEB WILLIAMS ROOKIE RC 72/199 PSA 9",
+                  "price": 220.68,
+                  "date": "2026-05-23T01:14:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/x9tP",
+                  "image_url": "https://i.ebayimg.com/images/g/oiYAAeSw6YdqBiSW/s-l225.jpg"
+                },
+                {
+                  "title": "2024 Donruss Optic - Rated Rookie Caleb Williams #201 Green Velocity PSA 9 Bears",
+                  "price": 47,
+                  "date": "2026-05-21T03:48:47Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/A8Sh",
+                  "image_url": "https://i.ebayimg.com/images/g/BXoAAeSwzRxqB-kL/s-l225.jpg"
+                },
+                {
+                  "title": "CALEB WILLIAMS PSA 9 2024 PANINI DONRUSS OPTIC #201 RED HYPER RATED ROOKIE 7666",
+                  "price": 45.44,
+                  "date": "2026-05-21T02:14:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/PxdT",
+                  "image_url": "https://i.ebayimg.com/images/g/c0oAAeSwwSZqA03F/s-l225.jpg"
+                },
+                {
+                  "title": "CALEB WILLIAMS PSA 9 2024 PANINI DONRUSS OPTIC #201 HOLO PRIZM RATED ROOKIE 1359",
+                  "price": 75,
+                  "date": "2026-05-21T02:13:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/KfP1",
+                  "image_url": "https://i.ebayimg.com/images/g/RegAAeSwisJqA01f/s-l225.jpg"
+                },
+                {
+                  "title": "Caleb Williams 2024 Donruss Optic #201 Blue Hyper Rookie PSA 9 Chicago Bears 🔥",
+                  "price": 49,
+                  "date": "2026-05-21T02:07:01Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/qQ9i",
+                  "image_url": "https://i.ebayimg.com/images/g/XvcAAeSwnSNqAkhi/s-l225.jpg"
+                }
+              ]
+            },
+            {
+              "grade_value": "10",
+              "grade_id": "4c004b81-2c7d-4d29-b69a-dc8d2f477aeb",
+              "period_days": 365,
+              "count": 9,
+              "records": [
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC #201 CALEB WILLIAMS ROOKIE RC PSA 10",
+                  "price": 185.5,
+                  "date": "2026-09-07T01:22:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/bvKRl",
+                  "image_url": "https://i.ebayimg.com/images/g/AaEAAeSwnp1qk5x3/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC #201 CALEB WILLIAMS ROOKIE RC PSA 10",
+                  "price": 197.5,
+                  "date": "2026-08-28T01:07:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/N50iy",
+                  "image_url": "https://i.ebayimg.com/images/g/6f8AAeSwguZqhgpx/s-l225.jpg"
+                },
+                {
+                  "title": "2024 Panini Donruss Optic Caleb Williams Fire Rated Rookie #201 Bears PSA 10",
+                  "price": 1050,
+                  "date": "2026-08-26T01:20:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/aeF1q",
+                  "image_url": "https://i.ebayimg.com/images/g/oKoAAeSwXeFqh2QM/s-l225.jpg"
+                },
+                {
+                  "title": "2024 Panini Donruss Optic Caleb Williams #201 Rated Rookie RC PSA 10 GEM MINT",
+                  "price": 128.5,
+                  "date": "2026-08-09T01:19:24Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/XnQup",
+                  "image_url": "https://i.ebayimg.com/images/g/MPsAAeSw7dlqaqUq/s-l225.jpg"
+                },
+                {
+                  "title": "2024 Panini Donruss Optic Caleb Williams Holo Rated Rookie #201 Bears PSA 10",
+                  "price": 480,
+                  "date": "2026-06-26T00:21:25Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/uwNT",
+                  "image_url": "https://i.ebayimg.com/images/g/wkgAAeSw9SNqNvtv/s-l225.jpg"
+                },
+                {
+                  "title": "153516673 Caleb Williams 2024 Panini Donruss Optic #201 Holo Rated Rookie PSA 10",
+                  "price": 365,
+                  "date": "2026-06-05T01:22:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/0fdG",
+                  "image_url": "https://i.ebayimg.com/images/g/YlkAAeSwRqxqGKV~/s-l225.jpg"
+                },
+                {
+                  "title": "Caleb Williams 2024 Panini Donruss Optic Blue Hyper Rated Rookie PSA 10 #201",
+                  "price": 196.25,
+                  "date": "2026-05-25T02:38:01Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/ImpY",
+                  "image_url": "https://i.ebayimg.com/images/g/7WAAAeSwEAdqCfAy/s-l225.jpg"
+                },
+                {
+                  "title": "2024 Donruss Optic: Caleb Williams #201 Rated Rookie - Green Hyper ***PSA 10***",
+                  "price": 208.5,
+                  "date": "2026-05-24T01:51:40Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/V5mX",
+                  "image_url": "https://i.ebayimg.com/images/g/NVMAAeSwh5lqCRKq/s-l225.jpg"
+                },
+                {
+                  "title": "CALEB WILLIAMS PSA 10 2024 PANINI DONRUSS OPTIC #201 RATED ROOKIE BEARS 0393",
+                  "price": 81,
+                  "date": "2026-05-21T02:10:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/D9Pv",
+                  "image_url": "https://i.ebayimg.com/images/g/spoAAeSwjiVqA02Q/s-l225.jpg"
+                }
+              ]
+            },
+            {
+              "grade_value": "6",
+              "grade_id": "8f77c77d-ee00-48e8-a7a8-aba87c1ac46e",
+              "period_days": 365,
+              "count": 3,
+              "records": [
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC PINK #201 CALEB WILLIAMS ROOKIE RC PSA 6",
+                  "price": 10,
+                  "date": "2026-07-31T01:45:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/Hm0Fj",
+                  "image_url": "https://i.ebayimg.com/images/g/GzUAAeSwtxVqXouS/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC PINK #201 CALEB WILLIAMS ROOKIE RC PSA 6",
+                  "price": 8.5,
+                  "date": "2026-07-31T01:41:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/VutPi",
+                  "image_url": "https://i.ebayimg.com/images/g/GtEAAeSwydZqXoq0/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC #201 CALEB WILLIAMS ROOKIE RC PSA 6",
+                  "price": 9.5,
+                  "date": "2026-07-27T00:31:36Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/uuVU0",
+                  "image_url": "https://i.ebayimg.com/images/g/ACoAAeSwzM5qYAaA/s-l225.jpg"
+                }
+              ]
+            },
+            {
+              "grade_value": "5",
+              "grade_id": "2bd25adf-5284-4b02-ad2f-e0ebeba1e185",
+              "period_days": 365,
+              "count": 2,
+              "records": [
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC #201 CALEB WILLIAMS ROOKIE RC PSA 5",
+                  "price": 7.5,
+                  "date": "2026-07-31T01:10:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/sJY3Y",
+                  "image_url": "https://i.ebayimg.com/images/g/m1wAAeSw8OVqXoq1/s-l225.jpg"
+                },
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC #201 CALEB WILLIAMS ROOKIE RC PSA 5",
+                  "price": 6.5,
+                  "date": "2026-07-30T01:47:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/NKxm2",
+                  "image_url": "https://i.ebayimg.com/images/g/EwYAAeSwfE5qXopk/s-l225.jpg"
+                }
+              ]
+            },
+            {
+              "grade_value": "7",
+              "grade_id": "06747244-9940-4c80-814e-47fba403462f",
+              "period_days": 365,
+              "count": 1,
+              "records": [
+                {
+                  "title": "2024 PANINI DONRUSS OPTIC PINK #201 CALEB WILLIAMS ROOKIE RC PSA 7",
+                  "price": 26,
+                  "date": "2026-07-29T01:46:00Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/x9COA",
+                  "image_url": "https://i.ebayimg.com/images/g/VbgAAeSwZl5qXooL/s-l225.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company_name": "CGC",
+          "company_id": "131e9c4b-9c30-4f2c-88a2-1b61e567bcc6",
+          "grades": [
+            {
+              "grade_value": "9",
+              "grade_id": "e209754b-97bb-4938-8615-4f90751c6cad",
+              "period_days": 365,
+              "count": 1,
+              "records": [
+                {
+                  "title": "2024 Donruss Optic Pink #201 Caleb Williams Bears RC Rated Rookie CGC 9",
+                  "price": 21,
+                  "date": "2026-06-05T02:40:01Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/WDwo",
+                  "image_url": "https://i.ebayimg.com/images/g/Us8AAeSw51NqGIIz/s-l225.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company_name": "SGC",
+          "company_id": "aa797bb1-ae21-440f-91b6-7484e47ce0ce",
+          "grades": [
+            {
+              "grade_value": "9",
+              "grade_id": "18a1af14-d53e-4dce-80c5-bbfb24b05e67",
+              "period_days": 365,
+              "count": 1,
+              "records": [
+                {
+                  "title": "2024 Donruss Optic Stars Prizm #201 Caleb Williams Bears RC Rated Rookie SGC 9",
+                  "price": 39,
+                  "date": "2026-06-04T02:50:01Z",
+                  "source": "ebay",
+                  "listing_type": "auction",
+                  "url": "https://showme.cards/0i6J",
+                  "image_url": "https://i.ebayimg.com/images/g/XVcAAeSwnSNqF2Uh/s-l225.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "sources": [
+          {
+            "source": "ebay",
+            "count": 134
+          }
+        ],
+        "last_sale_date": "2026-09-13T13:12:14Z",
+        "total_records": 134
+      }
+    }
+  }
+]

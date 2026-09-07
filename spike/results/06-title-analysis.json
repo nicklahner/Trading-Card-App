@@ -1,0 +1,172 @@
+[
+  {
+    "label": "2020 Prizm Justin Herbert #325",
+    "totalRecords": 23,
+    "titleCoverage": {
+      "withTitle": 23,
+      "without": 0,
+      "pct": 1
+    },
+    "parallelMatches": {
+      "none": 20,
+      "exactlyOne": 3,
+      "moreThanOne": 0,
+      "total": 23
+    },
+    "baseFiltering": {
+      "rawTotal": 7,
+      "rawWithTitle": 7,
+      "rawSurviving": 6,
+      "rawExcluded": 1,
+      "survivingPrices": [
+        3.85,
+        4.25,
+        6.5,
+        7.5,
+        33,
+        33
+      ]
+    },
+    "gradeDistribution": {
+      "RAW": 7,
+      "PSA:10": 6,
+      "PSA:9": 5,
+      "PSA:8": 1,
+      "SGC:10": 3,
+      "BGS:9.5": 1
+    },
+    "rawWithGradeKeywords": 0
+  },
+  {
+    "label": "2023 Prizm C.J. Stroud #6 Prizmatic",
+    "totalRecords": 11,
+    "titleCoverage": {
+      "withTitle": 11,
+      "without": 0,
+      "pct": 1
+    },
+    "parallelMatches": {
+      "none": 11,
+      "exactlyOne": 0,
+      "moreThanOne": 0,
+      "total": 11
+    },
+    "baseFiltering": {
+      "rawTotal": 3,
+      "rawWithTitle": 3,
+      "rawSurviving": 3,
+      "rawExcluded": 0,
+      "survivingPrices": [
+        0.99,
+        0.99,
+        1.5
+      ]
+    },
+    "gradeDistribution": {
+      "RAW": 3,
+      "PSA:9": 1,
+      "PSA:10": 5,
+      "SGC:9.5": 2
+    },
+    "rawWithGradeKeywords": 0
+  },
+  {
+    "label": "2024 Donruss Optic Caleb Williams #201",
+    "totalRecords": 134,
+    "titleCoverage": {
+      "withTitle": 134,
+      "without": 0,
+      "pct": 1
+    },
+    "parallelMatches": {
+      "none": 108,
+      "exactlyOne": 26,
+      "moreThanOne": 0,
+      "total": 134
+    },
+    "baseFiltering": {
+      "rawTotal": 81,
+      "rawWithTitle": 81,
+      "rawSurviving": 64,
+      "rawExcluded": 17,
+      "survivingPrices": [
+        3.25,
+        3.25,
+        3.88,
+        4,
+        4,
+        4.75,
+        12.3,
+        12.5,
+        14.5,
+        15,
+        16.5,
+        16.5,
+        18,
+        18.05,
+        18.5,
+        18.5,
+        18.5,
+        18.59,
+        19.5,
+        20.5,
+        20.5,
+        20.51,
+        22.5,
+        23.5,
+        24.5,
+        25,
+        26,
+        26.5,
+        28,
+        28,
+        29,
+        29,
+        29.18,
+        30,
+        30,
+        31,
+        31,
+        33,
+        33,
+        33,
+        33,
+        33.01,
+        34,
+        34.51,
+        36,
+        36,
+        36,
+        37,
+        39.88,
+        40,
+        41,
+        41.34,
+        42.5,
+        43,
+        44,
+        44,
+        44,
+        44.05,
+        47,
+        47.26,
+        49.51,
+        50.09,
+        54,
+        75.6
+      ]
+    },
+    "gradeDistribution": {
+      "RAW": 81,
+      "PSA:8": 7,
+      "PSA:9": 29,
+      "PSA:10": 9,
+      "PSA:6": 3,
+      "PSA:5": 2,
+      "PSA:7": 1,
+      "CGC:9": 1,
+      "SGC:9": 1
+    },
+    "rawWithGradeKeywords": 0
+  }
+]

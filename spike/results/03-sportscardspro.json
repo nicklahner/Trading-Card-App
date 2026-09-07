@@ -1,0 +1,2115 @@
+[
+  {
+    "test": "products_no_parallel",
+    "card": "#01 Eli Heidenreich",
+    "query": "2026 Topps Flagship Eli Heidenreich",
+    "resultCount": 70,
+    "products": [
+      {
+        "id": "14140587",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Eli Heidenreich [Gold] #398",
+        "loosePrice": 358,
+        "salesVolume": "120",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14140599",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Eli Heidenreich #398",
+        "loosePrice": 171,
+        "salesVolume": "282",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14142745",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Eli Heidenreich [True Photo Variation] #398",
+        "loosePrice": 6500,
+        "salesVolume": "1",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "loose-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14140553",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Eli Heidenreich [Diamante] #398",
+        "loosePrice": 500,
+        "salesVolume": "88",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14140560",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Eli Heidenreich [Pink Diamante] #398",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14140568",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Eli Heidenreich [Union Jack Blue Rainbow] #398",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14140571",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Eli Heidenreich [Union Jack Rainbow] #398",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14140572",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Eli Heidenreich [Crown Jewels] #398",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14140570",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Eli Heidenreich [Tudor Rose] #398",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14140577",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Eli Heidenreich [Purple Blue] #398",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      }
+    ],
+    "cappedAt20": false
+  },
+  {
+    "test": "products_no_parallel",
+    "card": "#05 Makai Lemon",
+    "query": "2026 Topps Flagship Makai Lemon",
+    "resultCount": 100,
+    "products": [
+      {
+        "id": "14135887",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Makai Lemon [Gold] #319",
+        "loosePrice": 62,
+        "salesVolume": "1",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "loose-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14156604",
+        "consoleName": "Football Cards 2026 Topps Flagship 1991 Rookie",
+        "productName": "Makai Lemon #91TR-19",
+        "loosePrice": 123,
+        "salesVolume": "576",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14158466",
+        "consoleName": "Football Cards 2026 Topps Flagship 1991 Rookie",
+        "productName": "Makai Lemon [Crackle Foil] #91TR-19",
+        "loosePrice": 425,
+        "salesVolume": "339",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14156610",
+        "consoleName": "Football Cards 2026 Topps Flagship 1991 Rookie",
+        "productName": "Makai Lemon [Pink Crackle] #91TR-19",
+        "loosePrice": 500,
+        "salesVolume": "123",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14136924",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Makai Lemon #319",
+        "loosePrice": 99,
+        "salesVolume": "162",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14136051",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Makai Lemon [Holo Pink] #319",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14144500",
+        "consoleName": "Football Cards 2026 Topps Flagship First Dual Signature",
+        "productName": "Eli Stowers / Makai Lemon #FDS-LS",
+        "loosePrice": 25000,
+        "salesVolume": "58",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14142141",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Makai Lemon [Team Color Border Variation] #319",
+        "loosePrice": 3200,
+        "salesVolume": "48",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14156615",
+        "consoleName": "Football Cards 2026 Topps Flagship 1991 Rookie",
+        "productName": "Makai Lemon [Pink] #91TR-19",
+        "loosePrice": 1299,
+        "salesVolume": "93",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14135868",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Makai Lemon [Diamante] #319",
+        "loosePrice": 325,
+        "salesVolume": "123",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      }
+    ],
+    "cappedAt20": false
+  },
+  {
+    "test": "products_no_parallel",
+    "card": "#03 Isiah Pacheco Pink",
+    "query": "2026 Topps Flagship Isiah Pacheco",
+    "resultCount": 72,
+    "products": [
+      {
+        "id": "14122978",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Isiah Pacheco [Gold] #103",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14122920",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Isiah Pacheco [Aqua Rainbow] #103",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14122930",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Isiah Pacheco [Holo] #103",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14122934",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Isiah Pacheco [Pink Diamante] #103",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14122938",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Isiah Pacheco [Rainbow] #103",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14122950",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Isiah Pacheco [Union Jack Blue Rainbow] #103",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14122947",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Isiah Pacheco [Union Jack Rainbow] #103",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14122942",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Isiah Pacheco [Sandglitter] #103",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14122958",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Isiah Pacheco [Crown Jewels] #103",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14122955",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Isiah Pacheco [Tudor Rose] #103",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      }
+    ],
+    "cappedAt20": false
+  },
+  {
+    "test": "products_no_parallel",
+    "card": "#09 Omarion Hampton",
+    "query": "2026 Topps Flagship Omarion Hampton",
+    "resultCount": 93,
+    "products": [
+      {
+        "id": "14123293",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Omarion Hampton [Gold] #107",
+        "loosePrice": 150,
+        "salesVolume": "94",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14201449",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Omarion Hampton [Holo Aqua] #107",
+        "loosePrice": 525,
+        "salesVolume": "50",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14123250",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Omarion Hampton [Aqua Rainbow] #107",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14123261",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Omarion Hampton [Pink Diamante] #107",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14123263",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Omarion Hampton [Rainbow] #107",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14123258",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Omarion Hampton [Holo] #107",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14123277",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Omarion Hampton [Union Jack Blue Rainbow] #107",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14123278",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Omarion Hampton [Purple Blue] #107",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14123280",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Omarion Hampton [Blue Yellow] #107",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14123275",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Omarion Hampton [Tudor Rose] #107",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      }
+    ],
+    "cappedAt20": false
+  },
+  {
+    "test": "products_no_parallel",
+    "card": "#10 Abdul Carter",
+    "query": "2026 Topps Flagship Abdul Carter",
+    "resultCount": 88,
+    "products": [
+      {
+        "id": "14125876",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Abdul Carter #150",
+        "loosePrice": 100,
+        "salesVolume": "131",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125756",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Abdul Carter [Gold] #150",
+        "loosePrice": 225,
+        "salesVolume": "118",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14151484",
+        "consoleName": "Football Cards 2026 Topps Flagship NFL Material Dual Relic",
+        "productName": "Abdul Carter #MDR-AC",
+        "loosePrice": 699,
+        "salesVolume": "85",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125741",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Abdul Carter [Crown Jewels] #150",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125739",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Abdul Carter [Tudor Rose] #150",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125737",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Abdul Carter [Big Ben] #150",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125743",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Abdul Carter [Purple Blue] #150",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125742",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Abdul Carter [Blue Yellow] #150",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125744",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Abdul Carter [White Blue] #150",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125749",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Abdul Carter [Green Blue] #150",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      }
+    ],
+    "cappedAt20": false
+  },
+  {
+    "test": "products_no_parallel",
+    "card": "#13 Mike Evans",
+    "query": "2026 Topps Flagship Mike Evans",
+    "resultCount": 81,
+    "products": [
+      {
+        "id": "14126239",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Mike Evans [Gold] #156",
+        "loosePrice": 599,
+        "salesVolume": "223",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14126199",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Mike Evans #156",
+        "loosePrice": 200,
+        "salesVolume": "140",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14126205",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Mike Evans [Aqua Rainbow] #156",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14126218",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Mike Evans [Union Jack Blue Rainbow] #156",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14126219",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Mike Evans [Union Jack Rainbow] #156",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14126224",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Mike Evans [Crown Jewels] #156",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14126223",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Mike Evans [Tudor Rose] #156",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14126226",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Mike Evans [White Blue] #156",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14126221",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Mike Evans [Big Ben] #156",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14126238",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Mike Evans [Black Blue] #156",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      }
+    ],
+    "cappedAt20": false
+  },
+  {
+    "test": "products_no_parallel",
+    "card": "#14 Milton Williams",
+    "query": "2026 Topps Flagship Milton Williams",
+    "resultCount": 65,
+    "products": [
+      {
+        "id": "14125347",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Milton Williams [Gold] #142",
+        "loosePrice": 99,
+        "salesVolume": "1",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "loose-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125296",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Milton Williams #142",
+        "loosePrice": 100,
+        "salesVolume": "1",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "loose-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125311",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Milton Williams [Pink Diamante] #142",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125312",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Milton Williams [Rainbow] #142",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125332",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Milton Williams [Crown Jewels] #142",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125338",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Milton Williams [Purple Blue] #142",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125339",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Milton Williams [Blue Yellow] #142",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125335",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Milton Williams [White Blue] #142",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125380",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Milton Williams [Big Ben] #142",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14125303",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Milton Williams [Aqua Rainbow] #142",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      }
+    ],
+    "cappedAt20": false
+  },
+  {
+    "test": "products_no_parallel",
+    "card": "#15 Americas Duo",
+    "query": "2026 Topps Flagship Americas Duo",
+    "resultCount": 100,
+    "products": [
+      {
+        "id": "11885348",
+        "consoleName": "Baseball Cards 2026 Topps",
+        "productName": "Dodgers Duo [Gold] #265",
+        "loosePrice": 1947,
+        "salesVolume": "106",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "epid",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "11885450",
+        "consoleName": "Baseball Cards 2026 Topps",
+        "productName": "Dodgers Duo [75 Years] #265",
+        "loosePrice": 182,
+        "salesVolume": "18",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "11884556",
+        "consoleName": "Baseball Cards 2026 Topps",
+        "productName": "Dodgers Duo [First] #265",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "11885268",
+        "consoleName": "Baseball Cards 2026 Topps",
+        "productName": "Dodgers Duo [Holo] #265",
+        "loosePrice": 335,
+        "salesVolume": "122",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "11885596",
+        "consoleName": "Baseball Cards 2026 Topps",
+        "productName": "Dodgers Duo [Wood] #265",
+        "loosePrice": 25853,
+        "salesVolume": "6",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "11885286",
+        "consoleName": "Baseball Cards 2026 Topps",
+        "productName": "Dodgers Duo [Rainbow] #265",
+        "loosePrice": 351,
+        "salesVolume": "123",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "11885526",
+        "consoleName": "Baseball Cards 2026 Topps",
+        "productName": "Dodgers Duo [Canvas] #265",
+        "loosePrice": 25750,
+        "salesVolume": "10",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "11885252",
+        "consoleName": "Baseball Cards 2026 Topps",
+        "productName": "Dodgers Duo #265",
+        "loosePrice": 134,
+        "salesVolume": "394",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "epid",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "11885264",
+        "consoleName": "Baseball Cards 2026 Topps",
+        "productName": "Dodgers Duo [Diamante] #265",
+        "loosePrice": 517,
+        "salesVolume": "112",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "epid",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "11885327",
+        "consoleName": "Baseball Cards 2026 Topps",
+        "productName": "Dodgers Duo [Aqua Holo] #265",
+        "loosePrice": 1300,
+        "salesVolume": "14",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      }
+    ],
+    "cappedAt20": false
+  },
+  {
+    "test": "products_no_parallel",
+    "card": "#06 Jalen Hurts",
+    "query": "2026 Topps Flagship Jalen Hurts",
+    "resultCount": 100,
+    "products": [
+      {
+        "id": "14126902",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Jalen Hurts [Gold] #167",
+        "loosePrice": 650,
+        "salesVolume": "117",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14145144",
+        "consoleName": "Football Cards 2026 Topps Flagship NFL Stars Dual Autograph",
+        "productName": "DeVonta Smith / Jalen Hurts #NFLDA-SH",
+        "loosePrice": 40500,
+        "salesVolume": "1",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "loose-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14159664",
+        "consoleName": "Football Cards 2026 Topps Flagship Touchdown",
+        "productName": "Jalen Hurts #TD-25",
+        "loosePrice": 9999,
+        "salesVolume": "159",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14126861",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Jalen Hurts #167",
+        "loosePrice": 144,
+        "salesVolume": "196",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14158747",
+        "consoleName": "Football Cards 2026 Topps Flagship 1991",
+        "productName": "Jalen Hurts [Crackle Foil] #91TF-43",
+        "loosePrice": 105,
+        "salesVolume": "185",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14217355",
+        "consoleName": "Football Cards 2026 Topps Flagship NFL Stars",
+        "productName": "Jalen Hurts [Pink Crackle] #NFLS-35",
+        "loosePrice": 269,
+        "salesVolume": "1",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "loose-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14146974",
+        "consoleName": "Football Cards 2026 Topps Flagship Super Bowl Champion Signature",
+        "productName": "Jalen Hurts #SBCS-JH",
+        "loosePrice": 43000,
+        "salesVolume": "80",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-buy",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14158146",
+        "consoleName": "Football Cards 2026 Topps Flagship NFL Stars",
+        "productName": "Jalen Hurts #NFLS-35",
+        "loosePrice": 199,
+        "salesVolume": "90",
+        "_fields": [
+          "bgs-10-price",
+          "box-only-price",
+          "condition-17-price",
+          "condition-18-price",
+          "condition-19-price",
+          "condition-20-price",
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "graded-price",
+          "id",
+          "loose-price",
+          "manual-only-price",
+          "new-price",
+          "product-name",
+          "release-date",
+          "retail-loose-sell",
+          "retail-new-buy",
+          "retail-new-sell",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14126876",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Jalen Hurts [Pink Diamante] #167",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      },
+      {
+        "id": "14126886",
+        "consoleName": "Football Cards 2026 Topps Flagship",
+        "productName": "Jalen Hurts [Union Jack Blue Rainbow] #167",
+        "salesVolume": "0",
+        "_fields": [
+          "console-name",
+          "gamestop-price",
+          "gamestop-trade-price",
+          "genre",
+          "id",
+          "product-name",
+          "release-date",
+          "sales-volume"
+        ]
+      }
+    ],
+    "cappedAt20": false
+  },
+  {
+    "test": "products_with_parallel",
+    "card": "#03 Isiah Pacheco Pink",
+    "query": "2026 Topps Flagship Isiah Pacheco Pink",
+    "resultCount": 3,
+    "products": [
+      {
+        "id": "14122934",
+        "productName": "Isiah Pacheco [Pink Diamante] #103",
+        "salesVolume": "0"
+      },
+      {
+        "id": "14122979",
+        "productName": "Isiah Pacheco [Holo Pink] #103",
+        "salesVolume": "0"
+      },
+      {
+        "id": "14287047",
+        "productName": "Isiah Pacheco [Pink Sandglitter] #103",
+        "salesVolume": "0"
+      }
+    ],
+    "cappedAt20": false
+  },
+  {
+    "test": "products_with_parallel",
+    "card": "#09 Omarion Hampton Holo Foil",
+    "query": "2026 Topps Flagship Omarion Hampton Holo Foil",
+    "resultCount": 12,
+    "products": [
+      {
+        "id": "14201449",
+        "productName": "Omarion Hampton [Holo Aqua] #107",
+        "loosePrice": 525,
+        "salesVolume": "50"
+      },
+      {
+        "id": "14123258",
+        "productName": "Omarion Hampton [Holo] #107",
+        "salesVolume": "0"
+      },
+      {
+        "id": "14123295",
+        "productName": "Omarion Hampton [Holo Pink] #107",
+        "salesVolume": "0"
+      },
+      {
+        "id": "14123182",
+        "productName": "Omarion Hampton [Holo Orange] #107",
+        "salesVolume": "0"
+      },
+      {
+        "id": "14123210",
+        "productName": "Omarion Hampton [Holo Red] #107",
+        "salesVolume": "0"
+      }
+    ],
+    "cappedAt20": false
+  },
+  {
+    "test": "product_detail",
+    "id": "14140587",
+    "data": {
+      "bgs-10-price": 6100,
+      "box-only-price": 3099,
+      "condition-17-price": 2800,
+      "condition-18-price": 2800,
+      "condition-19-price": 5000,
+      "condition-20-price": 30500,
+      "console-name": "Football Cards 2026 Topps Flagship",
+      "gamestop-price": 0,
+      "gamestop-trade-price": 0,
+      "genre": "Football Cards",
+      "graded-price": 1577,
+      "id": "14140587",
+      "loose-price": 358,
+      "manual-only-price": 4713,
+      "new-price": 827,
+      "product-name": "Eli Heidenreich [Gold] #398",
+      "release-date": "2026-08-21",
+      "retail-loose-buy": 80,
+      "retail-loose-sell": 389,
+      "retail-new-buy": 180,
+      "retail-new-sell": 909,
+      "sales-volume": "120",
+      "status": "success"
+    }
+  }
+]

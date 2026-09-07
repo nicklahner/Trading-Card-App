@@ -1,0 +1,631 @@
+[
+  {
+    "query": {
+      "label": "#03 Isiah Pacheco",
+      "q": "Isiah Pacheco 2026 Topps"
+    },
+    "resultCount": 2,
+    "top5": [
+      {
+        "cardId": "522edf9a-8446-4bcb-a744-b5259990fbf8",
+        "name": "Isiah Pacheco",
+        "number": "103",
+        "setName": "Base Set",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "1f824b52-7267-4763-b7d7-131e97579149",
+        "name": "Isiah Pacheco",
+        "number": "103",
+        "setName": "Real One Autographs",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      }
+    ]
+  },
+  {
+    "query": {
+      "label": "#04 Malachi Fields",
+      "q": "Malachi Fields 2025 Topps"
+    },
+    "resultCount": 0,
+    "top5": []
+  },
+  {
+    "query": {
+      "label": "#07 Ty Simpson",
+      "q": "Ty Simpson 2025 Topps Football"
+    },
+    "resultCount": 15,
+    "top5": [
+      {
+        "cardId": "e0afc2d1-686f-416d-bb64-e9939e6c0baa",
+        "name": "Ty Simpson",
+        "number": "24",
+        "setName": "Base Set",
+        "releaseName": "Bowman University Best",
+        "year": "2025",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "8ab5f5be-8a3d-4266-859a-75bd7c4f005d",
+        "name": "Ty Simpson",
+        "number": "CC-12",
+        "setName": "Campus Crests Refractor",
+        "releaseName": "Bowman University Best",
+        "year": "2025",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "35ef8d17-5eb1-4b8f-be4b-48086e15ba6d",
+        "name": "Ty Simpson",
+        "number": "GA-TS",
+        "setName": "Greatness Awaits Autographs Refractor",
+        "releaseName": "Bowman University Best",
+        "year": "2025",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "00daec62-4e63-41de-b398-2902bea5aa00",
+        "name": "Ty Simpson",
+        "number": "DRA-TS",
+        "setName": "Prospect Dual Relic Patch Autographs Refractor",
+        "releaseName": "Bowman University Best",
+        "year": "2025",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "95614e51-7f0d-42c2-8aef-22e1eeeb2d36",
+        "name": "Ty Simpson",
+        "number": "BOA-TYS",
+        "setName": "The Best of 2025 Autographs Refractor",
+        "releaseName": "Bowman University Best",
+        "year": "2025",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      }
+    ]
+  },
+  {
+    "query": {
+      "label": "#08 Alvin Kamara Big Ticket",
+      "q": "Alvin Kamara 2026 Topps Big Ticket"
+    },
+    "resultCount": 1,
+    "top5": [
+      {
+        "cardId": "6bf1616a-748f-4afc-b38e-586ae72b0f80",
+        "name": "Alvin Kamara",
+        "number": "BTP-25",
+        "setName": "Big Ticket Players",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      }
+    ]
+  },
+  {
+    "query": {
+      "label": "#09 Omarion Hampton",
+      "q": "Omarion Hampton 2026 Topps"
+    },
+    "resultCount": 6,
+    "top5": [
+      {
+        "cardId": "f09b20ac-4a71-4505-8e8b-781ee5be72c1",
+        "name": "Omarion Hampton",
+        "number": "107",
+        "setName": "Base Set",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "f8939f92-5aa1-40c7-9f32-75d0061ef804",
+        "name": "Omarion Hampton",
+        "number": "FFSC-OH",
+        "setName": "Field Fit Swatch Collection",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "08987152-3723-4653-a550-44dec7c5b947",
+        "name": "Omarion Hampton",
+        "number": "NFLM-OH",
+        "setName": "NFL Material Relics",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "42dcb668-1ff0-47e9-8d7d-5aaf88aa96cd",
+        "name": "Omarion Hampton",
+        "number": "ROR-OH",
+        "setName": "Real One Relics",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "e0fa6ff5-d7a7-416e-b9f3-c5390c131d64",
+        "name": "Omarion Hampton",
+        "number": "TFC-44",
+        "setName": "The Flagship Collection",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      }
+    ]
+  },
+  {
+    "query": {
+      "label": "#10 Abdul Carter",
+      "q": "Abdul Carter 2026 Topps"
+    },
+    "resultCount": 4,
+    "top5": [
+      {
+        "cardId": "bca97daf-b5c3-42ae-8789-f4a488214330",
+        "name": "Abdul Carter",
+        "number": "150",
+        "setName": "Base Set",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "fa3db0af-3707-4f50-b7fa-4ca73dcf467e",
+        "name": "Abdul Carter",
+        "number": "FFSC-AC",
+        "setName": "Field Fit Swatch Collection",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "42a446fc-b423-4736-ab04-efb9b1e7e4e2",
+        "name": "Abdul Carter",
+        "number": "MDR-AC",
+        "setName": "NFL Material Dual Relics",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "4fd7af98-afa3-4766-9cb8-3879b316c15b",
+        "name": "Abdul Carter",
+        "number": "ROR-AC",
+        "setName": "Real One Relics",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      }
+    ]
+  },
+  {
+    "query": {
+      "label": "#11 Brian Thomas Jr",
+      "q": "Brian Thomas Jr 2026 Topps Profiles"
+    },
+    "resultCount": 1,
+    "top5": [
+      {
+        "cardId": "59949d42-a507-41b6-a656-6bbab887a2b6",
+        "name": "Brian Thomas Jr.",
+        "number": "TP-2",
+        "setName": "Topps Profiles",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      }
+    ]
+  },
+  {
+    "query": {
+      "label": "#12 Malaki Starks",
+      "q": "Malaki Starks 2026 Topps"
+    },
+    "resultCount": 5,
+    "top5": [
+      {
+        "cardId": "53eedaea-4ca4-465e-ab88-3e66298b4cbf",
+        "name": "Malaki Starks",
+        "number": "207",
+        "setName": "Base Set",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "65384ca5-7a96-455a-92be-c7ed936ed298",
+        "name": "Malaki Starks",
+        "number": "207",
+        "setName": "Real One Autographs",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "94728bbb-7be9-433d-b3cc-311c3b3b866a",
+        "name": "Malaki Starks",
+        "number": "NFLSA-MS",
+        "setName": "NFL Stars Autographs",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "327aac38-df11-4b83-a31b-b76efcf94a26",
+        "name": "Malaki Starks",
+        "number": "FFSC-MS",
+        "setName": "Field Fit Swatch Collection",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "9d384dc8-7c67-4814-ac0c-de3802e03574",
+        "name": "Malaki Starks",
+        "number": "MDR-MS",
+        "setName": "NFL Material Dual Relics",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      }
+    ]
+  },
+  {
+    "query": {
+      "label": "#13 Mike Evans",
+      "q": "Mike Evans 2026 Topps"
+    },
+    "resultCount": 3,
+    "top5": [
+      {
+        "cardId": "8ec2379d-9947-499b-9f75-601b0a4819fb",
+        "name": "Mike Evans",
+        "number": "156",
+        "setName": "Base Set",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "f4b55967-9001-4192-a9af-6fb1152ada31",
+        "name": "Mike Evans",
+        "number": "156",
+        "setName": "Real One Autographs",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      },
+      {
+        "cardId": "b162290d-021d-4767-909b-de4a4bf52341",
+        "name": "Mike Evans",
+        "number": "NFLSA-ME",
+        "setName": "NFL Stars Autographs",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      }
+    ]
+  },
+  {
+    "query": {
+      "label": "#14 Milton Williams",
+      "q": "Milton Williams 2026 Topps"
+    },
+    "resultCount": 1,
+    "top5": [
+      {
+        "cardId": "124bd2ec-4ba9-4b5b-a02e-d9751be8af85",
+        "name": "Milton Williams",
+        "number": "142",
+        "setName": "Base Set",
+        "releaseName": "Topps Flagship Football",
+        "year": "2026",
+        "_keys": [
+          "type",
+          "id",
+          "name",
+          "relevance",
+          "year",
+          "setName",
+          "releaseName",
+          "manufacturerName",
+          "segmentName",
+          "cardNumber"
+        ]
+      }
+    ]
+  }
+]
