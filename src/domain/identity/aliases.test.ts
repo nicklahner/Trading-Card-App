@@ -98,6 +98,13 @@ describe('canonicalSetName — Topps Flagship', () => {
     expect(canonicalSetName('Topps Flagship Football')).toBe('topps-flagship');
     expect(canonicalSetName('2026 Topps Flagship Football')).toBe('topps-flagship');
   });
+
+  it('maps SCP-prefixed set names', () => {
+    expect(canonicalSetName('Football Cards 2026 Topps Flagship')).toBe('topps-flagship');
+    expect(canonicalSetName('Football Cards 2026 Topps Flagship 1991 Rookie')).toBe('topps-flagship');
+    expect(canonicalSetName('Football Cards 2026 Topps Flagship Profiles')).toBe('topps-flagship');
+    expect(canonicalSetName('Football Cards 2026 Topps Flagship Big Ticket Player')).toBe('topps-flagship');
+  });
 });
 
 describe('playerNamesMatch', () => {

@@ -77,6 +77,12 @@ const SET_ALIASES: Map<string, string> = new Map([
   ['2026 topps flagship football', 'topps-flagship'],
   ['2025 topps flagship', 'topps-flagship'],
   ['2025 topps flagship football', 'topps-flagship'],
+  // SCP returns set names with "Football Cards" prefix
+  ['football cards 2026 topps flagship', 'topps-flagship'],
+  ['football cards 2025 topps flagship', 'topps-flagship'],
+  ['football cards 2026 topps flagship 1991 rookie', 'topps-flagship'],
+  ['football cards 2026 topps flagship profiles', 'topps-flagship'],
+  ['football cards 2026 topps flagship big ticket player', 'topps-flagship'],
 ]);
 
 // --- Parallel aliases ---
