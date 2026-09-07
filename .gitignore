@@ -30,6 +30,9 @@ next-env.d.ts
 fixtures/cards/real/*
 !fixtures/cards/real/manifest.json
 
+# local photo storage
+data/
+
 # playwright
 /test-results/
 /playwright-report/

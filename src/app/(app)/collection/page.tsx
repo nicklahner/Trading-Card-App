@@ -134,7 +134,7 @@ export default async function CollectionPage({
   });
 
   return (
-    <div className="mx-auto max-w-lg">
+    <div className="mx-auto max-w-3xl">
       {/* Drafts section */}
       {drafts.length > 0 && (
         <section className="mb-6">

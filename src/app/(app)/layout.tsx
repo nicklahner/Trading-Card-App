@@ -17,7 +17,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   return (
     <div className="flex min-h-full flex-col">
       <header className="border-b px-6 py-4">
-        <nav className="flex items-center gap-6">
+        <nav className="mx-auto flex max-w-5xl items-center gap-6">
           <Link href="/collection" className="text-lg font-semibold">
             Card Tracker
           </Link>
@@ -39,7 +39,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
           </div>
         </nav>
       </header>
-      <main className="flex-1 p-6">{children}</main>
+      <main className="mx-auto w-full max-w-5xl flex-1 p-6">{children}</main>
     </div>
   );
 }

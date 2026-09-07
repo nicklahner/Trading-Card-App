@@ -127,7 +127,7 @@ export default async function ReviewQueuePage() {
 
   if (items.length === 0) {
     return (
-      <div className="mx-auto max-w-lg py-12 text-center">
+      <div className="mx-auto max-w-3xl py-12 text-center">
         <h1 className="mb-2 text-xl font-semibold">Review Queue</h1>
         <p className="text-gray-500">No cards need review right now.</p>
         <Link
@@ -213,7 +213,7 @@ export default async function ReviewQueuePage() {
   );
 
   return (
-    <div className="mx-auto max-w-lg">
+    <div className="mx-auto max-w-3xl">
       <h1 className="mb-4 text-xl font-semibold">
         Review Queue ({items.length})
       </h1>

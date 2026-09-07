@@ -70,10 +70,15 @@ function SetupForm({
   const [storage, setStorage] = useState('unknown');
   const [pending, startTransition] = useTransition();
   const [error, setError] = useState<string | null>(null);
+  const [labelError, setLabelError] = useState(false);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!label.trim()) return;
+    if (!label.trim()) {
+      setLabelError(true);
+      return;
+    }
+    setLabelError(false);
     setError(null);
     startTransition(async () => {
       try {
@@ -95,11 +100,16 @@ function SetupForm({
           <input
             type="text"
             value={label}
-            onChange={(e) => setLabel(e.target.value)}
+            onChange={(e) => {
+              setLabel(e.target.value);
+              if (e.target.value.trim()) setLabelError(false);
+            }}
             placeholder="e.g. Toploader box 1"
-            required
-            className="mt-1 block w-full rounded border px-3 py-2 text-sm"
+            className={`mt-1 block w-full rounded border px-3 py-2 text-sm ${labelError ? 'border-red-500' : ''}`}
           />
+          {labelError && (
+            <p className="mt-1 text-xs text-red-600">Please enter a session label.</p>
+          )}
         </label>
         <label className="block">
           <span className="text-sm font-medium">Default storage (optional)</span>

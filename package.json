@@ -23,7 +23,9 @@
     "cache:purge-all": "tsx src/jobs/cache-purge.ts",
     "smoke:identify": "PROVIDERS_MODE=live tsx src/jobs/smoke-identify.ts",
     "smoke:value": "PROVIDERS_MODE=live tsx src/jobs/smoke-value.ts",
-    "validate": "tsx src/jobs/validate.ts"
+    "validate": "tsx src/jobs/validate.ts",
+    "import:fixtures": "tsx src/jobs/import-fixtures.ts",
+    "db:reset": "tsx src/jobs/db-reset.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
