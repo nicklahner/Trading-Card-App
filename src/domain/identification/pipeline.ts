@@ -12,7 +12,9 @@ import type {
   Parallel,
 } from '../../providers/types';
 import type { CardIdentity } from '../identity/types';
+import { readFile } from 'node:fs/promises';
 import { extractWithOrientationRetry } from '../../lib/extract-with-orientation';
+import { verifyCardNumber, type CardNumberVerification } from '../../lib/card-number-verify';
 import { scoreCandidate, jaroWinkler, type ScoringContext } from './scoring';
 import { resolveParallel } from './parallels';
 import { scoreSCPCandidate } from './scp-linkage';
@@ -62,6 +64,10 @@ export interface IdentificationResult {
   scpProductId?: string | null;
   /** SCP product name found via text search (for unmatched cards). */
   scpProductName?: string | null;
+  /** Set name derived from SCP catalog lookup (not from extraction). */
+  derivedSetName?: string | null;
+  /** Card number cross-check result. */
+  cardNumberVerification?: CardNumberVerification | null;
 }
 
 // ---------------------------------------------------------------------------
@@ -117,7 +123,7 @@ function catalogToIdentifyCandidate(c: CatalogCard): IdentifyCandidate {
 
 function buildUnmatchedIdentity(extraction: CardExtraction): CardIdentity {
   const year =
-    extraction.set_year.value ?? extraction.copyright_year.value ?? 0;
+    extraction.copyright_year.value ?? extraction.set_year.value ?? 0;
   const playerName =
     extraction.players.length > 0 ? extraction.players[0].name : 'Unknown';
 
@@ -213,6 +219,45 @@ export async function runIdentificationPipeline(opts: {
     flags.push('cardsight_failed');
   }
 
+  // Step 2b: Card number verification — crop back photo + OCR cross-check
+  let cardNumberVerification: CardNumberVerification | null = null;
+  const backImage = images.find((img) => img.side === 'back');
+  if (backImage) {
+    try {
+      const backUrl = backImage.url;
+      let backBuf: Buffer;
+      if (backUrl.startsWith('data:')) {
+        const match = backUrl.match(/^data:[^;]+;base64,(.+)$/);
+        backBuf = match ? Buffer.from(match[1], 'base64') : Buffer.alloc(0);
+      } else {
+        const path = backUrl.startsWith('file://') ? backUrl.slice(7) : backUrl;
+        backBuf = await readFile(path);
+      }
+      if (backBuf.length > 0) {
+        cardNumberVerification = await verifyCardNumber(
+          backBuf,
+          extraction.card_number.value,
+        );
+        if (cardNumberVerification.flag) {
+          flags.push(cardNumberVerification.flag);
+        }
+        // If OCR found a number and model didn't, use the OCR value
+        if (!extraction.card_number.value && cardNumberVerification.ocrValue) {
+          extraction = {
+            ...extraction,
+            card_number: {
+              value: cardNumberVerification.ocrValue,
+              confidence: 0.6,
+              evidence: 'OCR from cropped back photo',
+            },
+          };
+        }
+      }
+    } catch {
+      // Card number verification is best-effort
+    }
+  }
+
   // Step 3: Kind-based early exits
   if (extraction.kind === 'not_a_card') {
     return {
@@ -264,7 +309,7 @@ export async function runIdentificationPipeline(opts: {
   // If CardSight returned nothing or only low-confidence results, try catalog search
   if (!hasStrongDetections) {
     const query = {
-      year: extraction.set_year.value ?? extraction.copyright_year.value ?? undefined,
+      year: extraction.copyright_year.value ?? extraction.set_year.value ?? undefined,
       setName: extraction.set_name.value ?? undefined,
       playerName:
         extraction.players.length > 0
@@ -323,12 +368,14 @@ export async function runIdentificationPipeline(opts: {
 
     // Try SCP text search from extraction fields even without CardSight match.
     // SCP may have the set/card even when CardSight doesn't.
+    // Also derive set name from SCP results (the model can't read it).
     let scpProductId: string | null = null;
     let scpProductName: string | null = null;
     let scpEstValueCents: number | null = null;
+    let derivedSetName: string | null = null;
     try {
       const playerName = extraction.players[0]?.name;
-      const year = extraction.set_year.value ?? extraction.copyright_year.value;
+      const year = extraction.copyright_year.value ?? extraction.set_year.value;
       const cardNumber = extraction.card_number.value;
       if (playerName) {
         const queryParts = [year, playerName, cardNumber].filter(Boolean);
@@ -336,10 +383,13 @@ export async function runIdentificationPipeline(opts: {
           query: queryParts.join(' '),
         });
         if (scpResults.length > 0) {
-          // Score SCP results against extraction to find the best match
-          const bestScp = scpResults[0]; // Take top result
+          const bestScp = scpResults[0];
           scpProductId = bestScp.cardId;
           scpProductName = `${bestScp.playerName} #${bestScp.cardNumber}`;
+          // Derive set name from SCP (e.g. "2026 Topps Flagship Football")
+          if (bestScp.setName) {
+            derivedSetName = bestScp.setName;
+          }
           // Try to get a price
           const prices = await providers.modelPriceProvider.getPrices([bestScp.cardId]);
           const priceResult = prices.get(bestScp.cardId);
@@ -350,6 +400,11 @@ export async function runIdentificationPipeline(opts: {
       }
     } catch {
       // SCP linkage for unmatched cards is best-effort
+    }
+
+    // Override set name: SCP-derived > extraction (which is unreliable) > null
+    if (derivedSetName) {
+      identity.setName = derivedSetName;
     }
 
     return {
@@ -369,6 +424,8 @@ export async function runIdentificationPipeline(opts: {
       unmatchedIdentity: identity,
       scpProductId,
       scpProductName,
+      derivedSetName,
+      cardNumberVerification,
     };
   }
 
@@ -476,7 +533,7 @@ export async function runIdentificationPipeline(opts: {
 
   // Year agreement: exact match, or extraction year is null (don't block on missing year)
   const extractedYear =
-    extraction.set_year.value ?? extraction.copyright_year.value;
+    extraction.copyright_year.value ?? extraction.set_year.value;
   const yearAgreement =
     extractedYear == null || extractedYear === topCandidate.year;
 
@@ -540,5 +597,6 @@ export async function runIdentificationPipeline(opts: {
     error: null,
     unmatched: false,
     unmatchedIdentity: null,
+    cardNumberVerification,
   };
 }

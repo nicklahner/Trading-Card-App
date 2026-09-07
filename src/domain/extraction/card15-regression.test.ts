@@ -79,8 +79,6 @@ describe('Card 15 regression — upside-down front anti-fabrication', () => {
     const data = hallucinatedExtraction();
     const parsed = CardExtractionSchema.parse(data);
     const warnings = validateExtractionPlausibility(parsed);
-    expect(warnings).toContain(
-      'set_year disagrees with copyright_year by 30 years',
-    );
+    expect(warnings.some((w) => w.includes('disagrees with copyright_year') && w.includes('30 years'))).toBe(true);
   });
 });

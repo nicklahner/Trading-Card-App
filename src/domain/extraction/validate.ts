@@ -27,19 +27,19 @@ export function validateExtractionPlausibility(
     }
   }
 
-  // Flag set_year that disagrees with copyright_year by more than 5 years.
-  // A large gap suggests the model hallucinated one of the values.
+  // Flag set_year that disagrees with copyright_year by more than 1 year.
+  // On modern cards, set_year should equal the copyright year. A gap
+  // means the model likely read a stats year instead of the copyright.
   if (
     extraction.set_year.value != null &&
-    extraction.set_year.confidence >= 0.8 &&
     extraction.copyright_year.value != null
   ) {
     const gap = Math.abs(
       extraction.set_year.value - extraction.copyright_year.value,
     );
-    if (gap > 5) {
+    if (gap > 1) {
       warnings.push(
-        `set_year disagrees with copyright_year by ${gap} years`,
+        `set_year (${extraction.set_year.value}) disagrees with copyright_year (${extraction.copyright_year.value}) by ${gap} years — likely read stats year instead of release year`,
       );
     }
   }

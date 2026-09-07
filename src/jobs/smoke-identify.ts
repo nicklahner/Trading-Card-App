@@ -243,9 +243,11 @@ async function main() {
       const expected = card.expected;
 
       // --- Extraction values (always available) ---
+      // For set_name: use derived (from SCP lookup) > extraction > null
+      const derivedSet = (result as { derivedSetName?: string | null }).derivedSetName;
       const extVals: Record<string, unknown> = {
-        year: result.extraction.set_year.value ?? result.extraction.copyright_year.value,
-        set_name: result.extraction.set_name.value,
+        year: result.extraction.copyright_year.value ?? result.extraction.set_year.value,
+        set_name: derivedSet ?? result.extraction.set_name.value,
         card_number: result.extraction.card_number.value,
         player: result.extraction.players[0]?.name ?? null,
         parallel: result.extraction.finish.parallel_name_printed,
