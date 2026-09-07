@@ -1,0 +1,542 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Auth (Auth.js / NextAuth) ───────────────────────────────────────────────
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("account")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("session")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+
+  @@map("user")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_token")
+}
+
+// ─── Domain: Card ────────────────────────────────────────────────────────────
+
+enum AutoType {
+  on_card
+  sticker
+  cut
+  unknown
+
+  @@map("auto_type")
+}
+
+enum Licensed {
+  nfl_licensed
+  nflpa_only
+  unlicensed
+  unknown
+
+  @@map("licensed")
+}
+
+model Card {
+  id                  String   @id @default(uuid()) @db.Uuid
+  identityKey         String   @unique @map("identity_key")
+  year                Int
+  manufacturer        String
+  setName             String   @map("set_name")
+  subset              String?
+  cardNumber          String   @map("card_number")
+  players             Json     // [{name, team, position}]
+  parallel            String?
+  printRun            Int?     @map("print_run")
+  isAuto              Boolean  @default(false) @map("is_auto")
+  autoType            AutoType? @map("auto_type")
+  isMemorabilia       Boolean  @default(false) @map("is_memorabilia")
+  isRookie            Boolean  @default(false) @map("is_rookie")
+  variation           String?
+  licensed            Licensed @default(unknown)
+  sportscardsproId    String?  @map("sportscardspro_id")
+  sportscardsproName  String?  @map("sportscardspro_name")
+  cardsightCardId     String?  @map("cardsight_card_id")
+  cardsightParallelId String?  @map("cardsight_parallel_id")
+  psaSpecId           String?  @map("psa_spec_id")
+  referenceImageUrl   String?  @map("reference_image_url")
+  createdAt           DateTime @default(now()) @map("created_at")
+  updatedAt           DateTime @updatedAt @map("updated_at")
+
+  items       Item[]
+  modelPrices ModelPrice[]
+  valuations  Valuation[]
+
+  @@unique([cardsightCardId, cardsightParallelId, isAuto, variation], name: "card_cardsight_unique")
+  @@map("card")
+}
+
+// ─── Domain: Item ────────────────────────────────────────────────────────────
+
+enum ItemStatus {
+  draft
+  identifying
+  needs_review
+  owned
+  sold
+  removed
+
+  @@map("item_status")
+}
+
+enum ConditionKind {
+  raw
+  graded
+
+  @@map("condition_kind")
+}
+
+enum RawConditionTier {
+  market
+  nm_mt
+  ex_mt
+  ex
+  vg
+  poor
+
+  @@map("raw_condition_tier")
+}
+
+enum Grader {
+  PSA
+  BGS
+  SGC
+  CGC
+  TAG
+  ACE
+  OTHER
+
+  @@map("grader")
+}
+
+enum StorageType {
+  toploader
+  penny_sleeve
+  binder
+  magnetic
+  slab
+  none
+  unknown
+
+  @@map("storage_type")
+}
+
+enum AcquiredVia {
+  purchase
+  pack_pull
+  trade
+  gift
+  unknown
+
+  @@map("acquired_via")
+}
+
+model Item {
+  id                  String           @id @default(uuid()) @db.Uuid
+  cardId              String?          @map("card_id") @db.Uuid
+  scanSessionId       String?          @map("scan_session_id") @db.Uuid
+  sessionSeq          Int?             @map("session_seq")
+  status              ItemStatus       @default(draft)
+  serialNumber        Int?             @map("serial_number")
+  conditionKind       ConditionKind    @default(raw) @map("condition_kind")
+  rawConditionTier    RawConditionTier? @map("raw_condition_tier") @default(market)
+  grader              Grader?
+  grade               Decimal?         @db.Decimal(3, 1)
+  gradeLabel          String?          @map("grade_label")
+  autoGrade           Decimal?         @map("auto_grade") @db.Decimal(3, 1)
+  certNumber          String?          @map("cert_number")
+  storage             StorageType      @default(unknown)
+  acquiredOn          DateTime?        @map("acquired_on") @db.Date
+  acquiredVia         AcquiredVia      @default(unknown) @map("acquired_via")
+  costPriceCents      Int?             @map("cost_price_cents")
+  costTaxCents        Int              @default(0) @map("cost_tax_cents")
+  costShippingCents   Int              @default(0) @map("cost_shipping_cents")
+  costFeesCents       Int              @default(0) @map("cost_fees_cents")
+  costGradingCents    Int              @default(0) @map("cost_grading_cents")
+  notes               String           @default("")
+  soldOn              DateTime?        @map("sold_on") @db.Date
+  soldPriceCents      Int?             @map("sold_price_cents")
+  soldFeesCents       Int?             @map("sold_fees_cents")
+  soldShippingCents   Int?             @map("sold_shipping_cents")
+  removedOn           DateTime?        @map("removed_on") @db.Date
+  manualValueCents    Int?             @map("manual_value_cents")
+  manualValueNote     String?          @map("manual_value_note")
+  manualValueSetAt    DateTime?        @map("manual_value_set_at")
+  identityUnverified  Json?            @map("identity_unverified")
+  createdAt           DateTime         @default(now()) @map("created_at")
+  updatedAt           DateTime         @updatedAt @map("updated_at")
+
+  card            Card?            @relation(fields: [cardId], references: [id])
+  scanSession     ScanSession?     @relation(fields: [scanSessionId], references: [id])
+  photos          ItemPhoto[]
+  identifications Identification[]
+  valuations      Valuation[]
+  goldenComps     GoldenComp[]
+  flagDismissals  FlagDismissal[]
+
+  @@map("item")
+}
+
+// ─── Domain: ItemPhoto ───────────────────────────────────────────────────────
+
+enum PhotoSide {
+  front
+  back
+  front_tilt
+  label
+  serial_closeup
+
+  @@map("photo_side")
+}
+
+model ItemPhoto {
+  id        String    @id @default(uuid()) @db.Uuid
+  itemId    String    @map("item_id") @db.Uuid
+  side      PhotoSide
+  gcsPath   String    @map("gcs_path")
+  width     Int
+  height    Int
+  sha256    String
+  createdAt DateTime  @default(now()) @map("created_at")
+
+  item Item @relation(fields: [itemId], references: [id], onDelete: Cascade)
+
+  @@map("item_photo")
+}
+
+// ─── Domain: ScanSession ─────────────────────────────────────────────────────
+
+model ScanSession {
+  id              String    @id @default(uuid()) @db.Uuid
+  label           String
+  startedAt       DateTime  @default(now()) @map("started_at")
+  endedAt         DateTime? @map("ended_at")
+  defaults        Json?     // {storage, set_hint}
+  countTotal      Int       @default(0) @map("count_total")
+  countConfirmed  Int       @default(0) @map("count_confirmed")
+
+  items           Item[]
+  identifications Identification[]
+
+  @@map("scan_session")
+}
+
+// ─── Domain: Identification ──────────────────────────────────────────────────
+
+enum IdentificationStatus {
+  queued
+  running
+  ready
+  needs_review
+  confirmed
+  failed
+
+  @@map("identification_status")
+}
+
+enum IdentificationFailureReason {
+  quota_exhausted
+  provider_unavailable
+  image_unreadable
+  internal
+
+  @@map("identification_failure_reason")
+}
+
+enum ConfirmedVia {
+  single
+  bulk
+  audit
+
+  @@map("confirmed_via")
+}
+
+model Identification {
+  id                    String                       @id @default(uuid()) @db.Uuid
+  itemId                String                       @map("item_id") @db.Uuid
+  scanSessionId         String?                      @map("scan_session_id") @db.Uuid
+  status                IdentificationStatus
+  extraction            Json?
+  candidates            Json?
+  cardsightCacheKey     String?                      @map("cardsight_cache_key")
+  chosenCandidateIndex  Int?                         @map("chosen_candidate_index")
+  overallConfidence     Decimal?                     @map("overall_confidence") @db.Decimal(4, 3)
+  wasReady              Boolean                      @default(false) @map("was_ready")
+  estValueMaxCents      Int?                         @map("est_value_max_cents")
+  valueAtRiskCents      Int?                         @map("value_at_risk_cents")
+  valueAtRiskPartial    Boolean                      @default(false) @map("value_at_risk_partial")
+  explicitFields        String[]                     @map("explicit_fields")
+  confirmedVia          ConfirmedVia?                @map("confirmed_via")
+  flags                 String[]
+  failureReason         IdentificationFailureReason? @map("failure_reason")
+  error                 String?
+  createdAt             DateTime                     @default(now()) @map("created_at")
+  updatedAt             DateTime                     @updatedAt @map("updated_at")
+  completedAt           DateTime?                    @map("completed_at")
+  confirmedAt           DateTime?                    @map("confirmed_at")
+
+  item        Item                       @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  scanSession ScanSession?               @relation(fields: [scanSessionId], references: [id])
+  corrections IdentificationCorrection[]
+
+  @@map("identification")
+}
+
+model IdentificationCorrection {
+  id               String   @id @default(uuid()) @db.Uuid
+  identificationId String   @map("identification_id") @db.Uuid
+  field            String
+  predicted        Json
+  corrected        Json
+  createdAt        DateTime @default(now()) @map("created_at")
+
+  identification Identification @relation(fields: [identificationId], references: [id], onDelete: Cascade)
+
+  @@map("identification_correction")
+}
+
+// ─── Pricing & Valuation ─────────────────────────────────────────────────────
+
+model ProviderCache {
+  key       String   @id
+  provider  String
+  payload   Json
+  fetchedAt DateTime @map("fetched_at")
+  expiresAt DateTime @map("expires_at")
+
+  @@map("provider_cache")
+}
+
+model ModelPrice {
+  id               String   @id @default(uuid()) @db.Uuid
+  cardId           String   @map("card_id") @db.Uuid
+  asOfDate         DateTime @map("as_of_date") @db.Date
+  productId        String   @map("product_id")
+  prices           Json     // { "RAW": 20000, "PSA:10": 61000, ... } in cents
+  salesVolumeYearly Int?    @map("sales_volume_yearly")
+  fetchedAt        DateTime @map("fetched_at")
+
+  card Card @relation(fields: [cardId], references: [id])
+
+  @@unique([cardId, asOfDate])
+  @@map("model_price")
+}
+
+enum Confidence {
+  high
+  medium
+  low
+  none
+
+  @@map("confidence")
+}
+
+model Valuation {
+  id                  String     @id @default(uuid()) @db.Uuid
+  itemId              String     @map("item_id") @db.Uuid
+  asOfDate            DateTime   @map("as_of_date") @db.Date
+  cardId              String     @map("card_id") @db.Uuid
+  gradeKey            String     @map("grade_key")
+  rawConditionTier    RawConditionTier? @map("raw_condition_tier")
+  valueCents          Int        @map("value_cents")
+  lowCents            Int        @map("low_cents")
+  highCents           Int        @map("high_cents")
+  marketValueCents    Int        @map("market_value_cents")
+  marketLowCents      Int        @map("market_low_cents")
+  marketHighCents     Int        @map("market_high_cents")
+  netValueCents       Int        @map("net_value_cents")
+  confidence          Confidence
+  confidenceReasons   String[]   @map("confidence_reasons")
+  method              String
+  compsTier           String?    @map("comps_tier")
+  compsWindowDays     Int?       @map("comps_window_days")
+  compsEstimateCents  Int?       @map("comps_estimate_cents")
+  compsN              Int?       @map("comps_n")
+  compsNExcluded      Int?       @map("comps_n_excluded")
+  compsNEff           Decimal?   @map("comps_n_eff") @db.Decimal(6, 2)
+  compsLastSaleOn     DateTime?  @map("comps_last_sale_on") @db.Date
+  compsDispersion     Decimal?   @map("comps_dispersion") @db.Decimal(6, 4)
+  modelValueCents     Int?       @map("model_value_cents")
+  modelSalesVolume    Int?       @map("model_sales_volume")
+  divergence          Decimal?   @db.Decimal(6, 4)
+  flags               String[]
+  algorithmVersion    String     @map("algorithm_version")
+  configHash          String     @map("config_hash")
+  feesVersion         Int?       @map("fees_version")
+  createdAt           DateTime   @default(now()) @map("created_at")
+
+  item Item @relation(fields: [itemId], references: [id])
+  card Card @relation(fields: [cardId], references: [id])
+
+  @@unique([itemId, asOfDate])
+  @@map("valuation")
+}
+
+model PortfolioSnapshot {
+  asOfDate              DateTime @id @map("as_of_date") @db.Date
+  totalValueCents       BigInt   @map("total_value_cents")
+  totalNetValueCents    BigInt   @map("total_net_value_cents")
+  totalCostBasisCents   BigInt   @map("total_cost_basis_cents")
+  itemsOwned            Int      @map("items_owned")
+  itemsPriced           Int      @map("items_priced")
+  itemsUnpriced         Int      @map("items_unpriced")
+  itemsUnknownCost      Int      @map("items_unknown_cost")
+  itemsStale            Int      @map("items_stale")
+  unpricedCostBasisCents BigInt  @map("unpriced_cost_basis_cents")
+  itemsUnvalued         Int      @map("items_unvalued")
+  itemsUnconfirmed      Int      @map("items_unconfirmed")
+  knownCostValueCents   BigInt   @map("known_cost_value_cents")
+  valueHighConfCents    BigInt   @map("value_high_conf_cents")
+  valueMedConfCents     BigInt   @map("value_med_conf_cents")
+  valueLowConfCents     BigInt   @map("value_low_conf_cents")
+  additionsValueCents   BigInt   @map("additions_value_cents")
+  removalsValueCents    BigInt   @map("removals_value_cents")
+  adjustmentsValueCents BigInt   @map("adjustments_value_cents")
+  revaluationCents      BigInt   @map("revaluation_cents")
+  marketChangeCents     BigInt   @map("market_change_cents")
+  algorithmVersion      String   @map("algorithm_version")
+  configHash            String   @map("config_hash")
+  prevSnapshotDate      DateTime? @map("prev_snapshot_date") @db.Date
+  createdAt             DateTime @default(now()) @map("created_at")
+  updatedAt             DateTime @updatedAt @map("updated_at")
+
+  @@map("portfolio_snapshot")
+}
+
+// ─── Validation ──────────────────────────────────────────────────────────────
+
+model GoldenComp {
+  id              String   @id @default(uuid()) @db.Uuid
+  itemId          String   @map("item_id") @db.Uuid
+  gradeKey        String   @map("grade_key")
+  sales           Json     // [{price_cents, sold_on, url}]
+  valueCents      Int      @map("value_cents")
+  noReliableComp  Boolean  @default(false) @map("no_reliable_comp")
+  conditionBasis  String   @default("market") @map("condition_basis")
+  blind           Boolean  @default(false)
+  compedOn        DateTime @map("comped_on") @db.Date
+  methodNote      String?  @map("method_note")
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  item Item @relation(fields: [itemId], references: [id])
+
+  @@map("golden_comp")
+}
+
+model ValidationRun {
+  id               String   @id @default(uuid()) @db.Uuid
+  kind             String   // 'golden' | 'backtest'
+  configSource     String   @map("config_source") // 'active' | 'candidate'
+  runAt            DateTime @map("run_at")
+  algorithmVersion String   @map("algorithm_version")
+  configHash       String   @map("config_hash")
+  goldenCount      Int      @map("golden_count")
+  metrics          Json
+
+  @@map("validation_run")
+}
+
+// ─── Settings & Operations ───────────────────────────────────────────────────
+
+model Settings {
+  id        String   @id @default(uuid()) @db.Uuid
+  kind      String   // 'valuation' | 'fees'
+  version   Int
+  data      Json
+  hash      String
+  active    Boolean  @default(false)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("settings")
+}
+
+model ApiUsage {
+  provider    String
+  endpoint    String
+  date        DateTime @db.Date
+  calls       Int      @default(0)
+  estCostCents Int     @default(0) @map("est_cost_cents")
+
+  @@id([provider, endpoint, date])
+  @@map("api_usage")
+}
+
+model JobRun {
+  id         String    @id @default(uuid()) @db.Uuid
+  job        String    // 'nightly' | 'identify' | 'value-item'
+  asOfDate   DateTime? @map("as_of_date") @db.Date
+  status     String    // 'running' | 'succeeded' | 'partial' | 'failed'
+  startedAt  DateTime  @map("started_at")
+  finishedAt DateTime? @map("finished_at")
+  stats      Json?
+  error      String?
+
+  @@map("job_run")
+}
+
+model FlagDismissal {
+  id                  String   @id @default(uuid()) @db.Uuid
+  itemId              String   @map("item_id") @db.Uuid
+  flag                String
+  dismissedValueCents Int      @map("dismissed_value_cents")
+  dismissedAt         DateTime @map("dismissed_at")
+
+  item Item @relation(fields: [itemId], references: [id])
+
+  @@unique([itemId, flag])
+  @@map("flag_dismissal")
+}
+
+model RateLimit {
+  provider      String   @id
+  nextAllowedAt DateTime @map("next_allowed_at")
+
+  @@map("rate_limit")
+}
