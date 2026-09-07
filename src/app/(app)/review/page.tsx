@@ -19,7 +19,7 @@ function playerName(players: unknown): string {
 function Thumbnail({ photoPath }: { photoPath: string | null }) {
   if (!photoPath) {
     return (
-      <div className="flex h-12 w-9 items-center justify-center rounded bg-gray-200 text-xs text-gray-400">
+      <div className="flex h-12 w-9 items-center justify-center rounded bg-muted text-xs text-ct-text-subtle">
         ?
       </div>
     );
@@ -84,15 +84,15 @@ function BulkConfirmButton({
 
   const colors =
     variant === 'ready'
-      ? 'bg-green-600 text-white'
-      : 'bg-blue-600 text-white';
+      ? 'bg-ct-positive text-background'
+      : 'bg-primary text-primary-foreground';
 
   return (
     <form action={handleBulkConfirm}>
       <div className="flex items-center justify-between rounded border p-3">
         <div>
           <p className="text-sm font-medium">{label}</p>
-          <p className="text-xs text-gray-500">{count} cards</p>
+          <p className="text-xs text-muted-foreground">{count} cards</p>
         </div>
         <button
           type="submit"
@@ -129,10 +129,10 @@ export default async function ReviewQueuePage() {
     return (
       <div className="mx-auto max-w-3xl py-12 text-center">
         <h1 className="mb-2 text-xl font-semibold">Review Queue</h1>
-        <p className="text-gray-500">No cards need review right now.</p>
+        <p className="text-muted-foreground">No cards need review right now.</p>
         <Link
           href="/collection"
-          className="mt-4 inline-block text-sm text-blue-600"
+          className="mt-4 inline-block text-sm text-primary"
         >
           Back to collection
         </Link>
@@ -272,16 +272,16 @@ export default async function ReviewQueuePage() {
             unmatched: 'Unmatched',
           };
           const sourceColor: Record<MatchSource, string> = {
-            cardsight: 'bg-blue-100 text-blue-700',
-            catalog_search: 'bg-purple-100 text-purple-700',
-            unmatched: 'bg-amber-100 text-amber-700',
+            cardsight: 'bg-ct-info/20 text-primary',
+            catalog_search: 'bg-primary/20 text-primary',
+            unmatched: 'bg-ct-caution/20 text-ct-caution',
           };
 
           return (
             <li key={item.id}>
               <Link
                 href={`/review/${item.id}`}
-                className="flex items-center gap-3 rounded border p-3 active:bg-gray-50"
+                className="flex items-center gap-3 rounded border p-3 active:bg-muted"
               >
                 <Thumbnail photoPath={photo?.gcsPath ?? null} />
                 <div className="min-w-0 flex-1">
@@ -294,29 +294,29 @@ export default async function ReviewQueuePage() {
                       {sourceLabel[item.matchSource]}
                     </span>
                     {item.estValueMaxCents != null && (
-                      <span className="text-xs text-gray-500">
+                      <span className="text-xs text-muted-foreground">
                         est. {formatCents(item.estValueMaxCents)}
                       </span>
                     )}
                     {item.wasReady && (
-                      <span className="rounded bg-green-50 px-1.5 py-0.5 text-xs text-green-600">
+                      <span className="rounded bg-ct-positive/10 px-1.5 py-0.5 text-xs text-ct-positive">
                         ready
                       </span>
                     )}
                     {/* Display flags */}
                     {item.displayFlags.map((flag) => (
-                      <span key={flag} className="rounded bg-amber-50 px-1.5 py-0.5 text-xs text-amber-600">
+                      <span key={flag} className="rounded bg-ct-caution/10 px-1.5 py-0.5 text-xs text-ct-caution">
                         {flag.replace(/_/g, ' ')}
                       </span>
                     ))}
                     {item.hasAlwaysFlag && item.displayFlags.length === 0 && (
-                      <span className="rounded bg-amber-50 px-1.5 py-0.5 text-xs text-amber-600">
+                      <span className="rounded bg-ct-caution/10 px-1.5 py-0.5 text-xs text-ct-caution">
                         needs attention
                       </span>
                     )}
                   </div>
                 </div>
-                <span className="text-gray-300">&rsaquo;</span>
+                <span className="text-ct-text-subtle">&rsaquo;</span>
               </Link>
             </li>
           );

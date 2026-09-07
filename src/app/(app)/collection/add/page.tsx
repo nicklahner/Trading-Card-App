@@ -64,19 +64,21 @@ function SearchStep({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="e.g. 2023 Prizm Justin Jefferson"
+          data-testid="search-input"
           className="min-w-0 flex-1 rounded border px-3 py-2 text-sm"
         />
         <button
           type="submit"
           disabled={pending}
-          className="rounded bg-blue-600 px-4 py-2 text-sm text-white disabled:opacity-50"
+          data-testid="search-button"
+          className="rounded bg-primary px-4 py-2 text-sm text-primary-foreground disabled:opacity-50"
         >
           {pending ? '...' : 'Search'}
         </button>
       </form>
 
       {searched && results.length === 0 && (
-        <p className="text-sm text-gray-500">No results found.</p>
+        <p className="text-sm text-muted-foreground">No results found.</p>
       )}
 
       <ul className="space-y-2">
@@ -85,27 +87,27 @@ function SearchStep({
             <button
               type="button"
               onClick={() => onSelect(card)}
-              className="w-full rounded border p-3 text-left active:bg-gray-50"
+              className="w-full rounded border p-3 text-left active:bg-muted"
             >
               <p className="text-sm font-medium">{card.playerName}</p>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-muted-foreground">
                 {card.year} {card.setName}
                 {card.subsetOrInsert ? ` - ${card.subsetOrInsert}` : ''} #
                 {card.cardNumber}
               </p>
               <div className="mt-1 flex gap-2">
                 {card.isRookie && (
-                  <span className="rounded bg-green-100 px-1.5 text-xs text-green-700">
+                  <span className="rounded bg-ct-positive/20 px-1.5 text-xs text-ct-positive">
                     RC
                   </span>
                 )}
                 {card.isAutograph && (
-                  <span className="rounded bg-purple-100 px-1.5 text-xs text-purple-700">
+                  <span className="rounded bg-primary/20 px-1.5 text-xs text-primary">
                     Auto
                   </span>
                 )}
                 {card.isMemorabilia && (
-                  <span className="rounded bg-amber-100 px-1.5 text-xs text-amber-700">
+                  <span className="rounded bg-ct-caution/20 px-1.5 text-xs text-ct-caution">
                     Mem
                   </span>
                 )}
@@ -151,17 +153,17 @@ function ParallelStep({
       <button
         type="button"
         onClick={onBack}
-        className="mb-3 text-sm text-blue-600"
+        className="mb-3 text-sm text-primary"
       >
         &larr; Back to search
       </button>
       <h2 className="mb-1 text-lg font-semibold">{card.playerName}</h2>
-      <p className="mb-3 text-xs text-gray-500">
+      <p className="mb-3 text-xs text-muted-foreground">
         {card.year} {card.setName} #{card.cardNumber}
       </p>
       <h3 className="mb-2 text-sm font-medium">Pick a parallel</h3>
 
-      {pending && <p className="text-sm text-gray-400">Loading parallels...</p>}
+      {pending && <p className="text-sm text-ct-text-subtle">Loading parallels...</p>}
 
       {parallels !== null && (
         <ul className="space-y-1">
@@ -170,7 +172,7 @@ function ParallelStep({
             <button
               type="button"
               onClick={() => onSelect(null)}
-              className="w-full rounded border p-2 text-left text-sm active:bg-gray-50"
+              className="w-full rounded border p-2 text-left text-sm active:bg-muted"
             >
               Base
             </button>
@@ -180,11 +182,11 @@ function ParallelStep({
               <button
                 type="button"
                 onClick={() => onSelect(p)}
-                className="w-full rounded border p-2 text-left text-sm active:bg-gray-50"
+                className="w-full rounded border p-2 text-left text-sm active:bg-muted"
               >
                 {p.name}
                 {p.printRun ? (
-                  <span className="ml-2 text-xs text-gray-400">
+                  <span className="ml-2 text-xs text-ct-text-subtle">
                     /{p.printRun}
                   </span>
                 ) : null}
@@ -258,12 +260,12 @@ function DetailsStep({
       <button
         type="button"
         onClick={onBack}
-        className="mb-3 text-sm text-blue-600"
+        className="mb-3 text-sm text-primary"
       >
         &larr; Back to parallels
       </button>
       <h2 className="mb-1 text-lg font-semibold">{card.playerName}</h2>
-      <p className="mb-4 text-xs text-gray-500">
+      <p className="mb-4 text-xs text-muted-foreground">
         {card.year} {card.setName} #{card.cardNumber}
         {parallel ? ` — ${parallel.name}` : ' — Base'}
       </p>
@@ -441,7 +443,7 @@ function DetailsStep({
 
         <button
           type="submit"
-          className="w-full rounded bg-blue-600 py-3 text-sm font-medium text-white"
+          className="w-full rounded bg-primary py-3 text-sm font-medium text-primary-foreground"
         >
           Review &amp; Add
         </button>
@@ -586,7 +588,7 @@ export default function AddCardPage() {
                 parallel: step.parallel,
               })
             }
-            className="mb-3 text-sm text-blue-600"
+            className="mb-3 text-sm text-primary"
           >
             &larr; Back to details
           </button>
@@ -594,32 +596,32 @@ export default function AddCardPage() {
 
           <div className="mb-4 space-y-1 rounded border p-3 text-sm">
             <p className="font-medium">{step.card.playerName}</p>
-            <p className="text-gray-500">
+            <p className="text-muted-foreground">
               {step.card.year} {step.card.setName} #{step.card.cardNumber}
             </p>
-            <p className="text-gray-500">
+            <p className="text-muted-foreground">
               Parallel: {step.parallel?.name ?? 'Base'}
               {step.parallel?.printRun
                 ? ` /${step.parallel.printRun}`
                 : ''}
             </p>
             {step.form.serialNumber && (
-              <p className="text-gray-500">
+              <p className="text-muted-foreground">
                 Serial: #{step.form.serialNumber}
               </p>
             )}
-            <p className="text-gray-500">
+            <p className="text-muted-foreground">
               Condition:{' '}
               {step.form.conditionKind === 'graded'
                 ? `${step.form.grader} ${step.form.grade}`
                 : `Raw (${step.form.rawTier})`}
             </p>
-            <p className="text-gray-500">Storage: {step.form.storage}</p>
-            <p className="text-gray-500">
+            <p className="text-muted-foreground">Storage: {step.form.storage}</p>
+            <p className="text-muted-foreground">
               Acquired via: {step.form.acquiredVia}
             </p>
             {step.form.costPrice && (
-              <p className="text-gray-500">
+              <p className="text-muted-foreground">
                 Cost: ${step.form.costPrice}
                 {step.form.costTax ? ` + $${step.form.costTax} tax` : ''}
                 {step.form.costShipping
@@ -631,12 +633,12 @@ export default function AddCardPage() {
               </p>
             )}
             {step.form.notes && (
-              <p className="text-gray-400">{step.form.notes}</p>
+              <p className="text-ct-text-subtle">{step.form.notes}</p>
             )}
           </div>
 
           {error && (
-            <p className="mb-3 text-sm text-red-600">{error}</p>
+            <p className="mb-3 text-sm text-destructive">{error}</p>
           )}
 
           <button
@@ -645,7 +647,8 @@ export default function AddCardPage() {
             onClick={() =>
               handleConfirm(step.card, step.parallel, step.form)
             }
-            className="w-full rounded bg-green-600 py-3 text-sm font-medium text-white disabled:opacity-50"
+            data-testid="confirm-add-button"
+            className="w-full rounded bg-ct-positive py-3 text-sm font-medium text-background disabled:opacity-50"
           >
             {pending ? 'Adding...' : 'Add to Collection'}
           </button>

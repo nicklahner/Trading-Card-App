@@ -54,7 +54,7 @@ async function addCard(
   await expect(page.getByRole('heading', { name: 'Add Card' })).toBeVisible();
 
   // Step 1: Search
-  const searchInput = page.locator('input[placeholder*="Prizm"]');
+  const searchInput = page.getByTestId('search-input');
   await searchInput.fill(opts.searchQuery);
   await page.getByRole('button', { name: 'Search' }).click();
 

@@ -1,26 +1,151 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* =========================================================================
+ * Card Tracker — Design Token Layer (UI-DESIGN.md §3)
+ * Tailwind v4 theme using @theme inline (no tailwind.config)
+ * ========================================================================= */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* --- Reset default Tailwind palette ---
+   * Setting all built-in color families to initial prevents classes like
+   * bg-white, text-slate-400, etc. from generating. Only our semantic
+   * tokens below will produce utility classes.
+   */
+  --color-*: initial;
+
+  /* --- Semantic color tokens ---
+   * These map Tailwind utility classes (bg-background, text-foreground, etc.)
+   * to our --ct-* custom properties defined on :root.
+   */
+  --color-background: var(--ct-bg);
+  --color-foreground: var(--ct-text);
+  --color-card: var(--ct-surface);
+  --color-card-foreground: var(--ct-text);
+  --color-popover: var(--ct-surface-raised);
+  --color-popover-foreground: var(--ct-text);
+  --color-primary: var(--ct-action);
+  --color-primary-foreground: var(--ct-action-contrast);
+  --color-secondary: var(--ct-surface-raised);
+  --color-secondary-foreground: var(--ct-text);
+  --color-muted: var(--ct-surface-raised);
+  --color-muted-foreground: var(--ct-text-muted);
+  --color-accent: var(--ct-surface-raised);
+  --color-accent-foreground: var(--ct-text);
+  --color-destructive: var(--ct-negative);
+  --color-destructive-foreground: var(--ct-bg);
+  --color-border: var(--ct-border);
+  --color-input: var(--ct-border-strong);
+  --color-ring: var(--ct-action);
+
+  /* --- Custom semantic colors ---
+   * Exposed as Tailwind utilities: bg-ct-positive, text-ct-negative, etc.
+   */
+  --color-ct-positive: var(--ct-positive);
+  --color-ct-negative: var(--ct-negative);
+  --color-ct-caution: var(--ct-caution);
+  --color-ct-info: var(--ct-info);
+  --color-ct-text-subtle: var(--ct-text-subtle);
+  --color-ct-surface: var(--ct-surface);
+  --color-ct-surface-raised: var(--ct-surface-raised);
+  --color-ct-border-strong: var(--ct-border-strong);
+
+  /* --- Typography --- */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* =========================================================================
+ * :root — Custom property declarations
+ * ========================================================================= */
+:root {
+  /* --- Core palette (dark-only, no light mode in v1) --- */
+  --ct-bg: #0B0C0E;
+  --ct-surface: #141619;
+  --ct-surface-raised: #1B1E23;
+  --ct-border: #282C33;
+  --ct-border-strong: #6B7484;
+
+  /* --- Text --- */
+  --ct-text: #F2F4F7;
+  --ct-text-muted: #A3ABB8;
+  --ct-text-subtle: #868F9D;
+
+  /* --- Interactive --- */
+  --ct-action: #4C8DFF;
+  --ct-action-contrast: #0B0C0E;
+
+  /* --- Status --- */
+  --ct-positive: #3FB98A;
+  --ct-negative: #E5695F;
+  --ct-caution: #E0A33E;
+  --ct-info: #7FA8D9;
+
+  /* --- Confidence aliases --- */
+  --ct-conf-high: var(--ct-positive);
+  --ct-conf-medium: var(--ct-info);
+  --ct-conf-low: var(--ct-caution);
+  --ct-conf-none: var(--ct-text-muted);
+
+  /* --- shadcn/ui compatibility layer ---
+   * Some shadcn components reference bare --background, --primary, etc.
+   * These aliases keep them working without modification.
+   */
+  --background: var(--ct-bg);
+  --foreground: var(--ct-text);
+  --card: var(--ct-surface);
+  --card-foreground: var(--ct-text);
+  --popover: var(--ct-surface-raised);
+  --popover-foreground: var(--ct-text);
+  --primary: var(--ct-action);
+  --primary-foreground: var(--ct-action-contrast);
+  --secondary: var(--ct-surface-raised);
+  --secondary-foreground: var(--ct-text);
+  --muted: var(--ct-surface-raised);
+  --muted-foreground: var(--ct-text-muted);
+  --accent: var(--ct-surface-raised);
+  --accent-foreground: var(--ct-text);
+  --destructive: var(--ct-negative);
+  --destructive-foreground: var(--ct-bg);
+  --border: var(--ct-border);
+  --input: var(--ct-border-strong);
+  --ring: var(--ct-action);
+
+  /* --- Spacing scale (4px base) --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* --- Border radius --- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* --- Motion --- */
+  --duration-fast: 120ms;
+  --duration-normal: 200ms;
+
+  color-scheme: dark;
 }
 
+/* =========================================================================
+ * Base body styles
+ * ========================================================================= */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--ct-bg);
+  color: var(--ct-text);
+  font-family: var(
+    --font-sans,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif
+  );
 }

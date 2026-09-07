@@ -211,7 +211,7 @@ export default async function ReviewItemPage(props: {
 
   return (
     <div className="mx-auto max-w-lg">
-      <Link href="/review" className="mb-4 inline-block text-sm text-blue-600">
+      <Link href="/review" className="mb-4 inline-block text-sm text-primary">
         &larr; Review Queue
       </Link>
       <ReviewForm data={data} />

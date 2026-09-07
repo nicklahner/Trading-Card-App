@@ -25,7 +25,8 @@
     "smoke:value": "PROVIDERS_MODE=live tsx src/jobs/smoke-value.ts",
     "validate": "tsx src/jobs/validate.ts",
     "import:fixtures": "tsx src/jobs/import-fixtures.ts",
-    "db:reset": "tsx src/jobs/db-reset.ts"
+    "db:reset": "tsx src/jobs/db-reset.ts",
+    "lint:colors": "tsx scripts/lint-colors.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

@@ -492,13 +492,16 @@ const createScanSessionSchema = z.object({
   defaults: z
     .object({
       storage: z.string().optional(),
+      set_hint: z.string().optional(),
+      year: z.number().int().min(1900).max(2100).optional(),
+      manufacturer: z.string().optional(),
     })
     .optional(),
 });
 
 export async function createScanSession(
   label: string,
-  defaults?: { storage?: string },
+  defaults?: { storage?: string; set_hint?: string; year?: number; manufacturer?: string },
 ) {
   await requireAuth();
   const parsed = createScanSessionSchema.parse({ label, defaults });

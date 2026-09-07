@@ -72,7 +72,7 @@ test.describe('M2 acceptance: batch scan + identification', () => {
     await labelInput.fill('E2E Test Batch');
 
     // Select storage default (toploader)
-    const storageSelect = page.locator('select').first();
+    const storageSelect = page.getByTestId('session-storage-select');
     await storageSelect.selectOption('toploader');
 
     // Start session

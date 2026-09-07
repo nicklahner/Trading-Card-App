@@ -118,14 +118,15 @@ export function CardDetailActions({
   return (
     <section className="space-y-3 pb-8">
       {error && (
-        <p className="rounded bg-red-50 p-2 text-sm text-red-600">{error}</p>
+        <p className="rounded bg-destructive/10 p-2 text-sm text-destructive">{error}</p>
       )}
 
       {/* Edit button */}
       <button
         type="button"
         onClick={() => router.push(`/collection/${itemId}/edit`)}
-        className="w-full rounded border border-blue-600 py-2.5 text-sm font-medium text-blue-600"
+        data-testid="edit-button"
+        className="w-full rounded border border-primary py-2.5 text-sm font-medium text-primary"
       >
         Edit
       </button>
@@ -138,13 +139,13 @@ export function CardDetailActions({
           className="flex w-full items-center justify-between p-3 text-sm font-medium"
         >
           Add photos
-          <span className="text-gray-400">{showPhotos ? '\u2212' : '+'}</span>
+          <span className="text-ct-text-subtle">{showPhotos ? '\u2212' : '+'}</span>
         </button>
         {showPhotos && (
           <div className="border-t p-3 space-y-3">
             {/* Front photo */}
             <div>
-              <label className="block text-xs font-medium text-gray-500 mb-1">
+              <label className="block text-xs font-medium text-muted-foreground mb-1">
                 Front
               </label>
               <input
@@ -158,12 +159,12 @@ export function CardDetailActions({
                 }}
               />
               {uploading === 'front' && (
-                <p className="mt-1 text-xs text-gray-400">Uploading...</p>
+                <p className="mt-1 text-xs text-ct-text-subtle">Uploading...</p>
               )}
             </div>
             {/* Back photo */}
             <div>
-              <label className="block text-xs font-medium text-gray-500 mb-1">
+              <label className="block text-xs font-medium text-muted-foreground mb-1">
                 Back
               </label>
               <input
@@ -177,7 +178,7 @@ export function CardDetailActions({
                 }}
               />
               {uploading === 'back' && (
-                <p className="mt-1 text-xs text-gray-400">Uploading...</p>
+                <p className="mt-1 text-xs text-ct-text-subtle">Uploading...</p>
               )}
             </div>
           </div>
@@ -190,15 +191,16 @@ export function CardDetailActions({
           <button
             type="button"
             onClick={() => setShowSold(!showSold)}
+            data-testid="mark-sold-button"
             className="flex w-full items-center justify-between p-3 text-sm font-medium"
           >
             Mark as sold
-            <span className="text-gray-400">{showSold ? '\u2212' : '+'}</span>
+            <span className="text-ct-text-subtle">{showSold ? '\u2212' : '+'}</span>
           </button>
           {showSold && (
             <form onSubmit={handleMarkSold} className="border-t p-3 space-y-3">
               <label className="block">
-                <span className="text-xs font-medium text-gray-500">
+                <span className="text-xs font-medium text-muted-foreground">
                   Sold date
                 </span>
                 <input
@@ -210,7 +212,7 @@ export function CardDetailActions({
                 />
               </label>
               <label className="block">
-                <span className="text-xs font-medium text-gray-500">
+                <span className="text-xs font-medium text-muted-foreground">
                   Sold price ($)
                 </span>
                 <input
@@ -225,7 +227,7 @@ export function CardDetailActions({
               </label>
               <div className="grid grid-cols-2 gap-2">
                 <label className="block">
-                  <span className="text-xs font-medium text-gray-500">
+                  <span className="text-xs font-medium text-muted-foreground">
                     Fees ($)
                   </span>
                   <input
@@ -238,7 +240,7 @@ export function CardDetailActions({
                   />
                 </label>
                 <label className="block">
-                  <span className="text-xs font-medium text-gray-500">
+                  <span className="text-xs font-medium text-muted-foreground">
                     Shipping ($)
                   </span>
                   <input
@@ -254,7 +256,7 @@ export function CardDetailActions({
               <button
                 type="submit"
                 disabled={pending}
-                className="w-full rounded bg-green-600 py-2.5 text-sm font-medium text-white disabled:opacity-50"
+                className="w-full rounded bg-ct-positive py-2.5 text-sm font-medium text-background disabled:opacity-50"
               >
                 {pending ? 'Saving...' : 'Confirm sale'}
               </button>
@@ -270,13 +272,13 @@ export function CardDetailActions({
             <button
               type="button"
               onClick={() => setShowRemoveConfirm(true)}
-              className="w-full rounded border border-red-300 py-2.5 text-sm font-medium text-red-600"
+              className="w-full rounded border border-destructive/40 py-2.5 text-sm font-medium text-destructive"
             >
               Remove
             </button>
           ) : (
-            <div className="rounded border border-red-300 p-3 space-y-2">
-              <p className="text-sm text-gray-600">
+            <div className="rounded border border-destructive/40 p-3 space-y-2">
+              <p className="text-sm text-muted-foreground">
                 Remove this card from your collection? This can be undone.
               </p>
               <div className="flex gap-2">
@@ -284,14 +286,14 @@ export function CardDetailActions({
                   type="button"
                   onClick={handleRemove}
                   disabled={pending}
-                  className="flex-1 rounded bg-red-600 py-2 text-sm font-medium text-white disabled:opacity-50"
+                  className="flex-1 rounded bg-destructive py-2 text-sm font-medium text-background disabled:opacity-50"
                 >
                   {pending ? 'Removing...' : 'Yes, remove'}
                 </button>
                 <button
                   type="button"
                   onClick={() => setShowRemoveConfirm(false)}
-                  className="flex-1 rounded border py-2 text-sm font-medium text-gray-600"
+                  className="flex-1 rounded border py-2 text-sm font-medium text-muted-foreground"
                 >
                   Cancel
                 </button>
@@ -308,13 +310,13 @@ export function CardDetailActions({
             <button
               type="button"
               onClick={() => setShowDeleteConfirm(true)}
-              className="w-full rounded bg-red-600 py-2.5 text-sm font-medium text-white"
+              className="w-full rounded bg-destructive py-2.5 text-sm font-medium text-background"
             >
               Delete
             </button>
           ) : (
-            <div className="rounded border border-red-300 p-3 space-y-2">
-              <p className="text-sm text-gray-600">
+            <div className="rounded border border-destructive/40 p-3 space-y-2">
+              <p className="text-sm text-muted-foreground">
                 Permanently delete this draft? This cannot be undone.
               </p>
               <div className="flex gap-2">
@@ -322,14 +324,14 @@ export function CardDetailActions({
                   type="button"
                   onClick={handleDelete}
                   disabled={pending}
-                  className="flex-1 rounded bg-red-600 py-2 text-sm font-medium text-white disabled:opacity-50"
+                  className="flex-1 rounded bg-destructive py-2 text-sm font-medium text-background disabled:opacity-50"
                 >
                   {pending ? 'Deleting...' : 'Yes, delete'}
                 </button>
                 <button
                   type="button"
                   onClick={() => setShowDeleteConfirm(false)}
-                  className="flex-1 rounded border py-2 text-sm font-medium text-gray-600"
+                  className="flex-1 rounded border py-2 text-sm font-medium text-muted-foreground"
                 >
                   Cancel
                 </button>

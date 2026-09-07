@@ -36,3 +36,4 @@ data/
 # playwright
 /test-results/
 /playwright-report/
+tests/screenshots/

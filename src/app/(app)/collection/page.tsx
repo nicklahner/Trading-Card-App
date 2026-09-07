@@ -45,7 +45,7 @@ function DeleteDraftButton({ itemId }: { itemId: string }) {
     <form action={handleDelete}>
       <button
         type="submit"
-        className="rounded bg-red-600 px-2 py-1 text-xs text-white"
+        className="rounded bg-destructive px-2 py-1 text-xs text-background"
       >
         Delete
       </button>
@@ -60,7 +60,7 @@ function DeleteDraftButton({ itemId }: { itemId: string }) {
 function Thumbnail({ photoPath }: { photoPath: string | null }) {
   if (!photoPath) {
     return (
-      <div className="flex h-12 w-9 items-center justify-center rounded bg-gray-200 text-xs text-gray-400">
+      <div className="flex h-12 w-9 items-center justify-center rounded bg-muted text-xs text-ct-text-subtle">
         ?
       </div>
     );
@@ -138,10 +138,10 @@ export default async function CollectionPage({
       {/* Drafts section */}
       {drafts.length > 0 && (
         <section className="mb-6">
-          <h2 className="text-sm font-semibold text-gray-700">
+          <h2 className="text-sm font-semibold text-foreground">
             Scanned — waiting for identification ({drafts.length})
           </h2>
-          <p className="mb-2 text-xs text-gray-400">
+          <p className="mb-2 text-xs text-ct-text-subtle">
             Card identification arrives in a future update.
           </p>
           <ul className="space-y-2">
@@ -181,8 +181,8 @@ export default async function CollectionPage({
               href={`/collection?filter=${tab}`}
               className={`rounded-full px-3 py-1 text-sm ${
                 isActive
-                  ? 'bg-gray-900 text-white'
-                  : 'bg-gray-100 text-gray-600'
+                  ? 'bg-foreground text-background'
+                  : 'bg-muted text-muted-foreground'
               }`}
             >
               {tab.charAt(0).toUpperCase() + tab.slice(1)} ({count})
@@ -194,10 +194,10 @@ export default async function CollectionPage({
       {/* Items list */}
       {items.length === 0 ? (
         <div className="py-12 text-center">
-          <p className="text-gray-500">No cards yet</p>
+          <p className="text-muted-foreground">No cards yet</p>
           <Link
             href="/collection/add"
-            className="mt-4 inline-block rounded bg-blue-600 px-4 py-2 text-sm text-white"
+            className="mt-4 inline-block rounded bg-primary px-4 py-2 text-sm text-primary-foreground"
           >
             Add your first card
           </Link>
@@ -213,20 +213,20 @@ export default async function CollectionPage({
               <li key={item.id}>
                 <Link
                   href={`/collection/${item.id}`}
-                  className="flex items-center gap-3 rounded border p-3 active:bg-gray-50"
+                  className="flex items-center gap-3 rounded border p-3 active:bg-muted"
                 >
                   <Thumbnail photoPath={photo?.gcsPath ?? null} />
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-sm font-medium">
                       {card ? playerName(card.players) : 'Unknown card'}
                     </p>
-                    <p className="truncate text-xs text-gray-500">
+                    <p className="truncate text-xs text-muted-foreground">
                       {card
                         ? `${card.year} ${card.setName}`
                         : 'Unlinked'}
                       {card?.parallel ? ` — ${card.parallel}` : ''}
                     </p>
-                    <div className="mt-0.5 flex gap-2 text-xs text-gray-400">
+                    <div className="mt-0.5 flex gap-2 text-xs text-ct-text-subtle">
                       <span>
                         {item.conditionKind === 'graded'
                           ? `${item.grader ?? '?'} ${item.grade ?? '?'}`
@@ -249,7 +249,8 @@ export default async function CollectionPage({
       {/* Floating add button */}
       <Link
         href="/collection/add"
-        className="fixed bottom-6 right-6 flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-2xl text-white shadow-lg"
+        data-testid="add-card-fab"
+        className="fixed bottom-6 right-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-2xl text-primary-foreground shadow-lg"
       >
         +
       </Link>

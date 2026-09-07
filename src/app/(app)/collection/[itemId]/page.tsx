@@ -113,9 +113,9 @@ function Badges({
   card: { isAuto: boolean; isMemorabilia: boolean; isRookie: boolean };
 }) {
   const badges: { label: string; color: string }[] = [];
-  if (card.isRookie) badges.push({ label: 'RC', color: 'bg-green-100 text-green-700' });
-  if (card.isAuto) badges.push({ label: 'Auto', color: 'bg-purple-100 text-purple-700' });
-  if (card.isMemorabilia) badges.push({ label: 'Mem', color: 'bg-amber-100 text-amber-700' });
+  if (card.isRookie) badges.push({ label: 'RC', color: 'bg-ct-positive/20 text-ct-positive' });
+  if (card.isAuto) badges.push({ label: 'Auto', color: 'bg-primary/20 text-primary' });
+  if (card.isMemorabilia) badges.push({ label: 'Mem', color: 'bg-ct-caution/20 text-ct-caution' });
   if (badges.length === 0) return null;
   return (
     <div className="flex gap-2">
@@ -139,7 +139,7 @@ function InfoRow({ label, value }: { label: string; value: React.ReactNode }) {
   if (value == null || value === '') return null;
   return (
     <div className="flex justify-between py-1.5 text-sm">
-      <span className="text-gray-500">{label}</span>
+      <span className="text-muted-foreground">{label}</span>
       <span className="text-right font-medium">{value}</span>
     </div>
   );
@@ -171,7 +171,7 @@ export default async function CardDetailPage(props: {
   return (
     <div className="mx-auto max-w-lg">
       {/* Back to collection */}
-      <Link href="/collection" className="mb-4 inline-block text-sm text-blue-600">
+      <Link href="/collection" className="mb-4 inline-block text-sm text-primary">
         &larr; Collection
       </Link>
 
@@ -182,7 +182,7 @@ export default async function CardDetailPage(props: {
       {card ? (
         <section className="mb-6">
           <h1 className="text-xl font-semibold">{playerName(card.players)}</h1>
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm text-muted-foreground">
             {card.year} {card.setName}
             {card.subset ? ` - ${card.subset}` : ''} #{card.cardNumber}
           </p>
@@ -205,7 +205,7 @@ export default async function CardDetailPage(props: {
       ) : (
         <section className="mb-6">
           <h1 className="text-xl font-semibold">Unlinked card</h1>
-          <p className="mt-1 text-sm text-gray-400">
+          <p className="mt-1 text-sm text-ct-text-subtle">
             This item has not been linked to a card identity yet.
           </p>
         </section>
@@ -213,7 +213,7 @@ export default async function CardDetailPage(props: {
 
       {/* Condition */}
       <section className="mb-6">
-        <h2 className="mb-2 text-sm font-semibold text-gray-700">Condition</h2>
+        <h2 className="mb-2 text-sm font-semibold text-foreground">Condition</h2>
         <div className="divide-y rounded border">
           <div className="p-3">
             {item.conditionKind === 'graded' ? (
@@ -224,12 +224,12 @@ export default async function CardDetailPage(props: {
                   {item.gradeLabel ? ` (${item.gradeLabel})` : ''}
                 </p>
                 {item.autoGrade != null && (
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-muted-foreground">
                     Auto grade: {Number(item.autoGrade)}
                   </p>
                 )}
                 {item.certNumber && (
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-muted-foreground">
                     Cert #{item.certNumber}
                   </p>
                 )}
@@ -254,7 +254,7 @@ export default async function CardDetailPage(props: {
 
       {/* Cost basis */}
       <section className="mb-6">
-        <h2 className="mb-2 text-sm font-semibold text-gray-700">Cost basis</h2>
+        <h2 className="mb-2 text-sm font-semibold text-foreground">Cost basis</h2>
         <div className="divide-y rounded border">
           <div className="space-y-0.5 p-3">
             <InfoRow
@@ -284,7 +284,7 @@ export default async function CardDetailPage(props: {
                 </div>
               </>
             ) : (
-              <p className="py-1 text-sm text-gray-400">Cost unknown</p>
+              <p className="py-1 text-sm text-ct-text-subtle">Cost unknown</p>
             )}
           </div>
         </div>
@@ -293,7 +293,7 @@ export default async function CardDetailPage(props: {
       {/* Sold info */}
       {item.status === 'sold' && (
         <section className="mb-6">
-          <h2 className="mb-2 text-sm font-semibold text-gray-700">Sale</h2>
+          <h2 className="mb-2 text-sm font-semibold text-foreground">Sale</h2>
           <div className="divide-y rounded border">
             <div className="space-y-0.5 p-3">
               {item.soldOn && (
@@ -325,7 +325,7 @@ export default async function CardDetailPage(props: {
                       value={
                         <span
                           className={
-                            gl >= 0 ? 'text-green-600' : 'text-red-600'
+                            gl >= 0 ? 'text-ct-positive' : 'text-destructive'
                           }
                         >
                           {gl >= 0 ? '+' : ''}
@@ -344,7 +344,7 @@ export default async function CardDetailPage(props: {
       {/* Notes */}
       {item.notes && (
         <section className="mb-6">
-          <h2 className="mb-2 text-sm font-semibold text-gray-700">Notes</h2>
+          <h2 className="mb-2 text-sm font-semibold text-foreground">Notes</h2>
           <p className="whitespace-pre-wrap rounded border p-3 text-sm">
             {item.notes}
           </p>

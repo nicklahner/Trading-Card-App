@@ -22,16 +22,16 @@ export default async function AppLayout({ children }: { children: React.ReactNod
             Card Tracker
           </Link>
           <div className="flex items-center gap-4 text-sm">
-            <Link href="/collection" className="text-gray-600 hover:text-gray-900">
+            <Link href="/collection" className="text-muted-foreground hover:text-foreground">
               Collection
             </Link>
-            <Link href="/scan" className="text-gray-600 hover:text-gray-900">
+            <Link href="/scan" className="text-muted-foreground hover:text-foreground">
               Scan
             </Link>
-            <Link href="/review" className="relative text-gray-600 hover:text-gray-900">
+            <Link href="/review" className="relative text-muted-foreground hover:text-foreground">
               Review
               {reviewCount > 0 && (
-                <span className="absolute -right-5 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1 text-xs font-medium text-white">
+                <span className="absolute -right-5 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-destructive px-1 text-xs font-medium text-background">
                   {reviewCount}
                 </span>
               )}

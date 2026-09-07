@@ -44,7 +44,7 @@ function PhotoCarousel({ photos }: { photos: ReviewPhoto[] }) {
 
   if (photos.length === 0) {
     return (
-      <div className="flex h-64 items-center justify-center rounded-lg bg-gray-100 text-gray-400">
+      <div className="flex h-64 items-center justify-center rounded-lg bg-muted text-ct-text-subtle">
         No photos
       </div>
     );
@@ -55,7 +55,7 @@ function PhotoCarousel({ photos }: { photos: ReviewPhoto[] }) {
       <img
         src={photos[current].url}
         alt={photos[current].side}
-        className="h-72 w-full rounded-lg object-contain bg-gray-50"
+        className="h-72 w-full rounded-lg object-contain bg-background"
       />
       {photos.length > 1 && (
         <>
@@ -66,7 +66,7 @@ function PhotoCarousel({ photos }: { photos: ReviewPhoto[] }) {
                 type="button"
                 onClick={() => setCurrent(i)}
                 className={`h-2 w-2 rounded-full ${
-                  i === current ? 'bg-blue-600' : 'bg-gray-300'
+                  i === current ? 'bg-primary' : 'bg-ct-text-subtle'
                 }`}
                 aria-label={`View ${p.side}`}
               />
@@ -75,20 +75,20 @@ function PhotoCarousel({ photos }: { photos: ReviewPhoto[] }) {
           <button
             type="button"
             onClick={() => setCurrent((c) => (c > 0 ? c - 1 : photos.length - 1))}
-            className="absolute left-1 top-1/2 -translate-y-1/2 rounded-full bg-white/80 px-2 py-1 text-sm shadow"
+            className="absolute left-1 top-1/2 -translate-y-1/2 rounded-full bg-background/80 px-2 py-1 text-sm shadow"
           >
             &lsaquo;
           </button>
           <button
             type="button"
             onClick={() => setCurrent((c) => (c < photos.length - 1 ? c + 1 : 0))}
-            className="absolute right-1 top-1/2 -translate-y-1/2 rounded-full bg-white/80 px-2 py-1 text-sm shadow"
+            className="absolute right-1 top-1/2 -translate-y-1/2 rounded-full bg-background/80 px-2 py-1 text-sm shadow"
           >
             &rsaquo;
           </button>
         </>
       )}
-      <p className="mt-1 text-center text-xs text-gray-400 capitalize">
+      <p className="mt-1 text-center text-xs text-ct-text-subtle capitalize">
         {photos[current].side.replace('_', ' ')}
       </p>
     </div>
@@ -114,25 +114,25 @@ function CandidateCard({
       onClick={onSelect}
       className={`w-full rounded border-2 p-3 text-left transition-colors ${
         isSelected
-          ? 'border-blue-600 bg-blue-50'
-          : 'border-gray-200 active:bg-gray-50'
+          ? 'border-primary bg-ct-info/10'
+          : 'border-muted active:bg-muted'
       }`}
     >
       <div className="flex items-start justify-between">
         <div className="min-w-0 flex-1">
           <p className="text-sm font-medium">{candidate.playerName}</p>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-muted-foreground">
             {candidate.year} {candidate.setName}
             {candidate.subsetOrInsert ? ` - ${candidate.subsetOrInsert}` : ''} #
             {candidate.cardNumber}
           </p>
           {candidate.parallelName && (
-            <p className="text-xs text-gray-400">
+            <p className="text-xs text-ct-text-subtle">
               {candidate.parallelName}
             </p>
           )}
           {candidate.scpProductName && (
-            <p className="mt-1 text-xs text-gray-400">
+            <p className="mt-1 text-xs text-ct-text-subtle">
               SCP: {candidate.scpProductName}
             </p>
           )}
@@ -141,23 +141,23 @@ function CandidateCard({
           <span
             className={`rounded px-1.5 py-0.5 text-xs font-medium ${
               candidate.score >= 0.9
-                ? 'bg-green-100 text-green-700'
+                ? 'bg-ct-positive/20 text-ct-positive'
                 : candidate.score >= 0.7
-                  ? 'bg-yellow-100 text-yellow-700'
-                  : 'bg-red-100 text-red-700'
+                  ? 'bg-ct-caution/20 text-ct-caution'
+                  : 'bg-destructive/10 text-destructive'
             }`}
           >
             {(candidate.score * 100).toFixed(0)}%
           </span>
           {candidate.estValueCents != null && (
-            <span className="text-xs text-gray-500">
+            <span className="text-xs text-muted-foreground">
               {formatCents(candidate.estValueCents)}
             </span>
           )}
         </div>
       </div>
       {candidate.isRookie && (
-        <span className="mt-1 inline-block rounded bg-green-100 px-1.5 py-0.5 text-xs font-medium text-green-700">
+        <span className="mt-1 inline-block rounded bg-ct-positive/20 px-1.5 py-0.5 text-xs font-medium text-ct-positive">
           RC
         </span>
       )}
@@ -411,7 +411,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
   return (
     <div className="space-y-6 pb-8">
       {error && (
-        <p className="rounded bg-red-50 p-2 text-sm text-red-600">{error}</p>
+        <p className="rounded bg-destructive/10 p-2 text-sm text-destructive">{error}</p>
       )}
 
       {/* Photos */}
@@ -423,7 +423,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
           {data.flags.map((flag) => (
             <div
               key={flag}
-              className="rounded border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-700"
+              className="rounded border border-ct-caution/40 bg-ct-caution/10 px-3 py-2 text-xs text-ct-caution"
             >
               {flag.replace(/_/g, ' ')}
               {unblockedFlags.includes(flag) && (
@@ -438,7 +438,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
 
       {/* Candidates */}
       <section>
-        <h2 className="mb-2 text-sm font-semibold text-gray-700">
+        <h2 className="mb-2 text-sm font-semibold text-foreground">
           Candidates
         </h2>
         <div className="space-y-2">
@@ -451,7 +451,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
             />
           ))}
           {data.candidates.length === 0 && (
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-ct-text-subtle">
               No candidates found. Fill in identity manually.
             </p>
           )}
@@ -460,11 +460,11 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
 
       {/* Suggestion banner: low-scoring candidate not used for pre-fill */}
       {prefill.suggestion && (
-        <section className="rounded border border-blue-200 bg-blue-50 p-3">
-          <p className="mb-1 text-xs font-medium text-blue-800">
+        <section className="rounded border border-ct-info/40 bg-ct-info/10 p-3">
+          <p className="mb-1 text-xs font-medium text-primary">
             Low-confidence match ({(prefill.suggestion.score * 100).toFixed(0)}%) — not pre-filled
           </p>
-          <p className="mb-2 text-xs text-blue-600">
+          <p className="mb-2 text-xs text-primary">
             {prefill.suggestion.playerName} - {prefill.suggestion.year} {prefill.suggestion.setName} #{prefill.suggestion.cardNumber}
           </p>
           <button
@@ -479,7 +479,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
               setParallelName(s.parallelName ?? '');
               setIsRookie(s.isRookie);
             }}
-            className="rounded bg-blue-600 px-3 py-1 text-xs font-medium text-white"
+            className="rounded bg-primary px-3 py-1 text-xs font-medium text-primary-foreground"
           >
             Apply this match
           </button>
@@ -488,17 +488,17 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
 
       {/* Pre-fill source indicator */}
       {prefill.source === 'extraction' && !prefill.suggestion && (
-        <p className="text-xs text-gray-400">Fields pre-filled from photo extraction</p>
+        <p className="text-xs text-ct-text-subtle">Fields pre-filled from photo extraction</p>
       )}
 
       {/* Editable identity fields */}
       <section>
-        <h2 className="mb-2 text-sm font-semibold text-gray-700">
+        <h2 className="mb-2 text-sm font-semibold text-foreground">
           Identity
         </h2>
         <div className="space-y-3">
           <label className="block">
-            <span className="text-xs text-gray-500">Player</span>
+            <span className="text-xs text-muted-foreground">Player</span>
             <input
               type="text"
               value={playerNameVal}
@@ -508,7 +508,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
           </label>
           <div className="grid grid-cols-2 gap-2">
             <label className="block">
-              <span className="text-xs text-gray-500">Year</span>
+              <span className="text-xs text-muted-foreground">Year</span>
               <input
                 type="number"
                 value={year}
@@ -517,7 +517,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
               />
             </label>
             <label className="block">
-              <span className="text-xs text-gray-500">Card #</span>
+              <span className="text-xs text-muted-foreground">Card #</span>
               <input
                 type="text"
                 value={cardNumber}
@@ -527,7 +527,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
             </label>
           </div>
           <label className="block">
-            <span className="text-xs text-gray-500">Set</span>
+            <span className="text-xs text-muted-foreground">Set</span>
             <input
               type="text"
               value={setName}
@@ -536,7 +536,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
             />
           </label>
           <label className="block">
-            <span className="text-xs text-gray-500">Subset / Insert</span>
+            <span className="text-xs text-muted-foreground">Subset / Insert</span>
             <input
               type="text"
               value={subset}
@@ -549,7 +549,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
 
       {/* Parallel picker */}
       <section>
-        <h2 className="mb-2 text-sm font-semibold text-gray-700">
+        <h2 className="mb-2 text-sm font-semibold text-foreground">
           Parallel
         </h2>
         <div className="flex items-center gap-2">
@@ -573,7 +573,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
             type="button"
             onClick={handleLoadParallels}
             disabled={loadingParallels}
-            className="mt-2 text-xs text-blue-600"
+            className="mt-2 text-xs text-primary"
           >
             {loadingParallels ? 'Loading...' : 'Browse catalog parallels'}
           </button>
@@ -584,7 +584,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
               <button
                 type="button"
                 onClick={() => handleSelectParallel(null)}
-                className="w-full rounded border p-2 text-left text-sm active:bg-gray-50"
+                className="w-full rounded border p-2 text-left text-sm active:bg-muted"
               >
                 Base
               </button>
@@ -594,11 +594,11 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
                 <button
                   type="button"
                   onClick={() => handleSelectParallel(p)}
-                  className="w-full rounded border p-2 text-left text-sm active:bg-gray-50"
+                  className="w-full rounded border p-2 text-left text-sm active:bg-muted"
                 >
                   {p.name}
                   {p.printRun && (
-                    <span className="ml-2 text-xs text-gray-400">
+                    <span className="ml-2 text-xs text-ct-text-subtle">
                       /{p.printRun}
                     </span>
                   )}
@@ -623,18 +623,18 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
             }}
             placeholder="e.g. 42"
             className={`mt-1 block w-full rounded border px-3 py-2 text-sm ${
-              serialError ? 'border-red-300' : ''
+              serialError ? 'border-destructive/40' : ''
             }`}
           />
           {serialError && (
-            <p className="mt-1 text-xs text-red-600">{serialError}</p>
+            <p className="mt-1 text-xs text-destructive">{serialError}</p>
           )}
         </label>
       </section>
 
       {/* Toggles: Auto / Memorabilia / Rookie */}
       <section>
-        <h2 className="mb-2 text-sm font-semibold text-gray-700">Attributes</h2>
+        <h2 className="mb-2 text-sm font-semibold text-foreground">Attributes</h2>
         <div className="flex gap-4">
           <label className="flex items-center gap-2 text-sm">
             <input
@@ -674,7 +674,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
 
       {/* Condition */}
       <section>
-        <h2 className="mb-2 text-sm font-semibold text-gray-700">Condition</h2>
+        <h2 className="mb-2 text-sm font-semibold text-foreground">Condition</h2>
         <div className="flex gap-3">
           <label className="flex items-center gap-1 text-sm">
             <input
@@ -775,7 +775,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
           className="flex w-full items-center justify-between rounded border p-3 text-sm font-medium"
         >
           Cost basis
-          <span className="text-gray-400">{showCost ? '\u2212' : '+'}</span>
+          <span className="text-ct-text-subtle">{showCost ? '\u2212' : '+'}</span>
         </button>
         {showCost && (
           <div className="mt-2 space-y-3">
@@ -791,7 +791,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
               <option value="gift">Gift</option>
             </select>
             <label className="block">
-              <span className="text-xs text-gray-500">Acquired on</span>
+              <span className="text-xs text-muted-foreground">Acquired on</span>
               <input
                 type="date"
                 value={acquiredOn}
@@ -843,11 +843,11 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
 
       {/* Unmatched card banner */}
       {data.unmatched && (
-        <section className="rounded-lg border border-amber-200 bg-amber-50 p-3 space-y-1">
-          <p className="text-sm font-medium text-amber-800">
+        <section className="rounded-lg border border-ct-caution/40 bg-ct-caution/10 p-3 space-y-1">
+          <p className="text-sm font-medium text-ct-caution">
             Not in catalog — creating from photo
           </p>
-          <p className="text-xs text-amber-600">
+          <p className="text-xs text-ct-caution">
             Verify the pre-filled fields and confirm. Set name carries from your previous card
             {data.sessionSetName ? ` ("${data.sessionSetName}")` : ''}.
             {data.scpProductName ? ` SCP match: ${data.scpProductName}.` : ' No SCP match yet — can link later.'}
@@ -862,7 +862,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
           type="button"
           onClick={handleConfirm}
           disabled={pending || (!data.unmatched && isBlocked)}
-          className="w-full rounded bg-green-600 py-3 text-sm font-medium text-white disabled:opacity-50"
+          className="w-full rounded bg-ct-positive py-3 text-sm font-medium text-background disabled:opacity-50"
         >
           {pending ? 'Confirming...' : (!data.unmatched && isBlocked) ? 'Resolve flags to confirm' : data.unmatched ? 'Add to Collection' : 'Confirm'}
         </button>
@@ -872,7 +872,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
           type="button"
           onClick={handleSkip}
           disabled={pending}
-          className="w-full rounded border border-gray-300 py-3 text-sm font-medium text-gray-600"
+          className="w-full rounded border border-border py-3 text-sm font-medium text-muted-foreground"
         >
           Skip
         </button>
@@ -882,7 +882,7 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
           type="button"
           onClick={handleNotSure}
           disabled={pending || data.candidates.length === 0}
-          className="w-full rounded border border-amber-300 py-3 text-sm font-medium text-amber-600 disabled:opacity-50"
+          className="w-full rounded border border-ct-caution py-3 text-sm font-medium text-ct-caution disabled:opacity-50"
         >
           {pending ? 'Saving...' : 'Not Sure'}
         </button>
@@ -892,13 +892,13 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
           <button
             type="button"
             onClick={() => setShowDeleteConfirm(true)}
-            className="w-full rounded border border-red-300 py-2.5 text-sm font-medium text-red-600"
+            className="w-full rounded border border-destructive/40 py-2.5 text-sm font-medium text-destructive"
           >
             Not a card / Delete
           </button>
         ) : (
-          <div className="rounded border border-red-300 p-3 space-y-2">
-            <p className="text-sm text-gray-600">
+          <div className="rounded border border-destructive/40 p-3 space-y-2">
+            <p className="text-sm text-muted-foreground">
               Permanently delete this item and its photos?
             </p>
             <div className="flex gap-2">
@@ -906,14 +906,14 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
                 type="button"
                 onClick={handleDelete}
                 disabled={pending}
-                className="flex-1 rounded bg-red-600 py-2 text-sm font-medium text-white disabled:opacity-50"
+                className="flex-1 rounded bg-destructive py-2 text-sm font-medium text-background disabled:opacity-50"
               >
                 {pending ? 'Deleting...' : 'Yes, delete'}
               </button>
               <button
                 type="button"
                 onClick={() => setShowDeleteConfirm(false)}
-                className="flex-1 rounded border py-2 text-sm font-medium text-gray-600"
+                className="flex-1 rounded border py-2 text-sm font-medium text-muted-foreground"
               >
                 Cancel
               </button>

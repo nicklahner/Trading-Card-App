@@ -142,21 +142,21 @@ function CardSearchFlow({
         <button
           type="button"
           onClick={() => setStep({ kind: 'search' })}
-          className="text-sm text-blue-600"
+          className="text-sm text-primary"
         >
           &larr; Back to search
         </button>
         <h3 className="text-sm font-medium">
           {step.card.playerName} &mdash; Pick parallel
         </h3>
-        {pending && <p className="text-xs text-gray-400">Loading...</p>}
+        {pending && <p className="text-xs text-ct-text-subtle">Loading...</p>}
         {parallels && (
           <ul className="space-y-1">
             <li>
               <button
                 type="button"
                 onClick={() => onSelect(step.card, null)}
-                className="w-full rounded border p-2 text-left text-sm active:bg-gray-50"
+                className="w-full rounded border p-2 text-left text-sm active:bg-muted"
               >
                 Base
               </button>
@@ -166,11 +166,11 @@ function CardSearchFlow({
                 <button
                   type="button"
                   onClick={() => onSelect(step.card, p)}
-                  className="w-full rounded border p-2 text-left text-sm active:bg-gray-50"
+                  className="w-full rounded border p-2 text-left text-sm active:bg-muted"
                 >
                   {p.name}
                   {p.printRun ? (
-                    <span className="ml-2 text-xs text-gray-400">
+                    <span className="ml-2 text-xs text-ct-text-subtle">
                       /{p.printRun}
                     </span>
                   ) : null}
@@ -182,7 +182,7 @@ function CardSearchFlow({
         <button
           type="button"
           onClick={onCancel}
-          className="w-full rounded border py-2 text-sm text-gray-500"
+          className="w-full rounded border py-2 text-sm text-muted-foreground"
         >
           Cancel
         </button>
@@ -204,13 +204,13 @@ function CardSearchFlow({
         <button
           type="submit"
           disabled={pending}
-          className="rounded bg-blue-600 px-4 py-2 text-sm text-white disabled:opacity-50"
+          className="rounded bg-primary px-4 py-2 text-sm text-primary-foreground disabled:opacity-50"
         >
           {pending ? '...' : 'Search'}
         </button>
       </form>
       {searched && results.length === 0 && (
-        <p className="text-xs text-gray-400">No results found.</p>
+        <p className="text-xs text-ct-text-subtle">No results found.</p>
       )}
       <ul className="max-h-64 space-y-1 overflow-y-auto">
         {results.map((card) => (
@@ -218,10 +218,10 @@ function CardSearchFlow({
             <button
               type="button"
               onClick={() => selectCard(card)}
-              className="w-full rounded border p-2 text-left text-sm active:bg-gray-50"
+              className="w-full rounded border p-2 text-left text-sm active:bg-muted"
             >
               <p className="font-medium">{card.playerName}</p>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-muted-foreground">
                 {card.year} {card.setName} #{card.cardNumber}
               </p>
             </button>
@@ -231,7 +231,7 @@ function CardSearchFlow({
       <button
         type="button"
         onClick={onCancel}
-        className="w-full rounded border py-2 text-sm text-gray-500"
+        className="w-full rounded border py-2 text-sm text-muted-foreground"
       >
         Cancel
       </button>
@@ -386,22 +386,22 @@ export function EditForm({ initialData }: { initialData: InitialData }) {
       <h1 className="mb-4 text-xl font-semibold">Edit Card</h1>
 
       {error && (
-        <p className="mb-4 rounded bg-red-50 p-2 text-sm text-red-600">
+        <p className="mb-4 rounded bg-destructive/10 p-2 text-sm text-destructive">
           {error}
         </p>
       )}
 
       {/* Card identity section */}
       <section className="mb-6">
-        <h2 className="mb-2 text-sm font-semibold text-gray-700">
+        <h2 className="mb-2 text-sm font-semibold text-foreground">
           Card identity
         </h2>
         <div className="rounded border p-3 text-sm">
           <p className="font-medium">{playerName(cardIdentity.players)}</p>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-muted-foreground">
             {cardIdentity.year} {cardIdentity.setName} #{cardIdentity.cardNumber}
           </p>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-muted-foreground">
             Parallel: {cardIdentity.parallel ?? 'Base'}
             {cardIdentity.printRun ? ` /${cardIdentity.printRun}` : ''}
           </p>
@@ -418,7 +418,7 @@ export function EditForm({ initialData }: { initialData: InitialData }) {
           <button
             type="button"
             onClick={() => setShowCardSearch(true)}
-            className="mt-2 text-sm text-blue-600"
+            className="mt-2 text-sm text-primary"
           >
             Change card
           </button>
@@ -535,7 +535,7 @@ export function EditForm({ initialData }: { initialData: InitialData }) {
         <fieldset>
           <legend className="text-sm font-medium">Cost basis</legend>
           <label className="mt-2 block">
-            <span className="text-xs text-gray-500">Acquired on</span>
+            <span className="text-xs text-muted-foreground">Acquired on</span>
             <input
               type="date"
               value={acquiredOn}
@@ -619,14 +619,15 @@ export function EditForm({ initialData }: { initialData: InitialData }) {
           <button
             type="submit"
             disabled={pending}
-            className="flex-1 rounded bg-blue-600 py-3 text-sm font-medium text-white disabled:opacity-50"
+            data-testid="save-edit-button"
+            className="flex-1 rounded bg-primary py-3 text-sm font-medium text-primary-foreground disabled:opacity-50"
           >
             {pending ? 'Saving...' : 'Save'}
           </button>
           <button
             type="button"
             onClick={() => router.push(`/collection/${initialData.itemId}`)}
-            className="flex-1 rounded border py-3 text-sm font-medium text-gray-600"
+            className="flex-1 rounded border py-3 text-sm font-medium text-muted-foreground"
           >
             Cancel
           </button>
