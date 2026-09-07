@@ -13,6 +13,7 @@ import type {
   ReviewPhoto,
   CatalogParallel,
 } from './page';
+import { computePrefill } from '@/domain/identification/prefill';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -176,52 +177,34 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
   // Candidate selection
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  // Editable identity fields (initialized from top candidate or extraction)
-  const topCandidate = data.candidates[0];
-  const ext = data.extraction;
+  // Pre-fill decision: candidate above floor, extraction, or empty
+  const prefill = computePrefill(
+    data.candidates,
+    data.extraction,
+    data.sessionSetName,
+  );
 
-  const [playerNameVal, setPlayerNameVal] = useState(
-    topCandidate?.playerName ?? ext?.playerName ?? '',
-  );
-  const [year, setYear] = useState(
-    (topCandidate?.year ?? ext?.year ?? '').toString(),
-  );
-  const [setName, setSetName] = useState(
-    topCandidate?.setName ?? ext?.setName ?? data.sessionSetName ?? '',
-  );
-  const [subset, setSubset] = useState(
-    topCandidate?.subsetOrInsert ?? ext?.subset ?? '',
-  );
-  const [cardNumber, setCardNumber] = useState(
-    topCandidate?.cardNumber ?? ext?.cardNumber ?? '',
-  );
+  // Editable identity fields (initialized from prefill decision)
+  const [playerNameVal, setPlayerNameVal] = useState(prefill.fields.playerName);
+  const [year, setYear] = useState(prefill.fields.year);
+  const [setName, setSetName] = useState(prefill.fields.setName);
+  const [subset, setSubset] = useState(prefill.fields.subset);
+  const [cardNumber, setCardNumber] = useState(prefill.fields.cardNumber);
 
   // Parallel
-  const [parallelName, setParallelName] = useState(
-    topCandidate?.parallelName ?? ext?.parallelName ?? '',
-  );
-  const [printRun, setPrintRun] = useState(
-    (ext?.printRun ?? '').toString(),
-  );
+  const [parallelName, setParallelName] = useState(prefill.fields.parallelName);
+  const [printRun, setPrintRun] = useState(prefill.fields.printRun);
   const [catalogParallels, setCatalogParallels] = useState<CatalogParallel[] | null>(null);
   const [loadingParallels, setLoadingParallels] = useState(false);
 
   // Serial number
-  const [serialNumber, setSerialNumber] = useState(
-    (ext?.serialNumber ?? '').toString(),
-  );
+  const [serialNumber, setSerialNumber] = useState(prefill.fields.serialNumber);
   const [serialError, setSerialError] = useState<string | null>(null);
 
   // Toggles
-  const [isAuto, setIsAuto] = useState(
-    topCandidate?.isRookie !== undefined
-      ? ext?.isAuto ?? false
-      : false,
-  );
-  const [isMemorabilia, setIsMemorabilia] = useState(ext?.isMemorabilia ?? false);
-  const [isRookie, setIsRookie] = useState(
-    topCandidate?.isRookie ?? ext?.isRookie ?? false,
-  );
+  const [isAuto, setIsAuto] = useState(prefill.fields.isAuto);
+  const [isMemorabilia, setIsMemorabilia] = useState(prefill.fields.isMemorabilia);
+  const [isRookie, setIsRookie] = useState(prefill.fields.isRookie);
 
   // Condition
   const [conditionKind, setConditionKind] = useState(data.conditionKind);
@@ -474,6 +457,39 @@ export function ReviewForm({ data }: { data: ReviewPageData }) {
           )}
         </div>
       </section>
+
+      {/* Suggestion banner: low-scoring candidate not used for pre-fill */}
+      {prefill.suggestion && (
+        <section className="rounded border border-blue-200 bg-blue-50 p-3">
+          <p className="mb-1 text-xs font-medium text-blue-800">
+            Low-confidence match ({(prefill.suggestion.score * 100).toFixed(0)}%) — not pre-filled
+          </p>
+          <p className="mb-2 text-xs text-blue-600">
+            {prefill.suggestion.playerName} - {prefill.suggestion.year} {prefill.suggestion.setName} #{prefill.suggestion.cardNumber}
+          </p>
+          <button
+            type="button"
+            onClick={() => {
+              const s = prefill.suggestion!;
+              setPlayerNameVal(s.playerName);
+              setYear(String(s.year || ''));
+              setSetName(s.setName);
+              setSubset(s.subsetOrInsert ?? '');
+              setCardNumber(s.cardNumber);
+              setParallelName(s.parallelName ?? '');
+              setIsRookie(s.isRookie);
+            }}
+            className="rounded bg-blue-600 px-3 py-1 text-xs font-medium text-white"
+          >
+            Apply this match
+          </button>
+        </section>
+      )}
+
+      {/* Pre-fill source indicator */}
+      {prefill.source === 'extraction' && !prefill.suggestion && (
+        <p className="text-xs text-gray-400">Fields pre-filled from photo extraction</p>
+      )}
 
       {/* Editable identity fields */}
       <section>
